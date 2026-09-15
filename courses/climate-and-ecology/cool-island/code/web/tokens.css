@@ -1,0 +1,90 @@
+/* Hallmark · genre: editorial · macrostructure: Workbench · theme: Riso · enrichment: Tier B SVG · nav: N3 · footer: Ft4
+ * zima-design signature: 宏结构=Workbench 主题=Riso 动效=crisp-professional 卡片物理=hairline 密度=杂志式混排
+ * audience: K1–12 students + teachers + families · use: run a six-session urban heat PBL · tone: civic, curious, tactile
+ * Hallmark · pre-emit critique: P5 H5 E4 S5 R4 V5 · contrast: pass (40–41) · slop: pass (42–57)
+ */
+:root {
+  color-scheme: light;
+
+  --color-paper: oklch(96% 0.018 88);
+  --color-paper-2: oklch(92% 0.026 87);
+  --color-paper-3: oklch(88% 0.032 86);
+  --color-ink: oklch(19% 0.026 61);
+  --color-ink-2: oklch(31% 0.028 66);
+  --color-neutral: oklch(44% 0.022 69);
+  --color-muted: oklch(37% 0.024 70);
+  --color-rule: oklch(71% 0.032 78);
+  --color-rule-strong: oklch(48% 0.034 72);
+  --color-heat: oklch(62% 0.205 42);
+  --color-heat-soft: oklch(90% 0.07 55);
+  --color-cool: oklch(55% 0.12 215);
+  --color-cool-soft: oklch(88% 0.055 211);
+  --color-leaf: oklch(48% 0.10 145);
+  --color-warning: oklch(69% 0.16 83);
+  --color-success: oklch(46% 0.11 148);
+  --color-error: oklch(49% 0.17 27);
+  --color-focus: oklch(43% 0.14 235);
+  --color-accent: var(--color-heat);
+  --color-accent-ink: var(--color-paper);
+  --color-surface-dark: oklch(24% 0.038 185);
+  --color-surface-dark-2: oklch(30% 0.045 190);
+  --color-surface-dark-ink: oklch(94% 0.018 88);
+  --color-overlay: oklch(18% 0.026 61 / 0.62);
+  --color-shadow: oklch(20% 0.025 61 / 0.10);
+
+  --font-display: "SimHei", "Microsoft YaHei UI", sans-serif;
+  --font-body: "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  --font-mono: var(--font-body);
+
+  --text-xs: 0.72rem;
+  --text-sm: 0.84rem;
+  --text-base: 1rem;
+  --text-md: 1.2rem;
+  --text-lg: 1.5rem;
+  --text-xl: 1.9rem;
+  --text-2xl: 2.4rem;
+  --text-3xl: 3rem;
+  --text-display-s: clamp(2.75rem, 7vw, 5rem);
+  --text-display: clamp(3.25rem, 9vw, 6rem);
+
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  --rule-thin: 1px;
+  --rule-bold: 2px;
+  --radius-xs: 0.2rem;
+  --radius-sm: 0.4rem;
+  --radius-md: 0.75rem;
+  --radius-round: 999px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  --shadow-whisper: 0 1px 2px var(--color-shadow);
+  --shadow-paper: 8px 8px 0 var(--color-ink);
+
+  --rail-width: clamp(10.5rem, 14vw, 14rem);
+  --content-max: 92rem;
+  --touch: 2.75rem;
+
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-sticky-nav: 220;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}

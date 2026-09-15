@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "publisher": "AHALab · 极客工坊",
+  "repository": "https://github.com/AHALabAI/open-course",
+  "default_language": "zh-CN",
+  "topics": [
+    {
+      "id": "world-and-society",
+      "title": {
+        "zh-CN": "与世界相连",
+        "en": "World and society"
+      }
+    },
+    {
+      "id": "climate-and-ecology",
+      "title": {
+        "zh-CN": "气候与生态",
+        "en": "Climate and ecology"
+      }
+    },
+    {
+      "id": "ai-and-computing",
+      "title": {
+        "zh-CN": "AI 与计算",
+        "en": "AI and computing"
+      }
+    },
+    {
+      "id": "design-and-making",
+      "title": {
+        "zh-CN": "设计与制造",
+        "en": "Design and making"
+      }
+    },
+    {
+      "id": "people-and-community",
+      "title": {
+        "zh-CN": "人与社区",
+        "en": "People and community"
+      }
+    }
+  ],
+  "courses": [
+    {
+      "id": "mmcool-worldview",
+      "path": "courses/world-and-society/mmcool-worldview"
+    },
+    {
+      "id": "cool-island",
+      "path": "courses/climate-and-ecology/cool-island"
+    }
+  ],
+  "tools": [
+    {
+      "id": "html-ppt-player",
+      "path": "tools/html-ppt-player"
+    }
+  ],
+  "skills": []
+}

@@ -1,0 +1,28 @@
+[![AHALab Open Course — a workshop connected with the physical world](assets/readme/banner.png)](https://aha-lab.ai/)
+
+# AHALab Open Course
+
+[![GitHub stars](https://img.shields.io/github/stars/AHALabAI/open-course?style=flat&color=506652)](https://github.com/AHALabAI/open-course/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/AHALabAI/open-course?style=flat&color=867447)](https://github.com/AHALabAI/open-course/fork)
+[![Course content: CC BY 4.0](https://img.shields.io/badge/content-CC_BY_4.0-506652)](LICENSE.md)
+[![Code: MIT](https://img.shields.io/badge/code-MIT-867447)](LICENSE.md)
+
+**Rebuilding a sense of physical meaning in the age of AI.**
+
+[简体中文](README.md) · [Courses](https://aha-lab.ai/) · [Attribution](ATTRIBUTION.md)
+
+AHALab explores AI and project-based learning through collaboration, care for others, and connections with the physical world. Observe, investigate, build, compare and revisit a question.
+
+| Course | Available material |
+|---|---|
+| [MMCOOL: We share one world](courses/world-and-society/mmcool-worldview/README.md) | A two-day course design; this repository indexes the published Day 1 slides, teacher notes and activities on the course website. |
+| [Cool Island](courses/climate-and-ecology/cool-island/README.md) | Six planned 120-minute sessions and a locally runnable browser activity. Weather examples are illustrative, not live forecasts. |
+| [HTML presentation player](tools/html-ppt-player/README.md) | Three-slide example, speaker window, notes, timers and motion controls. |
+
+Teaching materials are currently in Simplified Chinese. English summaries do not imply a full English translation. Use catalog.json for language availability and stable course paths.
+
+Original course content uses CC BY 4.0; software and code use MIT. Preserve applicable credits and licenses. Third-party rights remain separate; reuse does not imply AHALab endorsement. See [license scope](LICENSE.md).
+
+## Fork and contribute
+
+[Fork this repository](https://github.com/AHALabAI/open-course/fork) to adapt a course or a tool. Retain the applicable notices and describe your changes. Submit corrections through a Pull Request or [Issue](https://github.com/AHALabAI/open-course/issues). A Star or Fork is optional and never a condition of the license.

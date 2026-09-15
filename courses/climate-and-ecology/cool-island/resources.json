@@ -1,0 +1,26 @@
+[
+  {
+    "id": "interactive-course",
+    "kind": "interactive",
+    "title": "六节教案与交互",
+    "path": "code/web/index.html",
+    "distribution": "included",
+    "rights": "原创教学内容 CC BY 4.0；网页运行代码 MIT"
+  },
+  {
+    "id": "start",
+    "kind": "code",
+    "title": "运行说明",
+    "path": "code/README.md",
+    "distribution": "included",
+    "rights": "文档 CC BY 4.0"
+  },
+  {
+    "id": "google-ai-quests",
+    "kind": "external-activity",
+    "title": "Google AI Quests",
+    "url": "https://research.google/ai-quests/intl/en_us",
+    "distribution": "external-link",
+    "rights": "Google 原站条款；未复制平台代码或资源"
+  }
+]

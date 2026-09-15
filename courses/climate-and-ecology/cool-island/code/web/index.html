@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="AHALab 44°C 城市凉岛设计局：跨年龄、可实践、连接天气气候与 AI 预警的六节 PBL 完整教案。" name="description"/>
+<title>44°C 城市凉岛设计局｜AHALab PBL 完整教案</title>
+<link href="./styles.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到课程正文</a>
+<nav aria-label="六节课程任务轨" class="rail">
+<a class="rail__brand" href="#top">
+<span>AHALab · 城市凉岛</span>
+<strong>44°C 城市凉岛设计局</strong>
+</a>
+<div aria-live="polite" class="rail__window">
+<span>当前行动 / NOW</span>
+<strong id="railCurrentTitle">热从哪里来</strong>
+<small id="railCurrentMeta">L01 · 身体漫游</small>
+</div>
+<div class="rail__nav" style="--active-index: 0">
+<i aria-hidden="true" class="rail__cursor"></i>
+<a aria-current="true" class="rail__link" data-index="0" data-meta="L01 · 身体漫游" data-section="lesson-1" data-title="热从哪里来" href="#lesson-1"><span>01</span><strong>热从哪里来</strong></a>
+<a class="rail__link" data-index="1" data-meta="L02 · 工具侦探" data-section="lesson-2" data-title="让热显形" href="#lesson-2"><span>02</span><strong>让热显形</strong></a>
+<a class="rail__link" data-index="2" data-meta="L03 · 机制实验" data-section="lesson-3" data-title="四种凉意" href="#lesson-3"><span>03</span><strong>四种凉意</strong></a>
+<a class="rail__link" data-index="3" data-meta="L04 · 天气实验室" data-section="lesson-4" data-title="AI 与天空搭档" href="#lesson-4"><span>04</span><strong>AI 与天空搭档</strong></a>
+<a class="rail__link" data-index="4" data-meta="L05 · 混龄施工" data-section="lesson-5" data-title="一平方米建造" href="#lesson-5"><span>05</span><strong>一平方米建造</strong></a>
+<a class="rail__link" data-index="5" data-meta="L06 · 公众发布" data-section="lesson-6" data-title="凉岛开张" href="#lesson-6"><span>06</span><strong>凉岛开张</strong></a>
+</div>
+<div class="rail__foot">
+<span>COURSE PROGRESS</span>
+<div aria-hidden="true" class="rail__progress"><i></i></div>
+</div>
+</nav>
+<header class="mobile-bar">
+<strong>44°C 城市凉岛设计局</strong>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="打开课程目录" id="menuButton" type="button">目录</button>
+</header>
+<nav aria-label="移动端课程目录" class="mobile-menu" data-open="false" id="mobileMenu">
+<a href="#brief">真实委托</a>
+<a href="#ages">混龄团队</a>
+<a href="#lessons">六节教案</a>
+<a href="#weather">天气与 AI</a>
+<a href="#hackathon">天气黑客松</a>
+<a href="#relay">预警接力</a>
+<a href="#teacher">教师开课台</a>
+</nav>
+<main class="page" id="main">
+<section class="hero" id="top">
+<div class="hero__copy frame">
+<p class="hero__kicker">AHALab · 城市行动型 PBL</p>
+<h1>造一座会读天气的凉岛</h1>
+<p class="hero__lede">学生为校园里真实停留的人，测出热、看见热、改变热。作品从一平方米出发，连接身体、材料、城市、厄尔尼诺、台风路径与校园预警行动。</p>
+<div class="hero__actions">
+<a class="btn" href="#brief">领取委托</a>
+<button class="btn btn--paper" id="printPlan" type="button">打印教师稿</button>
+</div>
+<p class="hero__lede">课程设计演示：尚未接入实时天气。天气概率、台风路径和榜单仅示范学习流程；现场项目仍需测量、施工与复测。</p></div>
+<div aria-label="凉岛三种天气状态演示" class="hero__lab" data-scene="heat" id="coolIslandScene">
+<svg aria-labelledby="sceneTitle sceneDesc" role="img" viewbox="0 0 800 720">
+<title id="sceneTitle">校园凉岛剖面</title>
+<desc id="sceneDesc">一座包含遮阳、植物、传感器、座位和排水模块的凉岛，能够切换高温使用、强风收纳和雨后检查状态。</desc>
+<rect class="svg-dark" height="720" width="800"></rect>
+<g class="svg-grid svg-rule-stroke">
+<path d="M0 120H800M0 240H800M0 360H800M0 480H800M0 600H800"></path>
+<path d="M120 0V720M240 0V720M360 0V720M480 0V720M600 0V720M720 0V720"></path>
+</g>
+<g class="sun"><circle class="svg-warning" cx="650" cy="110" r="58"></circle><path class="svg-heat-stroke" d="M650 22V0M650 220v-25M562 110h-27M765 110h-27M588 48l-22-22M734 194l-20-20M713 48l22-22M588 173l-22 22" stroke-width="8"></path></g>
+<path class="svg-paper-2" d="M0 575H800V720H0z"></path>
+<path class="svg-heat" d="M50 575h230l-42 40H92z" opacity=".75"></path>
+<g class="shade-panel"><path class="svg-paper" d="M175 248h425l-55 82H120z"></path><path class="svg-ink-stroke" d="M120 330h425" stroke-width="8"></path></g>
+<path class="svg-light-stroke" d="M165 330v245M520 330v245" stroke-width="13"></path>
+<path class="svg-paper-2" d="M235 495h220v40H235z"></path>
+<path class="svg-light-stroke" d="M250 535v40M440 535v40" stroke-width="8"></path>
+<g class="plant-group"><path class="svg-leaf" d="M570 560c-38-42-18-87 31-89-2 47-9 75-31 89ZM599 568c9-53 50-72 84-43-28 37-51 51-84 43ZM586 542c-49-15-63-57-31-87 32 31 43 56 31 87Z"></path><path class="svg-light-stroke" d="M596 575v-92" stroke-width="7"></path></g>
+<g><rect class="svg-paper" height="132" width="102" x="78" y="400"></rect><rect class="svg-cool" height="45" width="68" x="95" y="420"></rect><circle class="svg-heat" cx="112" cy="493" r="9"></circle><circle class="svg-leaf" cx="145" cy="493" r="9"></circle></g>
+<g class="water-drop"><path class="svg-cool" d="M672 480c35 48 43 62 43 82a43 43 0 1 1-86 0c0-20 9-34 43-82Z"></path></g>
+<g class="wind-line svg-cool-stroke" stroke-linecap="round" stroke-width="7"><path d="M40 170c135-56 220 57 354 3"></path><path d="M350 415c147-79 252 28 405-25"></path><path d="M65 510c94-39 172 18 245 3"></path></g>
+<g class="rain-line svg-cool-stroke" stroke-linecap="round" stroke-width="7"><path d="M95 80l-24 52M190 44l-25 53M285 88l-24 52M380 48l-25 53M475 84l-24 52M570 45l-25 53M690 76l-24 52"></path></g>
+<g font-family="var(--font-mono)" font-size="18" font-weight="700"><text fill="currentColor" x="75" y="378">传感器位置</text><text fill="currentColor" x="235" y="470">真实停留任务</text><text fill="currentColor" x="550" y="610">植物与水循环</text></g>
+</svg>
+<div aria-label="选择天气状态" class="hero__lab-controls" role="group">
+<button aria-pressed="true" class="scene-switch" data-scene="heat" type="button">高温使用</button>
+<button aria-pressed="false" class="scene-switch" data-scene="wind" type="button">强风收纳</button>
+<button aria-pressed="false" class="scene-switch" data-scene="rain" type="button">雨后检查</button>
+</div>
+</div>
+</section>
+<section class="mission-strip" id="brief">
+<div class="frame">
+<blockquote>“在校园里选择一个真实地点，用约一平方米造出一座凉岛，让一位真实使用者愿意停留，并用数据与体验证明它如何工作。”</blockquote>
+<dl>
+<div><dt>周期</dt><dd>6 × 120 分钟</dd></div>
+<div><dt>团队</dt><dd>8—12 人混龄局</dd></div>
+<div><dt>空间</dt><dd>约 1 m² 原型</dd></div>
+<div><dt>公开</dt><dd>热诊所开放日</dd></div>
+</dl>
+</div>
+</section>
+<section class="section" id="scales">
+<div class="frame">
+<header class="section__head">
+<div><div class="section__mark"></div><h2>从皮肤，走到整片太平洋</h2></div>
+<p>学生在四种时间尺度之间移动。每次判断都写清地点、时段、指标、证据与下一次更新时间。</p>
+</header>
+<div class="scale-lab">
+<div aria-label="选择观察尺度" class="scale-tabs" role="tablist">
+<button aria-selected="true" class="scale-tab" data-scale="body" role="tab" type="button">身体 · 分钟</button>
+<button aria-selected="false" class="scale-tab" data-scale="weather" role="tab" type="button">天气 · 数天</button>
+<button aria-selected="false" class="scale-tab" data-scale="enso" role="tab" type="button">海洋 · 季节</button>
+<button aria-selected="false" class="scale-tab" data-scale="climate" role="tab" type="button">气候 · 数十年</button>
+</div>
+<article aria-live="polite" class="scale-stage" id="scaleStage" role="tabpanel">
+<div class="scale-stage__visual" id="scaleVisual"></div>
+<div class="scale-stage__copy">
+<h3 id="scaleTitle">身体先告诉我们</h3>
+<p id="scaleCopy">手背感到椅面烫，脸侧感到风，影子告诉我们太阳来自哪里。学生用身体语言建立第一张热感地图。</p>
+<strong id="scaleEvidence">证据：热感词、姿态、停留时间、现场照片</strong>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section section--tight section--cool" id="ages">
+<div class="frame">
+<header class="section__head">
+<div><div class="section__mark"></div><h2>四个年龄段，共用一件真作品</h2></div>
+<p>年龄差异成为团队能力。每组共享一位使用者、一处地点、一套数据和一座凉岛。</p>
+</header>
+<div class="age-board">
+<article class="age-lane"><b>K1–3</b><strong>体验观察员</strong><span>身体热感、影子绘图、人物采访、图标测试、30 秒讲述。</span></article>
+<article class="age-lane"><b>K4–6</b><strong>材料与场记员</strong><span>测量时间、材料数量、用水、照片、试验顺序和访客反馈。</span></article>
+<article class="age-lane"><b>K7–9</b><strong>数据与原型工程师</strong><span>传感节点、CSV、热力地图、结构连接、故障定位和游戏规则。</span></article>
+<article class="age-lane"><b>K10–12</b><strong>系统设计与研究员</strong><span>热平衡、多目标权衡、AI模型、气象数据、预算、安全和公开答辩。</span></article>
+</div>
+</div>
+</section>
+<section class="section" id="lessons">
+<div class="frame">
+<header class="section__head">
+<div><div class="section__mark"></div><h2>六次行动，完成一次城市改变</h2></div>
+<p>展开每一课查看 120 分钟流程、教师追问、跨龄职责和阶段证据。课堂沿着发现、试验、制作、公开持续推进。</p>
+</header>
+<div class="lesson-list">
+<details class="lesson" id="lesson-1" open="">
+<summary><span class="lesson__id">L01</span><span class="lesson__title">热从哪里来</span><span class="lesson__meta">身体漫游 · 真实委托</span><span aria-hidden="true" class="lesson__toggle">＋</span></summary>
+<div class="lesson__body">
+<p class="lesson__question">同一座校园，谁正在经历怎样的热？</p>
+<div class="lesson__grid">
+<ol class="timeline">
+<li><time>0—15</time><span><b>两把椅子的选择</b><small>触摸、看影子、感受风，先写预测。</small></span></li>
+<li><time>15—40</time><span><b>校园热感漫游</b><small>四人结伴，用贴纸记录晒、闷、烫、无风与久等。</small></span></li>
+<li><time>40—60</time><span><b>遇见真实使用者</b><small>与保安、接送者、户外工作人员或同学完成短访谈。</small></span></li>
+<li><time>60—90</time><span><b>热问题词典</b><small>把感受连接到地点、时刻、材料与行动。</small></span></li>
+<li><time>90—120</time><span><b>领取委托</b><small>选择一位使用者和一个候选地点，完成 30 秒问题陈述。</small></span></li>
+</ol>
+<aside class="evidence-box"><h4>带走的证据</h4><ul><li>热感地图 v1</li><li>使用者声音卡</li><li>地点与时刻照片</li><li>一条可以行动的问题</li></ul><h4>教师递台阶</h4><p>“你身体哪个位置最先收到热？”“谁在这里停得最久？”</p></aside>
+</div>
+</div>
+</details>
+<details class="lesson" id="lesson-2">
+<summary><span class="lesson__id">L02</span><span class="lesson__title">让热显形</span><span class="lesson__meta">工具侦探 · 测量契约</span><span aria-hidden="true" class="lesson__toggle">＋</span></summary>
+<div class="lesson__body">
+<p class="lesson__question">仪器给出不同答案时，怎样找到每个答案的意义？</p>
+<div class="lesson__grid">
+<ol class="timeline">
+<li><time>0—15</time><span><b>材料温度竞猜</b><small>黑布、白布、金属、木材与草地排序。</small></span></li>
+<li><time>15—40</time><span><b>工具身份调查</b><small>空气、表面、湿度、风速与身体热感各自留下什么证据。</small></span></li>
+<li><time>40—65</time><span><b>并排标定</b><small>同类仪器一起读数，记录差值和时间。</small></span></li>
+<li><time>65—100</time><span><b>阳光／阴影配对</b><small>统一高度、时间、距离、角度和材料。</small></span></li>
+<li><time>100—120</time><span><b>跨组复测</b><small>另一组依据协议完成复现并提出修订。</small></span></li>
+</ol>
+<aside class="evidence-box"><h4>测量契约</h4><ul><li>时间、地点、天气、仪器、记录人齐全</li><li>空气传感器拥有遮阳与通风</li><li>表面测温记录材料、距离和角度</li><li>每个结论至少三轮记录</li></ul></aside>
+</div>
+</div>
+</details>
+<details class="lesson" id="lesson-3">
+<summary><span class="lesson__id">L03</span><span class="lesson__title">四种凉意</span><span class="lesson__meta">遮阳 · 反射 · 蒸发 · 通风</span><span aria-hidden="true" class="lesson__toggle">＋</span></summary>
+<div class="lesson__body">
+<p class="lesson__question">哪一种组合，能让目标使用者真正愿意停留？</p>
+<div class="lesson__grid">
+<ol class="timeline">
+<li><time>0—15</time><span><b>组合下注</b><small>每组选择最有希望的降温组合并说明理由。</small></span></li>
+<li><time>15—75</time><span><b>四站轮转</b><small>同尺寸模型完成遮阳、反射、蒸发和通风 A/B 测试。</small></span></li>
+<li><time>75—95</time><span><b>意外结果会诊</b><small>挑选一条出乎预期的数据，改变一个变量再试。</small></span></li>
+<li><time>95—110</time><span><b>跨龄复现</b><small>交换协议与材料，让另一组完成复测。</small></span></li>
+<li><time>110—120</time><span><b>机制入选</b><small>选择进入凉岛的模块，并写出天气适用条件。</small></span></li>
+</ol>
+<aside class="evidence-box"><h4>阶段档案</h4><ul><li>阴影时间轴</li><li>材料护照</li><li>水—凉意曲线</li><li>风路地图</li><li>一条可迁移设计规则</li></ul></aside>
+</div>
+</div>
+</details>
+<details class="lesson" id="lesson-4">
+<summary><span class="lesson__id">L04</span><span class="lesson__title">AI 与天空搭档</span><span class="lesson__meta">方案生成 · 台风路径 · 预警链</span><span aria-hidden="true" class="lesson__toggle">＋</span></summary>
+<div class="lesson__body">
+<p class="lesson__question">怎样让预测变成一条及时、清楚、适合校园的行动？</p>
+<div class="lesson__grid">
+<ol class="timeline">
+<li><time>0—20</time><span><b>天空简报</b><small>现场观测、官方预报、模型更新、风险与行动。</small></span></li>
+<li><time>20—40</time><span><b>厄尔尼诺调查</b><small>把海温异常、季节概率与本地数据放在两条时间轴。</small></span></li>
+<li><time>40—60</time><span><b>马尔可夫天气台</b><small>从状态序列生成转移矩阵，预测下一时段概率并等待实况评分。</small></span></li>
+<li><time>60—80</time><span><b>追踪一只台风</b><small>连接五个时刻，预测第六点，再与多模型路径比较。</small></span></li>
+<li><time>80—100</time><span><b>盘古路径实验</b><small>读取公开样例、追踪低压中心、计算位置误差与提前量。</small></span></li>
+<li><time>100—120</time><span><b>妈祖预警接力</b><small>观测员、模型员、预报员、风险员和校园行动员完成交接。</small></span></li>
+</ol>
+<aside class="evidence-box"><h4>AI 工作契约</h4><ul><li>模型输出带来源和更新时间</li><li>模型分歧进入判断</li><li>实况到来后计算误差</li><li>校园行动写清责任人与触发条件</li></ul></aside>
+</div>
+</div>
+</details>
+<details class="lesson" id="lesson-5">
+<summary><span class="lesson__id">L05</span><span class="lesson__title">一平方米建造</span><span class="lesson__meta">混龄施工 · 三状态压测</span><span aria-hidden="true" class="lesson__toggle">＋</span></summary>
+<div class="lesson__body">
+<p class="lesson__question">怎样让每一个构件都来自实验，也照顾真实使用动作？</p>
+<div class="lesson__grid">
+<ol class="timeline">
+<li><time>0—20</time><span><b>地面放样</b><small>标出一平方米、通道、轮椅回转和停留姿态。</small></span></li>
+<li><time>20—55</time><span><b>骨架与配重</b><small>完成连接、圆角、摇晃测试和成人结构审核。</small></span></li>
+<li><time>55—80</time><span><b>四机制安装</b><small>每个模块贴上对应实验与使用者需求。</small></span></li>
+<li><time>80—100</time><span><b>传感与体验</b><small>同步基线／原型节点，让不同身高和行动方式试用。</small></span></li>
+<li><time>100—120</time><span><b>三状态压测</b><small>演练高温展开、强风收纳、雨后检查和责任交接。</small></span></li>
+</ol>
+<aside class="evidence-box"><h4>放行证据</h4><ul><li>实体原型 v1</li><li>结构与电气检查</li><li>同步传感数据</li><li>可访问性走查</li><li>三状态操作卡</li></ul></aside>
+</div>
+</div>
+</details>
+<details class="lesson" id="lesson-6">
+<summary><span class="lesson__id">L06</span><span class="lesson__title">凉岛开张</span><span class="lesson__meta">公众试坐 · 热诊所 · 维护交接</span><span aria-hidden="true" class="lesson__toggle">＋</span></summary>
+<div class="lesson__body">
+<p class="lesson__question">作品怎样进入真实一天，并继续被使用与照顾？</p>
+<div class="lesson__grid">
+<ol class="timeline">
+<li><time>0—20</time><span><b>开放准备</b><small>天气适用说明、分流、饮水、传感器与访客任务就位。</small></span></li>
+<li><time>20—65</time><span><b>热诊所试坐</b><small>基线体验、凉岛任务、热感护照和同步数据。</small></span></li>
+<li><time>65—85</time><span><b>30 秒费曼解释</b><small>用影子、布、水、风路或一条曲线讲清凉意。</small></span></li>
+<li><time>85—105</time><span><b>设计局答辩</b><small>呈现预测、意外、证据、版本变化和下一步。</small></span></li>
+<li><time>105—120</time><span><b>维护与 Skill</b><small>清洁、补水、存放、数据更新与个人方法进入交接。</small></span></li>
+</ol>
+<aside class="evidence-box"><h4>共同作品</h4><ul><li>凉岛 v2</li><li>公众实测报告</li><li>天气适用域</li><li>维护责任卡</li><li>个人学习 Skill</li></ul></aside>
+</div>
+</div>
+</details>
+</div>
+</div>
+</section>
+<section class="section section--tight section--cool" id="mechanisms">
+<div class="frame">
+<header class="section__head">
+<div><div class="section__mark"></div><h2>四座实验站，四种可见机制</h2></div>
+<p>学生先下注，再改变一个变量。实验结果通过另一年龄组复现后进入共同凉岛。</p>
+</header>
+<div class="mechanism-grid">
+<article class="mechanism" data-code="SHADOW"><h3>让太阳绕开身体</h3><p>改变高度、方向、孔隙和投影，画出阴影随时间移动的路径。</p><div aria-label="遮阳实验示意值" class="mechanism__meter"><i style="--value:82%"></i></div></article>
+<article class="mechanism" data-code="REFLECT"><h3>让材料少收一点热</h3><p>比较颜色、表面和触感，同时观察眩光与周围人的体验。</p><div aria-label="反射实验示意值" class="mechanism__meter"><i style="--value:61%"></i></div></article>
+<article class="mechanism" data-code="EVAPORATE"><h3>让水带走热</h3><p>记录水量、湿度、持续时间和触感，寻找天气适用条件。</p><div aria-label="蒸发实验示意值" class="mechanism__meter"><i style="--value:54%"></i></div></article>
+<article class="mechanism" data-code="AIRFLOW"><h3>让空气找到路</h3><p>用丝带看见风，改变开口、导风板和模型密度。</p><div aria-label="通风实验示意值" class="mechanism__meter"><i style="--value:73%"></i></div></article>
+</div>
+</div>
+</section>
+<section class="section section--ink" id="weather"><p class="frame">本区概率与路径为教学示意，不是当前预报；季节资料须按发布日期阅读。</p>
+<div class="frame">
+<header class="section__head">
+<div><div class="section__mark"></div><h2>天气与 AI 实验室</h2></div>
+<p>气候背景改变概率，天气预报提供提前量，校园行动回应具体地点与人。</p>
+</header>
+<div class="weather-workbench">
+<article class="weather-panel">
+<header class="weather-panel__head"><h3>厄尔尼诺证据卡</h3><span>WMO · 2026-06-02</span></header>
+<div class="weather-panel__body">
+<div aria-label="示意性的厄尔尼诺海温异常柱形图" class="enso-line">
+<i data-year="弱" style="--h:28%"></i><i data-year="中" style="--h:52%"></i><i data-year="强" style="--h:84%"></i><i data-year="更新" style="--h:64%"></i><i data-year="概率" style="--h:80%"></i>
+</div>
+<p>2026 年 6—8 月形成厄尔尼诺的概率为 <strong>80%</strong>。学生把概率、强度范围、预测时段和更新时间写在同一张卡上。</p>
+<p class="muted">图形用于课堂读图练习；正式开课时接入 WMO／NOAA 最新数据。</p>
+</div>
+</article>
+<article class="weather-panel">
+<header class="weather-panel__head"><h3>追踪一只台风</h3><span>路径＝预测 · 点＝时刻</span></header>
+<div class="typhoon-map">
+<svg aria-labelledby="trackTitle trackDesc" role="img" viewbox="0 0 760 430">
+<title id="trackTitle">三条台风候选路径</title>
+<desc id="trackDesc">三种模型从西北太平洋出发，给出台风未来路径的不同预测。</desc>
+<rect class="svg-paper-2" height="430" width="760"></rect>
+<g class="svg-grid svg-rule-stroke"><path d="M0 86H760M0 172H760M0 258H760M0 344H760"></path><path d="M152 0V430M304 0V430M456 0V430M608 0V430"></path></g>
+<path class="svg-paper" d="M80 50c105 35 115 96 172 117 41 15 106 4 134 49 30 48-28 99 18 130 52 35 99-24 166 14l-9 70H80z" opacity=".75"></path>
+<path class="svg-track svg-heat-stroke track-progress" d="M690 350C600 315 550 280 505 224S421 118 310 88" pathlength="1"></path>
+<path class="svg-track svg-cool-stroke track-progress svg-dash" d="M690 350C610 306 585 244 520 201S390 170 330 88" pathlength="1"></path>
+<path class="svg-track svg-ink-stroke track-progress svg-dash" d="M690 350C626 325 546 320 500 275S432 160 356 108" pathlength="1"></path>
+<g class="svg-heat"><circle cx="690" cy="350" r="9"></circle><circle cx="610" cy="309" r="7"></circle><circle cx="540" cy="265" r="7"></circle><circle cx="485" cy="200" r="7"></circle></g>
+</svg>
+</div>
+<div class="weather-panel__body">
+<button class="btn btn--paper" id="runTrack" type="button">播放路径推演</button>
+<div class="model-key"><span><i class="k1"></i>盘古样例</span><span><i class="k2"></i>数值模式</span><span><i class="k3"></i>集合成员</span></div>
+<p>团队先画自己的第六点，再比较模型分歧、提前量与官方最佳路径。实况到来后计算误差。</p>
+</div>
+</article>
+<article class="weather-panel weather-panel--wide" id="markovLab">
+<header class="weather-panel__head"><h3>马尔可夫天气台</h3><span>K10–12 · 透明概率基线</span></header>
+<div class="weather-panel__body markov-lab">
+<div class="markov-controls">
+<label for="markovCurrent">当前天气状态</label>
+<select id="markovCurrent"><option>晴热</option><option selected="">多云</option><option>雷雨</option><option>强风</option></select>
+<button class="btn btn--paper" id="markovForecast" type="button">计算下一时段</button>
+</div>
+<div class="markov-layout">
+<div>
+<table aria-label="天气状态转移概率矩阵" class="markov-matrix tnum">
+<caption>P(i→j) · 每一行合计 1</caption>
+<thead><tr><th>当前＼下一</th><th>晴热</th><th>多云</th><th>雷雨</th><th>强风</th></tr></thead>
+<tbody>
+<tr><th>晴热</th><td>0.50</td><td>0.30</td><td>0.15</td><td>0.05</td></tr>
+<tr><th>多云</th><td>0.25</td><td>0.40</td><td>0.25</td><td>0.10</td></tr>
+<tr><th>雷雨</th><td>0.20</td><td>0.35</td><td>0.35</td><td>0.10</td></tr>
+<tr><th>强风</th><td>0.25</td><td>0.25</td><td>0.20</td><td>0.30</td></tr>
+</tbody>
+</table>
+<p class="muted">课堂先用纸卡手算一行，再运行本地 Python 程序处理完整状态序列。</p>
+</div>
+<div>
+<div aria-live="polite" class="markov-bars" id="markovBars"></div>
+<div class="markov-score">
+<label for="markovObserved">下一时段实况</label>
+<select id="markovObserved"><option>晴热</option><option>多云</option><option selected="">雷雨</option><option>强风</option></select>
+<button class="btn btn--paper" id="scoreForecast" type="button">计算 Brier Score</button>
+<output id="brierOutput">等待实况</output>
+</div>
+</div>
+</div>
+<div class="markov-route"><strong>12 步模拟天气线</strong><p id="markovRoute">多云 → 多云 → 雷雨 → 多云 → 晴热</p></div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section section--paper" id="hackathon"><p class="frame">交互按钮展示预设流程和示例结果。完整课程另外使用历史数据、学生提交与评分器；本页未运行模型训练。</p>
+<div class="frame">
+<header class="section__head">
+<div><div class="section__mark"></div><h2>消失的第 31 天天气档案</h2></div>
+<p>两支团队面对同一份真实天气档案、同一段限时和同一套评分规则。第 31 天封存在时间胶囊里，预测冻结后才会揭晓。</p>
+</header>
+<div aria-label="天气预测黑客松数据概览" class="hackathon-ledger">
+<div><span>公开演示地点</span><strong>广州格点</strong></div>
+<div><span>历史日记录</span><strong class="tnum">2,192</strong></div>
+<div><span>训练／验证／盲测</span><strong class="tnum">2,129 / 30 / 30</strong></div>
+<div><span>共同任务</span><strong>预测 · 解释 · 行动</strong></div>
+</div>
+<div class="route-lab">
+<div aria-label="选择黑客松路线" class="route-tabs" role="tablist">
+<button aria-controls="routePanel" aria-selected="true" class="route-tab" data-route="red" role="tab" type="button"><span>A</span>透明算法队</button>
+<button aria-controls="routePanel" aria-selected="false" class="route-tab" data-route="blue" role="tab" type="button"><span>B</span>AI 自学队</button>
+<button aria-controls="routePanel" aria-selected="false" class="route-tab" data-route="purple" role="tab" type="button"><span>AB</span>紫队会师</button>
+</div>
+<article aria-live="polite" class="route-panel" data-route="red" id="routePanel" role="tabpanel">
+<p class="route-panel__eyebrow" id="routeEyebrow">RED TEAM · 看得见每一步</p>
+<h3 id="routeTitle">从昨天的天气，造一把透明的预测尺</h3>
+<div class="route-panel__grid">
+<div><span>可以调用</span><p id="routeTools">持续性基线、月气候态、马尔可夫链、线性回归、5 张 AI 求助券</p></div>
+<div><span>行动角色</span><p id="routeRole">数据侦探、规则搭建者、误差审计员、校园行动翻译员</p></div>
+<div><span>留下证据</span><p id="routeEvidence">状态转移表、训练日志、逐日预测、误差解释与一次模型修订</p></div>
+</div>
+</article>
+</div>
+<div aria-label="三阶段任务线" class="quest-timeline">
+<article><b>H01</b><div><span>数据荒野</span><h3>把散乱天气变成可追踪的线索</h3><p>K1–3 用身体天气符号，K4–6 做数据质检，K7–9 找特征，K10–12 建立时间切分与数据契约。</p></div></article>
+<article><b>H02</b><div><span>双轨限时赛</span><h3>两条路线同时冻结第 31 天预测</h3><p>团队保存输入、提示、代码、版本和判断，让每一个结果都能被同伴复现。</p></div></article>
+<article><b>H03</b><div><span>紫队会师</span><h3>把准确率翻译成校园凉岛行动</h3><p>交换一项方法，重跑一次模型，向真实使用者发布带地点、时段和更新时间的行动建议。</p></div></article>
+</div>
+<div class="time-capsule" data-state="ready" id="timeCapsule">
+<div class="time-capsule__story">
+<span class="capsule-kicker">TIME CAPSULE · 课堂演示</span>
+<h3>先把判断交出去，再让实况进来</h3>
+<p>选择路线后冻结预测。此刻团队用 30 秒讲清：预测解决什么困惑、脑中出现什么画面、实况到来时准备检查什么。</p>
+<div class="capsule-actions">
+<button class="btn" id="freezeForecast" type="button">冻结第 31 天预测</button>
+<button class="btn btn--paper" disabled="" id="revealForecast" type="button">揭晓示例基线榜</button>
+<button class="text-action" id="resetCapsule" type="button">重新演练</button>
+</div>
+<p aria-live="polite" class="capsule-status" id="capsuleStatus">时间胶囊等待团队提交预测与理由。</p>
+</div>
+<div aria-hidden="true" class="capsule-vault">
+<div class="capsule-vault__dial"><i></i><span>31</span></div>
+<p>预测在先<br/>实况在后</p>
+</div>
+<div class="score-reveal" hidden="" id="scoreReveal">
+<header><div><span>真实数据基线 · 验证集</span><h3>先赢过一把简单的尺</h3></div><strong>技术分 / 70</strong></header>
+<div class="score-row"><span>01</span><b>线性回归 + 马尔可夫</b><em>MAE 1.801°C · Brier 0.176</em><strong class="tnum">54.14</strong></div>
+<div class="score-row"><span>02</span><b>昨日持续性</b><em>MAE 2.051°C · Brier 0.179</em><strong class="tnum">53.09</strong></div>
+<div class="score-row"><span>03</span><b>月气候态</b><em>MAE 3.680°C · Brier 0.196</em><strong class="tnum">45.23</strong></div>
+<p>榜单提供一面镜子。团队继续用项目证据补足 30 分：可复现、诚实解释、跨龄协作与校园行动。</p>
+</div>
+</div>
+<aside class="quest-note">
+<strong>Google AI Quests 启发</strong>
+<p>学生以研究员身份进入情境，在探索、试错、反思与改变中完成任务；教师把数据质量、训练与测试、人的判断藏进每一次决定。低龄学生也能用天气卡、积木票与行动地图加入同一个研究团队。</p>
+<a href="https://research.google/ai-quests/intl/en_us" rel="noreferrer" target="_blank">打开 AI Quests 参考项目</a>
+</aside>
+</div>
+</section>
+<section class="section section--ink" id="relay">
+<div class="frame">
+<header class="section__head">
+<div><div class="section__mark"></div><h2>预警接力站</h2></div>
+<p>一场台风外围风雨接近校园。玩家从观测、预测、风险和行动中各选一项，组成一条可以执行的校园消息。</p>
+</header>
+<div class="relay">
+<div>
+<div class="relay__case">
+<h3>情境 03 · 周五放学前</h3>
+<p>多条路径仍有分歧。校园午后可能出现强风和短时强降雨，低洼东门、户外展板与凉岛遮阳面需要提前安排。</p>
+</div>
+<div aria-live="polite" class="relay__result" id="relayResult">
+<span class="relay__score">0 / 4</span>
+<p>从右侧四站各完成一次选择，系统会生成校园行动消息。</p>
+</div>
+</div>
+<div class="relay__steps">
+<article class="relay-step" data-step="observation"><h3>第一站 · 选观测</h3><div class="relay-options"><button class="relay-option" data-fit="true" type="button">雷达回波、风速与积水点</button><button class="relay-option" type="button">单张台风卫星海报</button></div></article>
+<article class="relay-step" data-step="forecast"><h3>第二站 · 读预测</h3><div class="relay-options"><button class="relay-option" data-fit="true" type="button">比较多模型路径与更新时间</button><button class="relay-option" type="button">采用最靠近校园的一条线</button></div></article>
+<article class="relay-step" data-step="risk"><h3>第三站 · 找风险</h3><div class="relay-options"><button class="relay-option" data-fit="true" type="button">东门积水、放学人流、户外装置</button><button class="relay-option" type="button">全校使用同一条泛化提示</button></div></article>
+<article class="relay-step" data-step="action"><h3>第四站 · 发行动</h3><div class="relay-options"><button class="relay-option" data-fit="true" type="button">14:00 更新；收纳遮阳面；调整东门路线</button><button class="relay-option" type="button">立即长期关闭全部户外空间</button></div></article>
+<button class="btn" id="resetRelay" type="button">重新接力</button>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="build">
+<div class="frame">
+<header class="section__head">
+<div><div class="section__mark"></div><h2>一平方米建造工作台</h2></div>
+<p>每个构件都能指向一项实验、一个使用动作和一份维护责任。</p>
+</header>
+<table class="build-matrix">
+<thead><tr><th>工位</th><th>学生动作</th><th>放行证据</th><th>跨龄交接</th></tr></thead>
+<tbody>
+<tr><td data-label="工位">放样</td><td data-label="学生动作">标出 1 m²、通道与停留姿态</td><td data-label="放行证据">尺寸与可访问性照片</td><td data-label="跨龄交接">K1–3 试走，K10–12 修订边界</td></tr>
+<tr><td data-label="工位">骨架</td><td data-label="学生动作">连接、配重、圆角和摇晃测试</td><td data-label="放行证据">结构检查与成人审核</td><td data-label="跨龄交接">K4–6 管件数，K7–9 管连接</td></tr>
+<tr><td data-label="工位">机制</td><td data-label="学生动作">安装遮阳、通风、反射与蒸发候选</td><td data-label="放行证据">模块对应实验来源</td><td data-label="跨龄交接">实验员向施工员讲清条件</td></tr>
+<tr><td data-label="工位">传感</td><td data-label="学生动作">同步基线点与原型点</td><td data-label="放行证据">时间、位置、高度和 CSV</td><td data-label="跨龄交接">低龄读屏，高段查元数据</td></tr>
+<tr><td data-label="工位">三状态</td><td data-label="学生动作">高温展开、强风收纳、雨后检查</td><td data-label="放行证据">操作时间与责任人</td><td data-label="跨龄交接">图标测试与后勤签收</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="section section--tight section--cool" id="teacher">
+<div class="frame">
+<header class="section__head">
+<div><div class="section__mark"></div><h2>教师开课台</h2></div>
+<p>勾选状态会保存在当前浏览器。清单覆盖真实委托、天气安全、数据、材料与公共展示。</p>
+</header>
+<div class="teacher-grid">
+<div class="checklist" id="teacherChecklist">
+<label class="check"><input type="checkbox" value="site"/><span>完成场地踏勘、阴影时段、饮水点和紧急联系人确认</span></label>
+<label class="check"><input type="checkbox" value="weather"/><span>准备官方天气预报、预警页面与每课天空简报模板</span></label>
+<label class="check"><input type="checkbox" value="users"/><span>确认真实使用者、访谈方式与公共试坐时段</span></label>
+<label class="check"><input type="checkbox" value="sensors"/><span>完成传感器并排读数、时间同步、辐射罩与导出检查</span></label>
+<label class="check"><input type="checkbox" value="materials"/><span>准备四座实验站、同尺寸试片、草模和记录卡</span></label>
+<label class="check"><input type="checkbox" value="structure"/><span>安排成人完成结构、电气、阻燃与户外固定审核</span></label>
+<label class="check"><input type="checkbox" value="ages"/><span>为四年龄段分配真实职责、交接对象与关键贡献票</span></label>
+<label class="check"><input type="checkbox" value="data"/><span>建立点位编号、CSV 字段、照片命名、版本和双份备份</span></label>
+<label class="check"><input type="checkbox" value="public"/><span>邀请后勤、家庭、社区与设计伙伴参加 critique 和开放日</span></label>
+</div>
+<aside class="teacher-note">
+<h3>每次课的 8 分钟天空简报</h3>
+<p><strong>看见</strong>：天空、风、身体感受。<br/><strong>读取</strong>：校园节点与官方观测。<br/><strong>比较</strong>：预报更新时间和模型分歧。<br/><strong>判断</strong>：人物、地点与活动风险。<br/><strong>行动</strong>：户外安排、补水、实验或收纳。</p>
+</aside>
+</div>
+</div>
+</section>
+<footer class="foot">
+<p>AHALab · “重建 AI 时代的物理意义感” · 课程版本 2026.07.18。资料基线：<a href="https://wmo.int/content/launch-of-wmo-el-ninola-nina-bulletin-june-august-2026" rel="noreferrer" target="_blank">WMO ENSO Bulletin</a> · <a href="https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-11/" rel="noreferrer" target="_blank">IPCC AR6 Chapter 11</a> · <a href="https://www.nature.com/articles/s41586-023-06185-3" rel="noreferrer" target="_blank">Pangu-Weather</a> · <a href="https://www.huadu.gov.cn/gzhdqxj/gkmlpt/content/10/10786/post_10786654.html" rel="noreferrer" target="_blank">MAZU 早期预警</a>。课程中的数据图例用于教学演示，开课依据官方最新资料更新。</p>
+</footer>
+</main>
+<script defer="" src="./app.js"></script>
+</body>
+</html>

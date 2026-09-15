@@ -1,0 +1,47 @@
+{
+  "id": "mmcool-worldview",
+  "version": "0.1.0",
+  "primary_topic": "world-and-society",
+  "topics": [
+    "world-and-society",
+    "climate-and-ecology",
+    "ai-and-computing",
+    "people-and-community"
+  ],
+  "connection_axes": [
+    "people",
+    "world"
+  ],
+  "title": {
+    "zh-CN": "MMCOOL：我们生活在同一个世界",
+    "en": "MMCOOL: We share one world"
+  },
+  "summary": {
+    "zh-CN": "从新闻、游戏和真实项目出发，讨论证据、人与世界的联系。",
+    "en": "Explore evidence and connections through stories, games and real projects."
+  },
+  "content_languages": [
+    "zh-CN"
+  ],
+  "audience": "middle-school",
+  "prerequisites": [
+    "不要求编程经验",
+    "愿意观察、交流，并检验一个判断"
+  ],
+  "format": "two-day-workshop",
+  "planned_duration_minutes": 240,
+  "content_license": "CC-BY-4.0",
+  "available_sessions": [
+    {
+      "id": "01-sources-and-evidence",
+      "title": "看见世界的联系",
+      "planned_minutes": 120,
+      "entry": "sessions/01-sources-and-evidence/README.md",
+      "delivery": "external-website",
+      "url": "https://aha-lab.ai/course/mmcool-worldview/day1.html"
+    }
+  ],
+  "available_materials_scope": "课程设计共两天；本仓库列出第一天的资料入口，未镜像整站素材。",
+  "code_entries": [],
+  "website": "https://aha-lab.ai/course/mmcool-worldview/"
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "day1-slides",
+    "kind": "slides",
+    "title": "第一天 HTML 课件",
+    "url": "https://aha-lab.ai/course/mmcool-worldview/day1.html",
+    "distribution": "external-link",
+    "rights": "按目标页面及逐项素材声明；链接不授予第三方作品再分发权。"
+  },
+  {
+    "id": "day1-notes",
+    "kind": "teacher-guide",
+    "title": "逐页讲稿",
+    "url": "https://aha-lab.ai/course/mmcool-worldview/teacher-notes.html",
+    "distribution": "external-link",
+    "rights": "按目标页面及逐项素材声明；链接不授予第三方作品再分发权。"
+  },
+  {
+    "id": "worksheet",
+    "kind": "activity",
+    "title": "工作纸",
+    "url": "https://aha-lab.ai/course/mmcool-worldview/worksheet.html",
+    "distribution": "external-link",
+    "rights": "按目标页面及逐项素材声明；链接不授予第三方作品再分发权。"
+  },
+  {
+    "id": "game-guide",
+    "kind": "activity",
+    "title": "防灾游戏说明",
+    "url": "https://aha-lab.ai/course/mmcool-worldview/game-guide.html",
+    "distribution": "external-link",
+    "rights": "按目标页面及逐项素材声明；链接不授予第三方作品再分发权。"
+  },
+  {
+    "id": "sources",
+    "kind": "sources",
+    "title": "资料出处",
+    "url": "https://aha-lab.ai/course/mmcool-worldview/resources.html",
+    "distribution": "external-link",
+    "rights": "按目标页面及逐项素材声明；链接不授予第三方作品再分发权。"
+  },
+  {
+    "id": "material-rights",
+    "kind": "rights",
+    "title": "素材使用范围",
+    "url": "https://aha-lab.ai/course/mmcool-worldview/license.html",
+    "distribution": "external-link",
+    "rights": "按目标页面及逐项素材声明；链接不授予第三方作品再分发权。"
+  },
+  {
+    "id": "day1-pdf",
+    "kind": "download",
+    "title": "第一天课件 PDF",
+    "url": "https://aha-lab.ai/course/mmcool-worldview/day1-slides.pdf",
+    "distribution": "external-link",
+    "rights": "按目标页面及逐项素材声明；链接不授予第三方作品再分发权。"
+  },
+  {
+    "id": "editable-day1",
+    "kind": "editable-source",
+    "title": "第一天可编辑课件 JSON",
+    "url": "https://aha-lab.ai/course/mmcool-worldview/day1.deck.json",
+    "distribution": "external-link",
+    "rights": "按目标页面及逐项素材声明；链接不授予第三方作品再分发权。"
+  }
+]

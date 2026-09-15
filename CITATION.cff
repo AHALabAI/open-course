@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Please credit AHALab, the course name and the version or commit used."
+type: software
+title: "AHALab Open Course"
+authors:
+  - name: "AHALab · 极客工坊"
+url: "https://aha-lab.ai/"
+repository-code: "https://github.com/AHALabAI/open-course"

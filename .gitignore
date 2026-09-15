@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+runtime/
+_review/
+_ops/
+_backups/
+website-public-course/
+project-code-private/

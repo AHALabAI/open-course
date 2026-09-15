@@ -1,0 +1,89 @@
+{
+  "id": "cool-island",
+  "version": "0.1.0",
+  "primary_topic": "climate-and-ecology",
+  "topics": [
+    "climate-and-ecology",
+    "design-and-making",
+    "ai-and-computing",
+    "people-and-community"
+  ],
+  "connection_axes": [
+    "people",
+    "world"
+  ],
+  "title": {
+    "zh-CN": "城市凉岛：造一座会读天气的凉岛",
+    "en": "Cool Island: Design a weather-aware place to stay"
+  },
+  "summary": {
+    "zh-CN": "从一平方米出发，为真实使用者测量、设计并复测遮阴与停留空间。",
+    "en": "Measure, design and revisit a small shaded space for real users."
+  },
+  "content_languages": [
+    "zh-CN"
+  ],
+  "audience": "mixed-age-with-middle-school-track",
+  "prerequisites": [
+    "基础温度读数与图表",
+    "按活动要求使用简单测量工具"
+  ],
+  "format": "six-session-pbl",
+  "planned_duration_minutes": 720,
+  "content_license": "CC-BY-4.0",
+  "available_sessions": [
+    {
+      "id": "01-lesson",
+      "title": "热从哪里来",
+      "planned_minutes": 120,
+      "entry": "sessions/01-lesson/README.md",
+      "delivery": "repository",
+      "resource_anchor": "lesson-1"
+    },
+    {
+      "id": "02-lesson",
+      "title": "让热显形",
+      "planned_minutes": 120,
+      "entry": "sessions/02-lesson/README.md",
+      "delivery": "repository",
+      "resource_anchor": "lesson-2"
+    },
+    {
+      "id": "03-lesson",
+      "title": "四种凉意",
+      "planned_minutes": 120,
+      "entry": "sessions/03-lesson/README.md",
+      "delivery": "repository",
+      "resource_anchor": "lesson-3"
+    },
+    {
+      "id": "04-lesson",
+      "title": "AI 与天空搭档",
+      "planned_minutes": 120,
+      "entry": "sessions/04-lesson/README.md",
+      "delivery": "repository",
+      "resource_anchor": "lesson-4"
+    },
+    {
+      "id": "05-lesson",
+      "title": "一平方米建造",
+      "planned_minutes": 120,
+      "entry": "sessions/05-lesson/README.md",
+      "delivery": "repository",
+      "resource_anchor": "lesson-5"
+    },
+    {
+      "id": "06-lesson",
+      "title": "凉岛开张",
+      "planned_minutes": 120,
+      "entry": "sessions/06-lesson/README.md",
+      "delivery": "repository",
+      "resource_anchor": "lesson-6"
+    }
+  ],
+  "available_materials_scope": "包含六节课程设计与浏览器活动；硬件建造和独立 Python 实验不在此代码包中。",
+  "code_entries": [
+    "code/serve.py",
+    "code/web/index.html"
+  ]
+}
