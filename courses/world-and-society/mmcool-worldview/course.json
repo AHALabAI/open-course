@@ -39,9 +39,17 @@
       "entry": "sessions/01-sources-and-evidence/README.md",
       "delivery": "external-website",
       "url": "https://aha-lab.ai/course/mmcool-worldview/day1.html"
+    },
+    {
+      "id": "02-project-studio",
+      "title": "项目工作室：从发现到第一版",
+      "planned_minutes": 120,
+      "entry": "sessions/02-project-studio/README.md",
+      "delivery": "external-website",
+      "url": "https://aha-lab.ai/course/mmcool-project-studio/"
     }
   ],
-  "available_materials_scope": "课程设计共两天；本仓库列出第一天的资料入口，未镜像整站素材。",
+  "available_materials_scope": "课程设计共两天；本仓库列出两天的公开资料入口，未镜像整站素材。",
   "code_entries": [],
   "website": "https://aha-lab.ai/course/mmcool-worldview/"
 }
