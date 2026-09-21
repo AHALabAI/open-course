@@ -2,6 +2,8 @@
 
 # AHALab Open Course
 
+课堂暖场工具：[AI-or-human](tools/warmup-ai-or-human/README.md) · 让学生先判断，再说出依据，并回到可复核的来源。
+
 [![GitHub stars](https://img.shields.io/github/stars/AHALabAI/open-course?style=flat&color=506652)](https://github.com/AHALabAI/open-course/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/AHALabAI/open-course?style=flat&color=867447)](https://github.com/AHALabAI/open-course/fork)
 [![Course content: CC BY 4.0](https://img.shields.io/badge/content-CC_BY_4.0-506652)](LICENSE.md)

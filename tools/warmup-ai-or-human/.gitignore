@@ -1,0 +1,8 @@
+.env
+data.db*
+media/*
+!media/.gitkeep
+sfx/*
+!sfx/.gitkeep
+__pycache__/
+*.pyc

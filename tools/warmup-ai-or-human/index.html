@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>你分得出吗？ · 智能简史开场</title>
+<style>
+  /* ===== 设计令牌 ===== */
+  :root{
+    --ink:#0d1417;          /* 墨底，带一点青 */
+    --ink-2:#13201f;        /* 面板 */
+    --paper:#ece6da;        /* 宣纸字色 */
+    --paper-dim:#a9b0ab;    /* 次级字 */
+    --muted:#6f7d7c;
+    --zima:#22d3d9;         /* 齐码蓝 = AI */
+    --zima-deep:#0f8f95;
+    --amber:#e0a24c;        /* 暖琥珀 = 人 */
+    --amber-deep:#b9772c;
+    --line:#26332f;
+    --ok:#46d6a0;
+    --no:#e0685f;
+    --serif:"Songti SC","STSong","Noto Serif SC",serif;
+    --sans:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+    --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  /* 氛围光：一抹齐码蓝 */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(60% 45% at 78% 8%, rgba(34,211,217,.10), transparent 70%),
+      radial-gradient(55% 40% at 12% 92%, rgba(224,162,76,.07), transparent 70%);
+  }
+  .wrap{position:relative;z-index:1;max-width:560px;margin:0 auto;min-height:100%;
+    padding:max(20px,env(safe-area-inset-top)) 20px max(28px,env(safe-area-inset-bottom));
+    display:flex;flex-direction:column;justify-content:center}
+  .screen{display:none;animation:rise .5s cubic-bezier(.2,.7,.2,1) both}
+  .screen.on{display:block}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--zima);margin:0 0 14px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(38px,12vw,56px);line-height:1.05;margin:0 0 12px;letter-spacing:.01em}
+  .sub{color:var(--paper-dim);font-size:15px;margin:0 0 30px;max-width:34ch}
+  .field{margin:0 0 18px}
+  label{display:block;font-size:13px;color:var(--paper-dim);margin:0 0 8px}
+  input[type=text]{width:100%;background:var(--ink-2);border:1px solid var(--line);color:var(--paper);
+    font-family:var(--serif);font-size:20px;padding:14px 16px;border-radius:14px;outline:none;transition:border-color .2s}
+  input[type=text]:focus{border-color:var(--zima)}
+  input::placeholder{color:var(--muted);font-family:var(--sans);font-size:16px}
+
+  .btn{appearance:none;border:none;cursor:pointer;font-family:var(--sans);font-size:17px;font-weight:600;
+    padding:16px 22px;border-radius:14px;width:100%;transition:transform .12s,filter .2s}
+  .btn:active{transform:translateY(1px) scale(.995)}
+  .btn-go{background:linear-gradient(120deg,var(--amber),var(--zima));color:#08110f}
+  .btn-go:hover{filter:brightness(1.06)}
+  .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--paper)}
+  .tiny{font-size:12.5px;color:var(--muted);margin:18px 0 0;line-height:1.5}
+
+  /* ===== 出题 ===== */
+  .top{display:flex;align-items:center;justify-content:space-between;margin:0 0 18px}
+  .roundtag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--zima);border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+  .count{font-family:var(--mono);font-size:12px;color:var(--paper-dim)}
+  .bar{height:3px;background:var(--line);border-radius:2px;overflow:hidden;margin:0 0 22px}
+  .bar > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--zima));transition:width .45s ease}
+
+  .prompt{font-size:14.5px;color:var(--paper-dim);margin:0 0 14px}
+  .card{background:var(--ink-2);border:1px solid var(--line);border-radius:18px;padding:22px 20px;margin:0 0 22px;position:relative}
+  .card .quote{font-family:var(--serif);font-size:21px;line-height:1.5;white-space:pre-line}
+  .card .src{color:var(--paper-dim);font-size:13.5px;margin-top:12px}
+  .card.code{padding:0;overflow:hidden}
+  .card.code pre{margin:0;padding:18px 18px;font-family:var(--mono);font-size:13.5px;line-height:1.65;
+    color:#cfe9e6;overflow-x:auto;background:#0c1614}
+  .card .media{border-radius:12px;overflow:hidden;background:#0c1614;display:block}
+  .card .media img,.card .media video{width:100%;display:block}
+  .card .media.embed{position:relative;aspect-ratio:16/9}
+  .card .media.embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .card audio{width:100%;margin:2px 0;display:block}
+  .card .cap{font-size:14.5px;color:var(--paper-dim);margin-top:12px;line-height:1.55}
+  .card .ph{font-family:var(--mono);font-size:13px;color:var(--muted);background:#0c1614;border:1px dashed var(--line);
+    border-radius:10px;padding:26px 18px;text-align:center;line-height:1.7}
+  .card.prod{padding:18px}
+  .card.prod .media{margin-bottom:14px}
+  .prodlink{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:13px;color:var(--zima);
+    text-decoration:none;border:1px solid rgba(34,211,217,.4);border-radius:999px;padding:7px 15px}
+  .prodlink:hover{background:rgba(34,211,217,.08)}
+  #bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
+  .snd{position:fixed;top:max(12px,env(safe-area-inset-top));right:14px;z-index:30;width:40px;height:40px;
+    border-radius:50%;border:1px solid var(--line);background:rgba(13,20,23,.6);color:var(--paper);
+    font-size:17px;line-height:1;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+  .snd:hover{border-color:var(--zima)}
+
+  .choices{display:grid;gap:11px}
+  .choice{position:relative;text-align:left;background:var(--ink-2);border:1px solid var(--line);
+    color:var(--paper);border-radius:14px;padding:15px 16px;cursor:pointer;font-size:16px;
+    display:flex;align-items:center;gap:12px;transition:border-color .18s,background .18s,transform .1s}
+  .choice:hover{border-color:#3a4b46}
+  .choice:active{transform:scale(.995)}
+  .choice .dot{width:11px;height:11px;border-radius:50%;flex:none}
+  .dot.h{background:var(--amber)}
+  .dot.a{background:var(--zima)}
+  .dot.b{background:linear-gradient(120deg,var(--amber),var(--zima))}
+  .choice .k{font-family:var(--mono);font-size:11px;color:var(--muted);margin-left:auto}
+  .choices.locked .choice{cursor:default;pointer-events:none;opacity:.55}
+  .choices.locked .choice.correct{opacity:1;border-color:var(--ok);background:rgba(70,214,160,.08)}
+  .choices.locked .choice.wrong{opacity:1;border-color:var(--no);background:rgba(224,104,95,.07)}
+
+  .reveal{display:none;margin:18px 0 0;border-left:2px solid var(--zima);padding:4px 0 4px 16px;animation:rise .4s both}
+  .reveal.on{display:block}
+  .reveal .verdict{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px}
+  .reveal .verdict.good{color:var(--ok)}
+  .reveal .verdict.bad{color:var(--no)}
+  .reveal .ans{font-family:var(--serif);font-size:17px;margin:0 0 8px}
+  .reveal .why{font-size:14.5px;color:var(--paper-dim)}
+  .next{margin-top:20px}
+
+  /* ===== 结果 ===== */
+  .ring{width:150px;height:150px;margin:6px auto 18px;position:relative}
+  .ring svg{transform:rotate(-90deg)}
+  .ring .mid{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .ring .num{font-family:var(--serif);font-size:42px;line-height:1}
+  .ring .den{font-family:var(--mono);font-size:12px;color:var(--paper-dim);margin-top:4px}
+  .who{text-align:center;font-size:14px;color:var(--paper-dim);margin:0 0 4px}
+  .who b{color:var(--paper);font-family:var(--serif);font-size:18px;font-weight:600}
+  .band{background:var(--ink-2);border:1px solid var(--line);border-radius:16px;padding:20px;margin:18px 0}
+  .band .bt{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--zima);margin:0 0 10px}
+  .band .bq{font-family:var(--serif);font-size:18px;line-height:1.55}
+  .hr{height:1px;background:var(--line);margin:24px 0;border:none}
+  .h2{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-dim);margin:0 0 14px}
+  .talk{list-style:none;padding:0;margin:0 0 6px}
+  .talk li{position:relative;padding:0 0 14px 18px;font-size:15.5px;color:var(--paper)}
+  .talk li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;
+    background:linear-gradient(120deg,var(--amber),var(--zima))}
+  .punch{font-family:var(--serif);font-size:20px;line-height:1.5;margin:24px 0;padding:18px 0;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .lb{margin:8px 0 0}
+  .lb .row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .lb .row:last-child{border-bottom:none}
+  .lb .rk{font-family:var(--mono);font-size:12px;color:var(--paper-dim);width:22px}
+  .lb .nm{font-family:var(--serif)}
+  .lb .sc{margin-left:auto;font-family:var(--mono);color:var(--zima)}
+  .lb .me{color:var(--amber)}
+  .hand{background:rgba(34,211,217,.06);border:1px dashed var(--zima-deep);border-radius:14px;padding:16px;font-size:14.5px;color:var(--paper-dim)}
+  .row-btn{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:8px}
+  .foot{text-align:center;color:var(--muted);font-size:12px;margin-top:26px;font-family:var(--mono);letter-spacing:.06em}
+
+  /* 倒计时 */
+  .timer{display:flex;align-items:center;gap:12px;margin:0 0 16px}
+  .timer .tnum{font-family:var(--mono);font-size:20px;font-weight:700;min-width:60px}
+  .timer .tbar{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+  .timer .tbar > i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--zima),var(--amber));transition:width 1s linear}
+  .timer.warn .tnum{color:var(--no)}
+  .timer.warn .tbar > i{background:var(--no)}
+  .timer.big .tnum{font-size:28px}
+  /* 候场 / 已完成 */
+  .lobby-h{font-family:var(--serif);font-weight:600;font-size:clamp(42px,15vw,60px);line-height:1.04;margin:0 0 12px}
+  .pulse{display:flex;gap:10px;margin:26px 0}
+  .pulse span{width:12px;height:12px;border-radius:50%;background:var(--zima);animation:pulse 1.2s infinite}
+  .pulse span:nth-child(2){animation-delay:.2s} .pulse span:nth-child(3){animation-delay:.4s}
+  @keyframes pulse{0%,100%{opacity:.25;transform:scale(.85)}50%{opacity:1;transform:scale(1.12)}}
+  .doneScoreline{font-family:var(--serif);font-size:20px;margin:18px 0 6px}
+  .doneScoreline b{font-size:30px;color:var(--zima)}
+  /* 个人作答回顾 */
+  .recap{list-style:none;padding:0;margin:0 0 4px}
+  .recap li{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .recap li:last-child{border-bottom:none}
+  .recap .ri{font-family:var(--mono);font-size:12px;color:var(--paper-dim);min-width:24px}
+  .recap .rp{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--paper-dim)}
+  .recap .rmark{font-family:var(--mono);font-size:13px;font-weight:700}
+  .recap .ok{color:var(--ok)} .recap .no{color:var(--no)}
+  /* 名次大字 + 排名 */
+  .rankself{text-align:center;margin:2px 0 16px}
+  .rankself .big{font-family:var(--serif);font-size:46px;line-height:1;background:linear-gradient(120deg,var(--amber),var(--zima));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .rankself .lbl{font-size:13px;color:var(--paper-dim);margin-top:5px}
+  .rank{margin:6px 0}
+  .rank .row{display:flex;align-items:center;gap:13px;padding:11px 13px;border-radius:12px;font-size:16px;margin-bottom:7px;background:var(--ink-2);border:1px solid var(--line)}
+  .rank .row.me{border-color:var(--amber);background:rgba(224,162,76,.08)}
+  .rank .row.t1{border-color:rgba(224,162,76,.5);background:rgba(224,162,76,.06)}
+  .rank .rk{font-family:var(--mono);font-size:14px;color:var(--paper-dim);min-width:30px;text-align:center}
+  .rank .row.top .rk{font-size:19px}
+  .rank .nm{font-family:var(--serif)}
+  .rank .sc{margin-left:auto;font-family:var(--mono);color:var(--zima)}
+  .rank .row.me .sc{color:var(--amber)}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none!important;transition:none!important}
+  }
+  :focus-visible{outline:2px solid var(--zima);outline-offset:2px;border-radius:8px}
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<button id="sndToggle" class="snd" aria-label="声音开关" title="声音开关">🔊</button>
+<div class="wrap">
+
+  <!-- 封面 -->
+  <section id="cover" class="screen on">
+    <p class="kicker">齐码蓝 · 智能简史 开场</p>
+    <h1>你<br>分得出吗？</h1>
+    <p class="sub">下面这些字、画、代码——是人做的，是 AI 做的，还是两个一起？凭直觉选。最后我们聊聊，你刚才是怎么猜的。</p>
+    <div class="field">
+      <label for="nick">先给自己起个称谓</label>
+      <input id="nick" type="text" maxlength="12" placeholder="昵称 / 外号 / 随便取" autocomplete="off">
+    </div>
+    <button class="btn btn-go" id="start">进入</button>
+    <p class="tiny">一共 <span id="qn">20</span> 题 · 进入后等主讲人开始，全场一起限时作答。</p>
+  </section>
+
+  <!-- 出题 -->
+  <section id="game" class="screen">
+    <div class="timer" id="timer"><span class="tnum" id="tnum">--:--</span><div class="tbar"><i id="tfill"></i></div></div>
+    <div class="top">
+      <span class="roundtag" id="rtag">文字 · 真伪</span>
+      <span class="count" id="count">1 / 20</span>
+    </div>
+    <div class="bar"><i id="prog"></i></div>
+    <p class="prompt" id="prompt">这段话，是谁写的？</p>
+    <div id="stage"></div>
+    <div class="choices" id="choices"></div>
+    <div class="reveal" id="reveal">
+      <p class="verdict" id="verdict"></p>
+      <p class="ans" id="ans"></p>
+      <p class="why" id="why"></p>
+    </div>
+    <button class="btn btn-go next" id="next" style="display:none">下一题</button>
+  </section>
+
+  <!-- 候场（等主讲人开始）-->
+  <section id="lobby" class="screen">
+    <p class="kicker">候场</p>
+    <h1 class="lobby-h">就位</h1>
+    <p class="sub">你已进入，<b id="lobbyNick">朋友</b>。等主讲人按下开始，全场一起限时作答。</p>
+    <div class="pulse"><span></span><span></span><span></span></div>
+    <p class="tiny">主讲人一开始，这里会自动进入题目。</p>
+  </section>
+
+  <!-- 已答完（等时间到）-->
+  <section id="done" class="screen">
+    <p class="kicker">已交卷</p>
+    <h1 class="lobby-h">答完啦</h1>
+    <p class="sub">先喝口水。等时间到，一起看大家的排名。</p>
+    <p class="doneScoreline">你这轮答对 <b id="doneScore">0</b> / <span id="doneTot">20</span></p>
+    <div class="timer big" id="timer2"><span class="tnum" id="tnum2">--:--</span><div class="tbar"><i id="tfill2"></i></div></div>
+  </section>
+
+  <!-- 结果 -->
+  <section id="result" class="screen">
+    <p class="kicker">本轮结果</p>
+    <div class="rankself" id="rankself"></div>
+    <div class="ring">
+      <svg width="150" height="150" viewBox="0 0 150 150">
+        <circle cx="75" cy="75" r="66" fill="none" stroke="#26332f" stroke-width="10"/>
+        <circle id="arc" cx="75" cy="75" r="66" fill="none" stroke="url(#g)" stroke-width="10" stroke-linecap="round" stroke-dasharray="414.7" stroke-dashoffset="414.7"/>
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#e0a24c"/><stop offset="1" stop-color="#22d3d9"/>
+        </linearGradient></defs>
+      </svg>
+      <div class="mid"><span class="num" id="score">0</span><span class="den" id="den">/ 20 答对</span></div>
+    </div>
+    <p class="who"><b id="whoName">朋友</b>，你的成绩</p>
+
+    <div class="band">
+      <p class="bt" id="bandTag">想一想</p>
+      <p class="bq" id="bandQ"></p>
+    </div>
+
+    <p class="h2">全场排名</p>
+    <div class="rank" id="rank"></div>
+
+    <hr class="hr">
+    <p class="h2">你的作答回顾</p>
+    <ul class="recap" id="recap"></ul>
+
+    <hr class="hr">
+    <p class="h2">一起聊聊</p>
+    <ul class="talk" id="talk"></ul>
+
+    <p class="punch">今天不教你分清人和 AI——那条线正在消失。要紧的是：分不清的时候，你还能不能自己判断；以及，那支笔，还在不在你手里。</p>
+
+    <div class="row-btn">
+      <button class="btn btn-ghost" id="again">返回</button>
+      <button class="btn btn-go" id="share">分享成绩</button>
+    </div>
+    <p class="foot">AHALab · 齐码蓝《智能简史》</p>
+  </section>
+
+</div>
+
+<script>
+/* ============================================================
+   题库：在这里增删改即可。
+   kind: 'text' | 'code' | 'image'
+   round: 顶部分组标签
+   prompt: 题干问句
+   body: text/code 的内容；src: 可选出处行；img: image 的图片地址
+   answer: 'h'(人) | 'a'(AI) | 'b'(人+AI)
+   reveal: 揭晓解说（尽量把答案往“其实是一起做的 / 要查证”上引）
+   想加“图片/视频”轮：复制一条改成 kind:'image'，填 img:'你的图片URL'。
+   ============================================================ */
+/* 下面是内置兜底题目；正常运行时会被后端 /api/questions 的题库覆盖。
+   想增删改题：登录 /host 管理后台操作即可。 */
+let ITEMS = [
+  {
+    kind:'text', round:'文字 · 真伪', prompt:'这首小诗，是谁写的？',
+    body:'我把整座湖叠进一张纸\n折出一只不会飞的鸟\n风来的时候\n它比真的还想走',
+    answer:'b',
+    reveal:'AI 一口气写了二十版，一个人从里面挑出这一版，又改了最后一句。那么——这首诗，该署谁的名？'
+  },
+  {
+    kind:'text', round:'文字 · 真伪', prompt:'这句“名人名言”，可信吗？',
+    body:'「想象力会枯竭，唯有好奇心能自己续命。」', src:'—— 阿尔伯特 · 爱因斯坦',
+    answer:'a',
+    reveal:'查无此言。这是 AI 仿出来的腔调，配上一个煞有介事的出处。它能把没人说过的话，安到真人头上。遇到引用，先查证，再感动。'
+  },
+  {
+    kind:'text', round:'文字 · 真伪', prompt:'这条新闻短讯，是谁写的？',
+    body:'本周末，洱海周边观测到今年首批越冬红嘴鸥，较去年提前九天到达。', src:'— 某地方媒体',
+    answer:'b',
+    reveal:'人记者跑的现场、写的初稿，AI 帮着润色、起了标题。今天你刷到的大多数稿子，都是这样“合写”出来的。'
+  },
+  {
+    kind:'text', round:'文字 · 真伪', prompt:'这段科普，靠谱吗？',
+    body:'章鱼有九个大脑：中央一个，八条腕各一个，所以它能边逃跑边开锁。',
+    answer:'a',
+    reveal:'读着真顺，可“九个大脑”是流行误传——章鱼是一个中枢脑，加上八条腕上分布的神经节，不是九个对等的脑。AI 常用最自信的语气，说最像样的错话。'
+  },
+  {
+    kind:'code', round:'程序 · 作品', prompt:'这段代码，是谁写的？',
+    body:'function 数鸟(frames){\n  let count = 0;\n  for (const f of frames){\n    count += detect(f)\n      .filter(o => o.label === "bird").length;\n  }\n  return count;\n}',
+    answer:'b',
+    reveal:'函数骨架是人搭的，里面那段循环是 Copilot 补全的。现在很多代码，就是人和 AI 一行一行接力写出来的。'
+  },
+  {
+    kind:'text', round:'程序 · 作品', prompt:'这句广告语，是谁想的？',
+    body:'「慢一点，世界会清楚一点。」', src:'— 某耳机品牌',
+    answer:'b',
+    reveal:'AI 一次出了十版 slogan，人挑了这一句，又改了两个字。创意的“最后一公里”，往往还攥在人手里。'
+  },
+  {
+    kind:'text', round:'图像 · 影像', prompt:'这张“获奖摄影作品”，是拍的还是生成的？',
+    body:'（想象一张光影极美、细节逼真的获奖照片）',
+    src:'※ 主讲人可在此换上一张真实图片 / 生成图片',
+    answer:'a',
+    reveal:'近年真有 AIGC 作品“混进”并赢得过摄影奖，事后才被人发现。当眼睛已经不够用，你就只能回到一个更老的问题：它从哪来、是谁、为什么给你看。'
+  }
+];
+
+/* ============================================================ */
+const $ = s => document.querySelector(s);
+const screens = {cover:$('#cover'), lobby:$('#lobby'), game:$('#game'), done:$('#done'), result:$('#result')};
+function show(name){ for(const k in screens){ screens[k].classList.toggle('on', k===name); } window.scrollTo(0,0); }
+
+/* ===== 音效 ===== */
+const SFX = { open:new Audio('/sfx/open.mp3'), start:new Audio('/sfx/start.mp3'), end:new Audio('/sfx/end.mp3') };
+SFX.open.preload='auto'; SFX.start.preload='auto'; SFX.end.preload='auto';
+let soundOn = true, openArmed=false;
+function sfxPlay(name, loop){ if(!soundOn) return; const a=SFX[name]; if(!a) return; a.loop=!!loop; try{ a.currentTime=0; const p=a.play(); if(p&&p.catch) p.catch(()=>{}); }catch(e){} }
+function sfxStop(name){ const a=SFX[name]; if(!a) return; try{ a.pause(); a.currentTime=0; }catch(e){} }
+function sfxStopAll(){ for(const k in SFX) sfxStop(k); }
+// 打开网页播放“报名”音乐；浏览器拦截自动播放时，等首次点击/触摸/按键再播
+function armOpenOnGesture(){
+  if(openArmed) return; openArmed=true;
+  const handler=()=>{
+    ['pointerdown','touchstart','keydown','click'].forEach(ev=>document.removeEventListener(ev,handler,true));
+    if(soundOn && screens.cover.classList.contains('on')) sfxPlay('open', true);
+  };
+  ['pointerdown','touchstart','keydown','click'].forEach(ev=>document.addEventListener(ev,handler,true));
+}
+function playOpenMusic(){
+  if(!soundOn) return;
+  const p = SFX.open.play();
+  if(p && p.then){ p.then(()=>{ SFX.open.loop=true; }).catch(()=>armOpenOnGesture()); }
+  else { SFX.open.loop=true; armOpenOnGesture(); }
+}
+// 声音开关
+function setSound(on){
+  soundOn = on;
+  const b=$('#sndToggle'); if(b) b.textContent = on ? '🔊' : '🔇';
+  if(!on){ sfxStopAll(); }
+  else if(screens.cover.classList.contains('on')){ sfxPlay('open', true); }
+}
+(function(){ const b=$('#sndToggle'); if(b) b.addEventListener('click', ()=>setSound(!soundOn)); })();
+
+let idx=0, score=0, nick='', answered=false, mySessionId='s'+Date.now()+Math.random().toString(36).slice(2,7);
+let TOTAL = ITEMS.length;
+function applyCounts(){ TOTAL=ITEMS.length; $('#qn').textContent=TOTAL; $('#den').textContent='/ '+TOTAL+' 答对'; }
+applyCounts();
+// 从后端拉题库（管理员可在 /host 增删改查）；拿不到就用上面的内置题目兜底
+(async function loadQuestions(){
+  try{
+    const r=await fetch('/api/questions'); const d=await r.json();
+    if(d && Array.isArray(d.questions) && d.questions.length){ ITEMS=d.questions; applyCounts(); }
+  }catch(e){}
+})();
+
+// 根据题型微调选项措辞
+function labelFor(code, it){
+  const k=it.kind||'text';
+  const isMedia = (k==='image'||k==='audio'||k==='video'||k==='embed');
+  if(k==='code')    return {h:'人 写的',a:'AI 写的',b:'人 和 AI 一起'}[code];
+  if(k==='product') return {h:'人 做的',a:'AI 做的',b:'人 和 AI 一起'}[code];
+  if(isMedia)       return {h:'人 做的',a:'AI 生成的',b:'人 和 AI 一起'}[code];
+  return {h:'人 写的',a:'AI 写的',b:'人 和 AI 一起'}[code];
+}
+
+$('#start').addEventListener('click', async ()=>{
+  nick = ($('#nick').value || '').trim().slice(0,12) || '无名旅人';
+  goLobby();          // 先进候场
+  startPolling();     // 轮询：若已在进行则自动进题，已结束则看排名
+  try{
+    const r=await fetch('/api/join',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:mySessionId, nick:nick})});
+    const d=await r.json(); if(d && d.state) onState(d.state);
+  }catch(e){}
+});
+
+function renderQ(){
+  answered=false;
+  const it = ITEMS[idx];
+  $('#rtag').textContent = it.round;
+  $('#count').textContent = (idx+1)+' / '+TOTAL;
+  $('#prog').style.width = (idx/TOTAL*100)+'%';
+  $('#prompt').textContent = it.prompt;
+
+  // 舞台内容
+  let stage = $('#stage'); stage.innerHTML='';
+  const card = document.createElement('div'); card.className='card';
+  const k = it.kind||'text';
+  const media = it.media || it.img || '';
+  const addSrc = ()=>{ if(it.src){const s=document.createElement('div');s.className='src';s.textContent=it.src;card.appendChild(s);} };
+  const ph = (t)=>{ const p=document.createElement('div'); p.className='ph'; p.textContent=t; card.appendChild(p); };
+  if(k==='code'){
+    card.classList.add('code');
+    const pre=document.createElement('pre'); pre.textContent=it.body; card.appendChild(pre);
+  } else if(k==='image'){
+    if(media){ const w=document.createElement('div'); w.className='media'; const im=document.createElement('img'); im.src=media; im.alt='待辨别的图片'; im.loading='lazy'; w.appendChild(im); card.appendChild(w); addSrc(); }
+    else ph('🖼  '+(it.body||'（管理员待补：图片）'));
+  } else if(k==='audio'){
+    if(media){ const a=document.createElement('audio'); a.controls=true; a.src=media; card.appendChild(a); addSrc(); }
+    else ph('🎵  '+(it.body||'（管理员待补：音频）'));
+  } else if(k==='video'){
+    if(media){ const w=document.createElement('div'); w.className='media'; const v=document.createElement('video'); v.controls=true; v.src=media; v.setAttribute('playsinline',''); w.appendChild(v); card.appendChild(w); addSrc(); }
+    else ph('🎬  '+(it.body||'（管理员待补：视频）'));
+  } else if(k==='embed'){
+    if(media){ const w=document.createElement('div'); w.className='media embed'; const fr=document.createElement('iframe'); fr.src=media; fr.setAttribute('allow','autoplay; encrypted-media; picture-in-picture'); fr.setAttribute('allowfullscreen',''); w.appendChild(fr); card.appendChild(w); addSrc(); }
+    else ph('▶  '+(it.body||'（管理员待补：可嵌入的播放地址）'));
+  } else if(k==='product'){
+    card.classList.add('prod');
+    if(media){ const w=document.createElement('div'); w.className='media'; const im=document.createElement('img'); im.src=media; im.alt=''; im.loading='lazy'; w.appendChild(im); card.appendChild(w); }
+    if(it.body){ const d=document.createElement('div'); d.className='cap'; d.textContent=it.body; card.appendChild(d); }
+    if(it.link){ const a=document.createElement('a'); a.className='prodlink'; a.href=it.link; a.target='_blank'; a.rel='noopener'; a.textContent='打开看看 ↗'; card.appendChild(a); }
+    addSrc();
+  } else {
+    const q=document.createElement('div'); q.className='quote'; q.textContent=it.body; card.appendChild(q);
+    addSrc();
+  }
+  stage.appendChild(card);
+
+  // 选项
+  const ch = $('#choices'); ch.className='choices'; ch.innerHTML='';
+  ['h','a','b'].forEach(code=>{
+    const b=document.createElement('button'); b.className='choice'; b.dataset.code=code;
+    b.innerHTML = '<span class="dot '+code+'"></span><span>'+labelFor(code,it)+'</span>'
+      + '<span class="k">'+(code==='h'?'HUMAN':code==='a'?'AI':'HUMAN+AI')+'</span>';
+    b.addEventListener('click', ()=>choose(code));
+    ch.appendChild(b);
+  });
+
+  // 复位揭晓
+  $('#reveal').classList.remove('on');
+  $('#next').style.display='none';
+}
+
+function choose(code){
+  if(answered) return; answered=true;
+  const it = ITEMS[idx];
+  const correct = it.answer;
+  const right = (code===correct);
+  if(right) score++;
+  myAnswers.push({qid:it.id, your:code, right:right, prompt:it.prompt});
+  // 上报作答（供后台统计与计分）
+  fetch('/api/answer',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({id:mySessionId, nick:nick, qid:it.id, choice:code})}).catch(()=>{});
+  const ch=$('#choices'); ch.classList.add('locked');
+  [...ch.children].forEach(b=>{
+    const c=b.dataset.code;
+    if(c===correct) b.classList.add('correct');
+    else if(c===code) b.classList.add('wrong');
+  });
+  $('#prog').style.width=((idx+1)/TOTAL*100)+'%';
+
+  const good = right;
+  const v=$('#verdict'); v.textContent = good?'✓ 答对了':'✕ 没猜中'; v.className='verdict '+(good?'good':'bad');
+  $('#ans').textContent = '正确答案：'+labelFor(correct,it);
+  $('#why').textContent = it.reveal;
+  $('#reveal').classList.add('on');
+
+  const nx=$('#next'); nx.style.display='block';
+  nx.textContent = (idx===TOTAL-1)?'交卷':'下一题';
+}
+
+$('#next').addEventListener('click', ()=>{
+  if(idx<TOTAL-1){ idx++; renderQ(); }
+  else onAllAnswered();
+});
+
+/* ===== 限时同步赛：状态机 + 倒计时 ===== */
+let phase='cover';            // cover|lobby|playing|done|result
+let myAnswers=[];             // {qid, your, right, prompt}
+let pollTimer=null, tickTimer=null, remaining=0, TOTAL_DUR=180, resultShown=false;
+
+function startPolling(){ if(pollTimer) clearInterval(pollTimer); poll(); pollTimer=setInterval(poll, 1800); }
+async function poll(){ try{ const r=await fetch('/api/state'); onState(await r.json()); }catch(e){} }
+function fmt(s){ s=Math.max(0,Math.floor(s)); const m=Math.floor(s/60), x=s%60; return m+':'+(x<10?'0':'')+x; }
+function setTimers(){
+  const pct = TOTAL_DUR>0 ? Math.max(0,remaining)/TOTAL_DUR*100 : 0;
+  [['timer','tnum','tfill'],['timer2','tnum2','tfill2']].forEach(([w,n,f])=>{
+    const wrap=document.getElementById(w); if(!wrap) return;
+    const num=document.getElementById(n), fill=document.getElementById(f);
+    if(num) num.textContent=fmt(remaining); if(fill) fill.style.width=pct+'%';
+    wrap.classList.toggle('warn', remaining<=10);
+  });
+}
+function ensureTick(){ if(tickTimer) return; tickTimer=setInterval(()=>{ if(remaining>0){ remaining--; setTimers(); } }, 1000); }
+
+function onState(s){
+  if(!s) return;
+  if(s.duration) TOTAL_DUR=s.duration;
+  if(typeof s.remaining==='number') remaining=s.remaining;
+  setTimers();
+  if(s.status==='ended'){ if(phase!=='result') showResult(); return; }
+  if(s.status==='running'){ ensureTick(); if(phase==='lobby') enterPlaying(); return; }
+  // idle/waiting：若主讲人重置了本轮，把还在答题/已交卷的人拉回候场
+  if(phase==='playing' || phase==='done') goLobby();
+}
+
+function goLobby(){
+  phase='lobby'; resultShown=false; idx=0; score=0; myAnswers=[];
+  $('#lobbyNick').textContent = nick;
+  show('lobby'); sfxPlay('open', true);
+}
+function enterPlaying(){
+  phase='playing'; idx=0; score=0; myAnswers=[];
+  sfxStop('open'); sfxPlay('start', false);
+  renderQ(); show('game'); ensureTick();
+}
+function onAllAnswered(){
+  phase='done';
+  fetch('/api/finish',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:mySessionId})}).catch(()=>{});
+  $('#doneScore').textContent=score; $('#doneTot').textContent=TOTAL;
+  show('done');
+}
+
+async function showResult(){
+  if(resultShown) return; resultShown=true; phase='result';
+  if(tickTimer){ clearInterval(tickTimer); tickTimer=null; }
+  sfxStop('open'); sfxStop('start'); sfxPlay('end', false);
+  // 成绩环
+  const pct = TOTAL>0 ? score/TOTAL : 0; const arc=$('#arc'); const C=414.7;
+  $('#score').textContent=score; $('#whoName').textContent=nick; $('#den').textContent='/ '+TOTAL+' 答对';
+  requestAnimationFrame(()=>{ setTimeout(()=>{ arc.style.transition='stroke-dashoffset 1s ease'; arc.style.strokeDashoffset=C*(1-pct); }, 120); });
+  // 分档反思
+  const ratio = TOTAL>0 ? score/TOTAL : 0; let tag,q;
+  if(ratio>=0.8){ tag='你眼很尖'; q='你分得很准。但说句实话——这种“分辨力”，还能可靠多久？等 AI 再强一代，你还分得出吗？'; }
+  else if(ratio>=0.4){ tag='一半一半'; q='你对一半、错一半。那条“人和 AI”的界线，对你来说到底清不清楚？刚才你是凭什么在猜？'; }
+  else { tag='大多没分出'; q='大部分没猜中——先别懊恼。这到底是你的问题，还是这个问题本身，正在慢慢失去意义？'; }
+  $('#bandTag').textContent=tag; $('#bandQ').textContent=q;
+  // 个人作答回顾
+  const ul=$('#recap'); ul.innerHTML='';
+  myAnswers.forEach((a,i)=>{
+    const li=document.createElement('li');
+    li.innerHTML='<span class="ri">'+(i+1)+'</span><span class="rp">'+escapeHtml(a.prompt||'')+'</span>'
+      +'<span class="rmark '+(a.right?'ok':'no')+'">'+(a.right?'✓':'✗')+'</span>';
+    ul.appendChild(li);
+  });
+  if(!myAnswers.length){ const li=document.createElement('li'); li.innerHTML='<span class="rp">这轮你没来得及作答。</span>'; ul.appendChild(li); }
+  // 讨论
+  const talk=['你刚才主要是凭什么在猜？（用词？语气？还是说不清的“感觉”？）','很多题答案其实是“人和 AI 一起”——那么谁还在做主？','那道假名言，你查证了吗？','比起站队“挺 AI 还是反 AI”，更该想清楚的是什么？'];
+  const tl=$('#talk'); tl.innerHTML=''; talk.forEach(t=>{const li=document.createElement('li');li.textContent=t;tl.appendChild(li);});
+  show('result');
+  await renderRank();
+}
+
+async function renderRank(){
+  try{
+    const r=await fetch('/api/results'); const d=await r.json();
+    const rows=d.rows||[]; const qn=d.qcount||TOTAL; const box=$('#rank'); box.innerHTML='';
+    const medal=['🥇','🥈','🥉'];
+    rows.slice(0,15).forEach((row)=>{
+      const me=(row.id===mySessionId); const top=row.rank<=3;
+      const div=document.createElement('div');
+      div.className='row'+(me?' me':'')+(top?(' top t'+row.rank):'');
+      div.innerHTML='<span class="rk">'+(top?medal[row.rank-1]:row.rank)+'</span>'
+        +'<span class="nm">'+escapeHtml(row.nick)+(me?'（你）':'')+'</span>'
+        +'<span class="sc">'+row.score+'/'+qn+'</span>';
+      box.appendChild(div);
+    });
+    const mine=rows.find(x=>x.id===mySessionId); const rs=$('#rankself');
+    rs.innerHTML = mine ? ('<div class="big">第 '+mine.rank+' 名</div><div class="lbl">共 '+rows.length+' 人参与 · 你答对 '+mine.score+'/'+qn+'</div>') : '';
+  }catch(e){}
+}
+function escapeHtml(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+$('#again').addEventListener('click', ()=>{ sfxStop('end'); if(pollTimer){clearInterval(pollTimer);pollTimer=null;} resultShown=false; phase='cover'; show('cover'); sfxPlay('open', true); });
+$('#share').addEventListener('click', async ()=>{
+  const text = '我在《智能简史》开场辨别了一轮，'+TOTAL+' 题对了 '+score+' 题。你分得出人、AI、还是“一起”吗？';
+  try{
+    if(navigator.share){ await navigator.share({title:'你分得出吗？', text}); }
+    else { await navigator.clipboard.writeText(text); $('#share').textContent='已复制 ✓'; setTimeout(()=>$('#share').textContent='分享成绩',1600); }
+  }catch(e){}
+});
+
+// 回车开始
+$('#nick').addEventListener('keydown', e=>{ if(e.key==='Enter') $('#start').click(); });
+// 打开网页即播放“报名”音乐（自动播放被拦截则等首次点击）
+window.addEventListener('load', playOpenMusic);
+if(document.readyState==='complete') playOpenMusic();
+</script>
+
+<!-- 流动的 Zima 蓝 × 琥珀 着色器背景（离线、手机可跑、尊重 reduce-motion）-->
+<script>
+(function(){
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const cv = document.getElementById('bg'); if(!cv) return;
+  let gl; try{ gl = cv.getContext('webgl') || cv.getContext('experimental-webgl'); }catch(e){}
+  if(!gl) return;
+  const VS = 'attribute vec2 p; void main(){ gl_Position=vec4(p,0.0,1.0); }';
+  const FS = [
+    'precision highp float; uniform float t; uniform vec2 r;',
+    'float h(vec2 p){ p=fract(p*vec2(123.34,456.21)); p+=dot(p,p+45.32); return fract(p.x*p.y); }',
+    'float n(vec2 p){ vec2 i=floor(p),f=fract(p); f=f*f*(3.0-2.0*f);',
+    '  return mix(mix(h(i),h(i+vec2(1.0,0.0)),f.x), mix(h(i+vec2(0.0,1.0)),h(i+vec2(1.0,1.0)),f.x), f.y); }',
+    'float fbm(vec2 p){ float v=0.0,a=0.5; for(int i=0;i<5;i++){ v+=a*n(p); p*=2.03; a*=0.5; } return v; }',
+    'void main(){',
+    '  vec2 uv=gl_FragCoord.xy/r; vec2 p=(gl_FragCoord.xy-0.5*r)/r.y; float tt=t*0.04;',
+    '  vec2 q=vec2(fbm(p*1.6+tt), fbm(p*1.6+vec2(3.1,1.7)-tt));',
+    '  float f=fbm(p*1.6+q*1.4+tt*0.6);',
+    '  vec3 ink=vec3(0.051,0.078,0.090); vec3 zima=vec3(0.133,0.827,0.851); vec3 amber=vec3(0.878,0.635,0.298);',
+    '  vec3 col=ink;',
+    '  col=mix(col, zima, smoothstep(0.55,1.0,f)*0.16);',
+    '  col=mix(col, amber, smoothstep(0.62,0.98,q.x)*0.07);',
+    '  float d=length(uv-0.5); col*= 1.0 - smoothstep(0.35,0.95,d)*0.35;',
+    '  gl_FragColor=vec4(col,1.0);',
+    '}'
+  ].join('\n');
+  function sh(ty,src){ const s=gl.createShader(ty); gl.shaderSource(s,src); gl.compileShader(s); return s; }
+  const prog=gl.createProgram();
+  gl.attachShader(prog,sh(gl.VERTEX_SHADER,VS)); gl.attachShader(prog,sh(gl.FRAGMENT_SHADER,FS));
+  gl.linkProgram(prog);
+  if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) return;
+  gl.useProgram(prog);
+  const buf=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+  const loc=gl.getAttribLocation(prog,'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  const uT=gl.getUniformLocation(prog,'t'), uR=gl.getUniformLocation(prog,'r');
+  function resize(){ const dpr=Math.min(window.devicePixelRatio||1,1.5);
+    cv.width=Math.max(1,Math.floor(innerWidth*dpr)); cv.height=Math.max(1,Math.floor(innerHeight*dpr));
+    gl.viewport(0,0,cv.width,cv.height); }
+  addEventListener('resize',resize,{passive:true}); resize();
+  const t0=performance.now();
+  (function loop(){ if(!document.body.contains(cv)) return;
+    gl.uniform1f(uT,(performance.now()-t0)/1000); gl.uniform2f(uR,cv.width,cv.height);
+    gl.drawArrays(gl.TRIANGLES,0,3); requestAnimationFrame(loop); })();
+})();
+</script>
+</body>
+</html>

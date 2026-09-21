@@ -54,6 +54,10 @@
     {
       "id": "html-ppt-player",
       "path": "tools/html-ppt-player"
+    },
+    {
+      "id": "warmup-ai-or-human",
+      "path": "tools/warmup-ai-or-human"
     }
   ],
   "skills": []

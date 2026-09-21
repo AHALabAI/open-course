@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "AHALab Warmup AI-or-human"
+type: software
+authors:
+  - name: "AHALab"
+url: "https://github.com/AHALabAI/open-course/tree/main/tools/warmup-ai-or-human"
+license: Apache-2.0
+version: "0.1.0"
