@@ -1,0 +1,5 @@
+import {chromium} from 'playwright';import fs from 'node:fs/promises';import path from 'node:path';import {fileURLToPath} from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url)),out=path.join(root,'repairs/envelope-v01/depth');await fs.mkdir(out,{recursive:true});
+const views=JSON.parse(await fs.readFile(path.join(root,'repairs/envelope-v01/views.json'),'utf8'));
+const b=await chromium.launch({channel:'msedge',headless:true,args:['--enable-webgl','--ignore-gpu-blocklist']});let errors=[];
+try{const page=await b.newPage();page.on('pageerror',e=>errors.push(e.message));await page.goto('http://127.0.0.1:8767/envelope-depth.html');await page.waitForFunction(()=>window.depthReady,{},{timeout:90000});for(const [i,v] of views.entries()){const data=await page.evaluate(v=>window.depthFrame(v),v);await fs.writeFile(path.join(out,v.image+'.png'),Buffer.from(data.split(',')[1],'base64'));if(i%50===0)console.log('Depth',i,'/',views.length);}if(errors.length)throw Error(errors.join('\n'));console.log('Depth capture complete',views.length);}finally{await b.close();}

@@ -24,6 +24,18 @@
 
 每门课含对象与时长、课程说明、课次、活动、资料出处、配套代码及来源声明。跨主题课程只保存一份，用 [catalog.json](catalog.json) 与 course.json 中的多个主题标签检索。
 
+## 从空间到游戏：文章配套代码
+
+| 示例 | 从哪里开始 |
+|---|---|
+| [一间房，一个小任务](tools/world-starter/README.md) | Blender → GLB → Three.js，拾取、火堆、小游戏与可选 AI |
+| [四层探索工坊](tools/aha-world/README.md) | 独立建筑、探索、建造、访客联机与 AI 伙伴 |
+| [公开空间重建](tools/office-reconstruction/README.md) | office1a 标定照片、网格修复、同相机对照与动画渲染 |
+
+[课程与下载入口](https://aha-lab.ai/course/ai-game-studio/#source-code) · [第一篇制作文章](https://mp.weixin.qq.com/s/ecNLna3nGzrH7c1ebXWjsg)
+
+四层工坊是独立开源示例。[AHA 小世界](https://world.aha-lab.ai/)继续保留原游戏。各示例默认本地运行；使用说明以中文为主，第三方许可和能力边界见各目录 README。
+
 ## 直接使用工具
 
 [HTML 课件播放器](tools/html-ppt-player/README.md)：含三页示例、独立讲者窗、讲稿、计时与过程演示。无需额外运行库。

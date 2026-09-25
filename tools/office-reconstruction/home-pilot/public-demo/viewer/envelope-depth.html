@@ -1,0 +1,8 @@
+<!doctype html><html><meta charset="utf-8"><link rel="icon" href="data:,"><script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script><body style="margin:0"><script type="module">
+import * as THREE from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+const r=new THREE.WebGLRenderer({antialias:false,preserveDrawingBuffer:true});r.setPixelRatio(1);r.outputColorSpace=THREE.LinearSRGBColorSpace;r.setClearColor(0,1);document.body.appendChild(r.domElement);
+const s=new THREE.Scene(),camera=new THREE.PerspectiveCamera();
+s.add((await new GLTFLoader().loadAsync('assets/office-room-final.glb')).scene);
+s.overrideMaterial=new THREE.ShaderMaterial({side:THREE.DoubleSide,vertexShader:'varying float cameraDepth; void main(){vec4 p=modelViewMatrix*vec4(position,1.0);cameraDepth=-p.z;gl_Position=projectionMatrix*p;}',fragmentShader:'varying float cameraDepth;void main(){float q=floor(clamp(cameraDepth/10.0,0.0,1.0)*65535.0+0.5);gl_FragColor=vec4(floor(q/256.0)/255.0,mod(q,256.0)/255.0,0.0,1.0);}'});
+window.depthFrame=v=>{let k=v.intrinsics;const w=Math.round(k.width/2),h=Math.round(k.height/2);r.setSize(w,h);camera.position.fromArray(v.position);let a=v.rotation_camera_to_world;camera.up.set(-a[0][1],-a[1][1],-a[2][1]);camera.lookAt(camera.position.clone().add(new THREE.Vector3(a[0][2],a[1][2],a[2][2])));const n=.01;camera.projectionMatrix.makePerspective(-k.cx/k.fx*n,(k.width-k.cx)/k.fx*n,k.cy/k.fy*n,-(k.height-k.cy)/k.fy*n,n,20);camera.projectionMatrixInverse.copy(camera.projectionMatrix).invert();r.render(s,camera);return r.domElement.toDataURL('image/png');};window.depthReady=true;
+</script></body></html>

@@ -55,7 +55,7 @@ def ensure_env():
             f.write("# 只固定对外 IP（端口用上面的 PORT）：\n")
             f.write(("HOST_IP=%s\n" % env["HOST_IP"]) if env.get("HOST_IP") else "# HOST_IP=192.168.1.50\n")
             f.write("# 或直接给完整地址（优先级最高，可用域名/https，给反向代理用）：\n")
-            f.write(("PUBLIC_URL=%s\n" % env["PUBLIC_URL"]) if env.get("PUBLIC_URL") else "# PUBLIC_URL=http://192.168.1.50:8000\n")
+            f.write(("PUBLIC_URL=%s\n" % env["PUBLIC_URL"]) if env.get("PUBLIC_URL") else "# PUBLIC_URL=http://localhost:8000\n")
     return env
 
 # ---------------- 默认题库 ----------------

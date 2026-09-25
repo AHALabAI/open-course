@@ -1,0 +1,10 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.env*
+!.env.example
+private/
+*.log
+*.blend1
+.DS_Store

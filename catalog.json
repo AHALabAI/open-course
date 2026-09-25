@@ -58,6 +58,18 @@
     {
       "id": "warmup-ai-or-human",
       "path": "tools/warmup-ai-or-human"
+    },
+    {
+      "id": "world-starter",
+      "path": "tools/world-starter"
+    },
+    {
+      "id": "aha-world",
+      "path": "tools/aha-world"
+    },
+    {
+      "id": "office-reconstruction",
+      "path": "tools/office-reconstruction"
     }
   ],
   "skills": []

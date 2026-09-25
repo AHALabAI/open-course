@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AHALab · 探索工坊</title><link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"/vendor/build/three.module.js","three/addons/":"/vendor/examples/jsm/"}}</script></head>
+<body>
+<canvas id="world" aria-label="AHA 四层空间生存游戏"></canvas>
+<header><a class="brand" href="/" aria-label="AHA 小小世界首页"><span class="brandmark">a<span>h</span>a</span><span class="brandtitle">小小世界<small>LITTLE WORLD / 01</small></span></a><div class="topright"><span id="clock">一座房子，一整个世界。</span><button id="pause" hidden>暂停</button><button id="overview">空间全览</button><a class="guide" href="lesson.html" target="_blank">游戏手册 ↗</a></div></header>
+<section id="intro" class="intro">
+  <div class="eyebrow"><i></i> AHA SPACE · SURVIVAL SANDBOX</div>
+  <h1>一座工坊，<br><span>一个小世界</span></h1>
+  <p class="lead">在四层探索工坊里寻找能量晶体，<br>收集木石、点起篝火，与伙伴撑过第一夜。</p>
+  <div class="missionline"><span>01 搜集</span><b>→</b><span>02 修复</span><b>→</b><span>03 生存</span></div>
+  <div class="startrow"><button id="start" class="primary" disabled>正在载入空间…</button><button id="explore">自由创作</button><button id="duel">对战挑战</button></div>
+  <p class="micro">约 3 分钟一轮 · 单人 / 局域网联机 · 手机、平板、电脑</p>
+  <button id="joinroom" class="multiplayer-entry" disabled><span>多人联机 · 进入 AHA <b>↗</b></span><small>选择你的角色 · 最多 8 人一起探索</small></button>
+  <div class="introfoot"><span class="tinylabel">A PLACE TO EXPLORE</span><p>集合大厅 / 阅读廊 / 制作间 / 观测平台</p><span id="loadstatus">读取 Blender 空间模型</span></div>
+</section>
+<section id="hud" hidden>
+  <div class="vitals panel"><div class="panelcaption">我的状态 <span id="shelter">庭院</span></div><div class="vital"><span>生命</span><meter id="health" min="0" max="100" value="100"></meter><b id="healthv">100</b></div><div class="vital"><span>饱食</span><meter id="hunger" min="0" max="100" value="100"></meter><b id="hungerv">100</b></div><div class="vital"><span>饮水</span><meter id="thirst" min="0" max="100" value="100"></meter><b id="thirstv">100</b></div></div>
+  <div class="quests panel"><div class="panelcaption">点亮第一夜 <span id="modebadge">生存</span></div><p id="quest1">○ 收集木材 5、石块 3</p><p id="quest2">○ 在 2 / 3 / 4 层各找到一枚晶体</p><p id="quest3">○ 修复四层露台信标</p><p id="quest4">○ 回到篝火边，撑到天亮</p></div>
+  <div id="floorbox" class="panel floorbox"><small>当前空间</small><strong id="floorname">1F 抵达</strong><p>靠近青色楼梯标记，E 上楼 / Q 下楼</p><div id="floorbuttons"><button data-floor="0">1F</button><button data-floor="1">2F</button><button data-floor="2">3F</button><button data-floor="3">4F</button></div><small id="floorhint">生存模式需到楼梯处换层</small></div>
+  <aside class="brain panel"><div class="panelcaption"><span><i class="statusdot"></i> 小芽 · 伙伴决策</span><button id="aiToggle" class="tinybutton">AI 开</button></div><div class="decision"><span id="npcAction">在营地等你</span><span id="aiSource" class="pill">待开始</span></div><p id="aiReason">世界状态 → 有限选项 → 实际行动</p><div class="stats"><span>置信度<strong id="confidence">—</strong></span><span>紧迫度<strong id="urgency">—</strong></span><span>风险判断<strong id="danger">—</strong></span></div><div id="probabilities"></div><div class="brainfoot"><span id="latency">每 8 秒观察一次</span><span id="calls">0 次调用</span></div><details><summary>它看见了什么？</summary><pre id="aistate">等待开始</pre></details></aside>
+  <div class="inventory panel"><div class="slot"><kbd>1</kbd><span class="swatch wood"></span><span>木材</span><b id="wood">0</b></div><div class="slot"><kbd>2</kbd><span class="swatch stone"></span><span>石块</span><b id="stone">0</b></div><div class="slot"><kbd>3</kbd><span class="swatch crystal"></span><span>晶体</span><b id="crystal">0</b></div><div class="slot"><kbd>F</kbd><span class="swatch food"></span><span>食物</span><b id="food">1</b></div><button id="build">B 建造</button><button id="fire">C 篝火</button></div>
+  <div class="workshop panel"><button id="talk">T 与小芽对话</button><button id="attack">J 挥击</button><button id="dash">Shift 冲刺</button><button id="savebuild">保存创作</button><button id="loadbuild">载入创作</button></div>
+  <div id="prompt" class="prompt">WASD 移动 · E 互动</div><div class="controls">WASD 移动 · 拖动视角 · E 互动 · Q 下楼 · J 挥击 · Shift 冲刺 · T 对话 · Esc 暂停</div>
+  <div class="touchmenu"><button id="touchActions">操作</button><button id="touchInfo">任务 / AI</button><button id="touchRoom">房间聊天</button></div>
+  <div class="touchcontrols"><button data-key="w" aria-label="向前移动">↑</button><div><button data-key="a" aria-label="向左移动">←</button><button data-key="s" aria-label="向后移动">↓</button><button data-key="d" aria-label="向右移动">→</button></div><button id="touchE">互动 E</button></div>
+  <div class="touchtools"><button id="touchEat">吃食物</button><button id="touchDrink">喝水</button><button id="touchZoomIn" aria-label="拉近视角">＋</button><button id="touchZoomOut" aria-label="拉远视角">－</button><button id="touchReclaim" aria-pressed="false">回收：关</button></div>
+</section>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="login"><span class="eyebrow">AHA / MULTIPLAYER</span><h2>选一个你，走进世界。</h2><form id="loginForm"><label>昵称 <input id="nickname" maxlength="16" required placeholder="你的名字" value="探险家"></label><label>角色 <select id="avatar"><option value="human">背包小人</option><option value="rabbit">白色小兔</option><option value="fox">橙色小狐</option></select></label><p id="lanhint">同一 Wi‑Fi 下，打开同一个主机地址即可相遇。</p><button class="primary" type="submit">进入联机房间</button><button type="button" id="closelogin">返回</button></form><p class="micro">昵称访客登录 · 最多 8 人 · 共享建造、物资、篝火、信标与战斗结果</p></dialog>
+<section id="roompanel" class="panel roompanel" hidden><b id="roomcount">AHA-01 · 1 人</b><button id="roomrestart">重开挑战</button><div id="roommessages" aria-live="polite"></div><form id="roomchat"><input id="roominput" maxlength="240" placeholder="@AHA 问规则，或 @伙伴"><button>发送</button></form><small>@AHA 会将最近 20 条房间消息及角色状态发送给 DeepSeek，回答对全房间可见。请勿发送隐私或密钥。</small></section>
+<section id="conversation" class="panel conversation" hidden><div class="panelcaption">与小芽对话 <button id="closetalk">关闭</button></div><div id="messages" aria-live="polite"><p class="npc">小芽：我在庭院陪你。你可以让我收集木材、解释规则，或者聊聊这座空间。</p></div><div class="quickchat"><button data-message="帮我收集木材">帮我找木材</button><button data-message="我想盖一座小屋">一起创作</button><button data-message="怎么对战">怎么对战</button></div><form id="chatForm"><input id="chatInput" maxlength="240" placeholder="说说你想做什么…" autocomplete="off"><button type="submit">发送</button></form><small>行动对话：Jev 判断意图，游戏回复并执行可用行动。</small></section>
+<section id="repair" class="panel repair" hidden><span class="eyebrow">SIGNAL ALIGNMENT</span><h2>对准信标频率</h2><p>指针进入绿色区间时按空格或点击「锁定」。连续完成三次。</p><div class="repairtrack"><span id="repairzone"></span><i id="repairneedle"></i></div><p id="repairprogress">0 / 3</p><button id="locksignal" class="primary">锁定 Space</button><button id="cancelrepair">稍后再试</button></section>
+<dialog id="end"><span class="eyebrow">AHA / FIRST NIGHT</span><h2 id="endtitle"></h2><p id="endtext"></p><div class="startrow"><button id="restart" class="primary">再来一次</button><button id="freeafter">自由探索</button></div><p class="micro">下一轮只改一条规则，看看结果如何变化。</p></dialog>
+<div class="credit" id="credit">AHALab · 探索工坊 · Blender × Three.js</div>
+<script type="module" src="game.mjs"></script></body></html>

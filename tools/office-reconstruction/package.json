@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "playwright": "1.55.1"
+  },
+  "name": "@ahalab/office-reconstruction",
+  "version": "0.1.0",
+  "license": "MIT"
+}

@@ -23,6 +23,16 @@ Teaching materials are currently in Simplified Chinese. English summaries do not
 
 Original course content uses CC BY 4.0; software and code use MIT. Preserve applicable credits and licenses. Third-party rights remain separate; reuse does not imply AHALab endorsement. See [license scope](LICENSE.md).
 
+## From spaces to games: companion code
+
+| Example | Start here |
+|---|---|
+| [One room, one task](tools/world-starter/README.md) | Blender → GLB → Three.js, collection, a campfire and optional AI |
+| [Explorer Hall](tools/aha-world/README.md) | An independent four-level building, exploration, building and guest multiplayer |
+| [Public-space reconstruction](tools/office-reconstruction/README.md) | Calibrated office1a photos, mesh repair, camera-matched comparison and animation |
+
+[Course and downloads](https://aha-lab.ai/en/course/ai-game-studio/#source-code). The open-source hall is a separate example; [AHA Small World](https://world.aha-lab.ai/) remains the original game. Instructions are primarily in Chinese. See each README for requirements, limitations and third-party terms.
+
 ## Fork and contribute
 
 [Fork this repository](https://github.com/AHALabAI/open-course/fork) to adapt a course or a tool. Retain the applicable notices and describe your changes. Submit corrections through a Pull Request or [Issue](https://github.com/AHALabAI/open-course/issues). A Star or Fork is optional and never a condition of the license.

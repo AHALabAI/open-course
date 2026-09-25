@@ -1,0 +1,7 @@
+{
+  "colmap": "C:/recon-tools/colmap-4.2.0/bin/colmap.exe",
+  "openmvs_bin": "C:/recon-tools/openmvs-2.4.0/vc17/x64/Release",
+  "blender": "C:/Program Files/Blender Foundation/Blender 5.1/blender.exe",
+  "ffmpeg": "C:/recon-tools/ffmpeg/bin/ffmpeg.exe",
+  "ffprobe": "C:/recon-tools/ffmpeg/bin/ffprobe.exe"
+}

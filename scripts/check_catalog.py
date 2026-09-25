@@ -8,6 +8,7 @@ from urllib.parse import unquote, urlsplit
 import hashlib,json,re,sys
 
 ROOT=Path(__file__).resolve().parents[1]
+WEB_ROOTS=[ROOT/'tools/aha-world/public',ROOT/'tools/world-starter/public',ROOT/'tools/warmup-ai-or-human']
 SLUG=re.compile(r'^[a-z0-9]+(?:-[a-z0-9]+)*$')
 errors=[]
 def require(ok,message):
@@ -77,11 +78,17 @@ def main():
         if not f.is_file() or {'.git','__pycache__','node_modules'}.intersection(f.parts):continue
         count+=1;rel=f.relative_to(ROOT)
         require(not f.is_symlink(),'Symlink requires separate review: '+str(rel))
-        require(not f.name.startswith('.env'),'Environment file: '+str(rel))
+        require(not f.name.startswith('.env') or f.name=='.env.example','Environment file: '+str(rel))
+        if f.name=='.env.example':
+            for line in f.read_text(encoding='utf-8').splitlines():
+                match=re.match(r'^([A-Z_]*(?:KEY|SECRET|TOKEN|PASS|PASSWORD))=(.*)$',line)
+                if match:
+                    value=match[2].strip()
+                    require(not value or bool(re.fullmatch(r'(?:CHANGE_ME.*|change-me.*|your[-_].*|replace[-_].*)',value)), 'Non-placeholder credential in template: '+str(rel))
         require(not {'.env','.env.local','id_rsa','id_ed25519'}.intersection(rel.parts),'Sensitive file: '+str(rel))
         require(not {'_ops','_backups','project-code-private','website-public-course','runtime'}.intersection(rel.parts),'Private directory: '+str(rel))
-        require(f.suffix.lower() not in {'.pem','.key','.p12','.pfx','.blend','.splat','.mp4','.zip','.ply'},'Review binary separately: '+str(rel))
-        if f.suffix not in {'.md','.json','.html','.js','.css','.py','.cff'}:continue
+        require(f.suffix.lower() not in {'.pem','.key','.p12','.pfx','.splat','.mp4','.zip','.ply'},'Review binary separately: '+str(rel))
+        if f.suffix not in {'.md','.json','.html','.js','.mjs','.css','.py','.cff'}:continue
         s=f.read_text(encoding='utf-8')
         # This validator describes the patterns; do not match those descriptions as secrets.
         if f.resolve()!=Path(__file__).resolve():
@@ -100,7 +107,11 @@ def main():
             links=[next(x for x in groups if x) for groups in re.findall(r'''url\(\s*(?:"([^"]*)"|'([^']*)'|([^)]*))\s*\)''',s)]
         for link in links:
             u=urlsplit(link)
-            if not u.scheme and not u.netloc and u.path:local(f.parent,link)
+            if not u.scheme and not u.netloc and u.path:
+                web_root=next((root for root in WEB_ROOTS if f.is_relative_to(root)),None)
+                if u.path.startswith('/') and web_root:
+                    local(web_root,u.path.lstrip('/') or 'index.html')
+                else:local(f.parent,link)
     # Illustrations/screenshots are allowed only when credited in the repository asset index.
     asset_list=read(ROOT/'assets/ASSETS.json')
     listed=set()
@@ -110,7 +121,7 @@ def main():
             for k in ['creator','source','rights','sha256']:require(bool(asset.get(k)),'Missing asset '+k+': '+asset['path'])
             if p and p.is_file():require(hashlib.sha256(p.read_bytes()).hexdigest()==asset['sha256'],'Asset hash mismatch: '+asset['path'])
     for f in ROOT.rglob('*'):
-        if f.is_file() and '.git' not in f.parts and f.suffix.lower() in {'.png','.jpg','.jpeg','.webp','.gif','.glb','.pdf'}:
+        if f.is_file() and not {'.git','node_modules','__pycache__'}.intersection(f.parts) and f.suffix.lower() in {'.png','.jpg','.jpeg','.webp','.gif','.glb','.blend','.pdf'}:
             require(f.relative_to(ROOT).as_posix() in listed,'Missing asset attribution: '+f.relative_to(ROOT).as_posix())
     print(json.dumps({'courses':len(catalog['courses']),'sessions':session_count,'tools':len(catalog.get('tools',[])),'files_checked':count,'errors':errors,'passed':not errors},ensure_ascii=False,indent=2))
     return int(bool(errors))
