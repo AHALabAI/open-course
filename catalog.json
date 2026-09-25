@@ -38,6 +38,13 @@
         "zh-CN": "人与社区",
         "en": "People and community"
       }
+    },
+    {
+      "id": "spatial-world",
+      "title": {
+        "zh-CN": "空间世界",
+        "en": "Spatial worlds"
+      }
     }
   ],
   "courses": [
@@ -48,6 +55,10 @@
     {
       "id": "cool-island",
       "path": "courses/climate-and-ecology/cool-island"
+    },
+    {
+      "id": "spatial-workflows",
+      "path": "courses/spatial-world/spatial-workflows"
     }
   ],
   "tools": [

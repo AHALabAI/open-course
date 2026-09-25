@@ -21,6 +21,7 @@
 |---|---|---|
 | 与世界相连 | [MMCOOL：我们生活在同一个世界](courses/world-and-society/mmcool-worldview/README.md) | 两天各约 120 分钟；已整理第一天的官网课件、讲稿和活动入口 |
 | 气候与生态 | [城市凉岛](courses/climate-and-ecology/cool-island/README.md) | 六节各约 120 分钟；教案和浏览器互动代码可在本机运行 |
+| 空间世界 | [从空间到游戏](courses/spatial-world/spatial-workflows/README.md) | 三个学习模块；交互房间、四层工坊与公开空间重建的完整源码 |
 
 每门课含对象与时长、课程说明、课次、活动、资料出处、配套代码及来源声明。跨主题课程只保存一份，用 [catalog.json](catalog.json) 与 course.json 中的多个主题标签检索。
 
@@ -28,9 +29,9 @@
 
 | 示例 | 从哪里开始 |
 |---|---|
-| [一间房，一个小任务](tools/world-starter/README.md) | Blender → GLB → Three.js，拾取、火堆、小游戏与可选 AI |
-| [四层探索工坊](tools/aha-world/README.md) | 独立建筑、探索、建造、访客联机与 AI 伙伴 |
-| [公开空间重建](tools/office-reconstruction/README.md) | office1a 标定照片、网格修复、同相机对照与动画渲染 |
+| [一间房，一个小任务](courses/spatial-world/spatial-workflows/code/world-starter/README.md) | Blender → GLB → Three.js，拾取、火堆、小游戏与可选 AI |
+| [四层探索工坊](courses/spatial-world/spatial-workflows/code/aha-world/README.md) | 独立建筑、探索、建造、访客联机与 AI 伙伴 |
+| [公开空间重建](courses/spatial-world/spatial-workflows/code/office-reconstruction/README.md) | office1a 标定照片、网格修复、同相机对照与动画渲染 |
 
 [课程与下载入口](https://aha-lab.ai/course/ai-game-studio/#source-code) · [第一篇制作文章](https://mp.weixin.qq.com/s/ecNLna3nGzrH7c1ebXWjsg)
 

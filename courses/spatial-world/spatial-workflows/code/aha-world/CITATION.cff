@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please retain the AHALab copyright and license notices."
+title: "AHALab aha-world"
+version: 0.1.0
+authors:
+  - name: AHALab
+license: MIT
+repository-code: "https://github.com/AHALabAI/open-course"
+url: "https://aha-lab.ai/course/ai-game-studio/#source-code"

@@ -1,0 +1,61 @@
+{
+  "id": "spatial-workflows",
+  "version": "0.1.0",
+  "primary_topic": "spatial-world",
+  "topics": [
+    "spatial-world",
+    "ai-and-computing",
+    "design-and-making"
+  ],
+  "connection_axes": [
+    "people",
+    "world"
+  ],
+  "title": {
+    "zh-CN": "从空间到游戏：3D 创作与真实空间重建",
+    "en": "From spaces to games: 3D creation and reconstruction"
+  },
+  "summary": {
+    "zh-CN": "从交互房间、四层工坊到公开照片重建，练习用可运行作品和对照证据解释设计。",
+    "en": "Build an interactive room, explore a workshop, and investigate reconstruction from public calibrated photographs."
+  },
+  "content_languages": [
+    "zh-CN"
+  ],
+  "audience": "learners-and-educators",
+  "prerequisites": [
+    "基础终端和文件操作；重建模块另需 Python 使用经验"
+  ],
+  "format": "three-self-paced-modules",
+  "planned_duration_minutes": 420,
+  "content_license": "CC-BY-4.0",
+  "available_sessions": [
+    {
+      "id": "01-world-starter",
+      "title": "一间房，一个小任务",
+      "planned_minutes": 120,
+      "entry": "sessions/01-world-starter/README.md",
+      "delivery": "repository"
+    },
+    {
+      "id": "02-explorer-workshop",
+      "title": "四层探索工坊",
+      "planned_minutes": 120,
+      "entry": "sessions/02-explorer-workshop/README.md",
+      "delivery": "repository"
+    },
+    {
+      "id": "03-space-reconstruction",
+      "title": "从照片到空间",
+      "planned_minutes": 180,
+      "entry": "sessions/03-space-reconstruction/README.md",
+      "delivery": "repository"
+    }
+  ],
+  "available_materials_scope": "三个学习模块、完整示例源码及相应使用说明；重建照片和外部工具由使用者另行下载。",
+  "code_entries": [
+    "code/world-starter/README.md",
+    "code/aha-world/README.md",
+    "code/office-reconstruction/README.md"
+  ]
+}

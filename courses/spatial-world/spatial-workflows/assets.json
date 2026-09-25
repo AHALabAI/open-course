@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "redistributed_assets": [
+    {
+      "path": "code/aha-world/generated/explorer-hall.blend",
+      "creator": "AHALab",
+      "source": "Procedural Blender scene; accompanying build_scene.py",
+      "rights": "MIT — see the project LICENSE",
+      "sha256": "ee6b8056b51bb3609fb06cd8b80e2db15df684dc2d5df8b5277c307b66124a52",
+      "bytes": 266892
+    },
+    {
+      "path": "code/aha-world/public/assets/explorer-hall.glb",
+      "creator": "AHALab",
+      "source": "Procedural Blender scene; accompanying build_scene.py",
+      "rights": "MIT — see the project LICENSE",
+      "sha256": "e2d19ce0b4279a777544fb4bbc86cd1b573c499c12bb815d835e36909535ae82",
+      "bytes": 666588
+    },
+    {
+      "path": "code/aha-world/public/assets/explorer-hall.png",
+      "creator": "AHALab",
+      "source": "Procedural Blender scene; accompanying build_scene.py",
+      "rights": "MIT — see the project LICENSE",
+      "sha256": "daeeb1b65f48ba2f1b2f7e5cc00dd3df2934f568df648e65485306ae2fe11db8",
+      "bytes": 1778669
+    },
+    {
+      "path": "code/world-starter/generated/room.blend",
+      "creator": "AHALab",
+      "source": "Procedural Blender scene; accompanying build_scene.py",
+      "rights": "MIT — see the project LICENSE",
+      "sha256": "9ad6136532760e2d4f766310de46b112a6b002248761143570b543f03d9cfcac",
+      "bytes": 109919
+    },
+    {
+      "path": "code/world-starter/public/assets/room-render.png",
+      "creator": "AHALab",
+      "source": "Procedural Blender scene; accompanying build_scene.py",
+      "rights": "MIT — see the project LICENSE",
+      "sha256": "d028ca13ece28d1a2b81ed79a7187c5b1a417422c2b17bf3a1f29d1fb04ec156",
+      "bytes": 1054547
+    },
+    {
+      "path": "code/world-starter/public/assets/room.glb",
+      "creator": "AHALab",
+      "source": "Procedural Blender scene; accompanying build_scene.py",
+      "rights": "MIT — see the project LICENSE",
+      "sha256": "e84b0571bacab72d80b2f7b9c54f0234202fa766d92e6410ef1acb64d55cbc37",
+      "bytes": 52816
+    }
+  ]
+}

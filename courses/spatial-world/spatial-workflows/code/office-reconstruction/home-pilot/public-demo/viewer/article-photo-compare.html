@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><link rel="icon" href="data:,"><title>公开实拍与模型同相机对照</title><style>body{margin:0;background:#182329}canvas{display:block}</style><script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script></head><body><script type="module">
+import * as THREE from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(1);renderer.outputColorSpace=THREE.SRGBColorSpace;document.body.append(renderer.domElement);
+const scene=new THREE.Scene();scene.background=new THREE.Color('#182329');scene.add(new THREE.HemisphereLight(0xffffff,0x555555,2));const sun=new THREE.DirectionalLight(0xffffff,2);sun.position.set(2,4,3);scene.add(sun);
+const camera=new THREE.PerspectiveCamera(),loader=new GLTFLoader(),models={};const views=await (await fetch('assets/article-photo-views.json')).json();
+for(const [key,file] of Object.entries({original:'office.glb',final:'office-room-final.glb',overlay:'room-repair-overlay-final.glb'})){
+ const o=(await loader.loadAsync('assets/'+file)).scene;o.traverse(m=>{if(!m.isMesh)return;if(key==='overlay'){m.material=new THREE.MeshBasicMaterial({color:0xff7628,side:THREE.DoubleSide,transparent:true,opacity:.65,polygonOffset:true,polygonOffsetFactor:-3,polygonOffsetUnits:-3,depthWrite:false});m.renderOrder=2;return;}const convert=mat=>{if(mat.name.startsWith('replacement_')){mat.side=THREE.DoubleSide;return mat;}return new THREE.MeshBasicMaterial({map:mat.map,color:mat.color,side:THREE.DoubleSide});};m.material=Array.isArray(m.material)?m.material.map(convert):convert(m.material);});o.visible=false;scene.add(o);models[key]=o;
+}
+models.overlay.getObjectByName('inferred_tabletop').visible=false;
+window.renderCase=async(key,variant='final',marked=false)=>{
+ const v=views.find(v=>v.key===key),R=v.rotation_camera_to_world,k=v.intrinsics,near=.01,far=1000;
+ renderer.setSize(k.width,k.height);camera.position.fromArray(v.position);camera.up.set(-R[0][1],-R[1][1],-R[2][1]);camera.lookAt(camera.position.clone().add(new THREE.Vector3(R[0][2],R[1][2],R[2][2])));
+ camera.projectionMatrix.makePerspective(-k.cx/k.fx*near,(k.width-k.cx)/k.fx*near,k.cy/k.fy*near,-(k.height-k.cy)/k.fy*near,near,far);camera.projectionMatrixInverse.copy(camera.projectionMatrix).invert();camera.updateMatrixWorld(true);
+ for(const [name,obj] of Object.entries(models))obj.visible=name===variant||(name==='overlay'&&marked);renderer.render(scene,camera);
+ let maxError=0;for(const [u,w] of [[.2,.2],[.8,.8],[.5,.5]]){const q=[(u*k.width-k.cx)/k.fx*2,(w*k.height-k.cy)/k.fy*2,2];const p=new THREE.Vector3(...R.map((row,i)=>row.reduce((s,r,j)=>s+r*q[j],v.position[i]))).project(camera);maxError=Math.max(maxError,Math.abs((p.x+1)/2*k.width-u*k.width),Math.abs((1-p.y)/2*k.height-w*k.height));}
+ await new Promise(r=>requestAnimationFrame(r));return {key,variant,marked,width:k.width,height:k.height,projection_pixel_error:maxError,view:v};
+};window.comparisonReady=true;
+</script></body></html>

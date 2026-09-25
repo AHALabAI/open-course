@@ -1,0 +1,38 @@
+[
+  {
+    "id": "world-starter",
+    "distribution": "included",
+    "path": "code/world-starter/README.md",
+    "rights": "AHALab original material: MIT. Third-party terms: see the example notices."
+  },
+  {
+    "id": "aha-world",
+    "distribution": "included",
+    "path": "code/aha-world/README.md",
+    "rights": "AHALab original material: MIT. Third-party terms: see the example notices."
+  },
+  {
+    "id": "office-reconstruction",
+    "distribution": "included",
+    "path": "code/office-reconstruction/README.md",
+    "rights": "AHALab original material: MIT. Third-party terms: see the example notices."
+  },
+  {
+    "id": "course-web",
+    "distribution": "external-link",
+    "url": "https://aha-lab.ai/course/ai-game-studio/#source-code",
+    "rights": "AHALab course text; external materials retain their own rights."
+  },
+  {
+    "id": "first-article",
+    "distribution": "external-link",
+    "url": "https://mp.weixin.qq.com/s/ecNLna3nGzrH7c1ebXWjsg",
+    "rights": "Linked for reading; article and platform rights remain with their owners."
+  },
+  {
+    "id": "release",
+    "distribution": "external-link",
+    "url": "https://github.com/AHALabAI/open-course/releases/tag/spatial-workflows-v0.1.0",
+    "rights": "Per-example MIT and third-party notices."
+  }
+]

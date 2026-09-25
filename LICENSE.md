@@ -6,7 +6,7 @@
 |---|---|
 | AHALab 原创课程文案、教案、工作纸与说明文档 | [CC BY 4.0](LICENSES/CC-BY-4.0.md)，包括相应 HTML/JSON 中的原创教学文案 |
 | tools/html-ppt-player/ 与 courses/climate-and-ecology/cool-island/code/ 中的软件实现 | 各目录所附 MIT LICENSE；HTML/JavaScript/CSS 的程序和页面运行实现属软件范围，原创教学文案单独按上一行处理 |
-| tools/aha-world/、tools/world-starter/、tools/office-reconstruction/ 的 AHALab 原创代码、随包模型及目录内文档 | 各目录 MIT LICENSE；第三方库和数据保留各自许可 |
+| tools/aha-world/、tools/world-starter/、tools/office-reconstruction/ 及 courses/spatial-world/spatial-workflows/code/ 的 AHALab 原创代码、随包模型及目录内文档 | 各目录 MIT LICENSE；第三方库和数据保留各自许可 |
 | scripts/ 下的维护脚本 | [MIT](LICENSES/MIT.txt) |
 | catalog.json 与 course.json 中的 AHALab 原创课程描述 | CC BY 4.0；课程 ID、路径等事实性字段用于索引 |
 | assets/readme/ 中列入 ASSETS.json 的横幅与示例截图 | AHALab 所持权利按 CC BY 4.0 提供，品牌及其他独立权利不包括在内 |

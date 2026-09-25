@@ -1,0 +1,17 @@
+{
+  "name": "aha-world-tutorial-starter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --env-file=.env.local server.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "license": "MIT"
+}

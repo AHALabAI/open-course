@@ -8,7 +8,7 @@ from urllib.parse import unquote, urlsplit
 import hashlib,json,re,sys
 
 ROOT=Path(__file__).resolve().parents[1]
-WEB_ROOTS=[ROOT/'tools/aha-world/public',ROOT/'tools/world-starter/public',ROOT/'tools/warmup-ai-or-human']
+WEB_ROOTS=[ROOT/'courses/spatial-world/spatial-workflows/code/aha-world/public',ROOT/'courses/spatial-world/spatial-workflows/code/world-starter/public',ROOT/'tools/aha-world/public',ROOT/'tools/world-starter/public',ROOT/'tools/warmup-ai-or-human']
 SLUG=re.compile(r'^[a-z0-9]+(?:-[a-z0-9]+)*$')
 errors=[]
 def require(ok,message):

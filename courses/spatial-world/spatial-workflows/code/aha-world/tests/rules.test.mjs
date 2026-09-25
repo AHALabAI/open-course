@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {newGame,pay,tickState,blocked,parseDecision} from '../public/rules.mjs';
+test('crafting cannot consume a partial recipe',()=>{const bag={wood:3,stone:0};assert.equal(pay(bag,{wood:2,stone:1}),false);assert.deepEqual(bag,{wood:3,stone:0});});
+test('night damages exposed players but shelters protect',()=>{const a=newGame({elapsed:110}),b=newGame({elapsed:110});tickState(a,10,false);tickState(b,10,true);assert.ok(a.health<100);assert.equal(b.health,100);});
+test('win requires surviving until dawn and fixing beacon',()=>{const a=newGame({elapsed:179,beacon:true}),b=newGame({elapsed:179});tickState(a,2,true);tickState(b,2,true);assert.equal(a.status,'won');assert.equal(b.status,'lost');});
+test('low-confidence AI choice falls back to guard',()=>{const a=parseDecision({answers:{action:{choice:'gather',confidence:.3,probabilities:{gather:.4,assist:.2,shelter:.2,guard:.2}},urgency:{score:1},danger:{noul:.1}}});assert.equal(a.choice,'guard');assert.equal(a.proposed,'gather');});
+test('invalid model output rejected',()=>{assert.throws(()=>parseDecision({answers:{action:{choice:'teleport',confidence:1}}}));});
+test('floor boundaries, walls and player blocks prevent crossing',()=>{assert.equal(blocked(19,0,0,[]),true);assert.equal(blocked(0,-8,2,[]),true);assert.equal(blocked(0,-8,3,[]),false);assert.equal(blocked(0,0,1,[{x:0,z:0,w:1,d:1,floor:1}]),true);assert.equal(blocked(0,0,0,[{x:0,z:0,w:1,d:1,floor:1}]),false);});
+test('terminal states stop simulating',()=>{const s=newGame({status:'won'});tickState(s,20,false);assert.equal(s.elapsed,0);});
