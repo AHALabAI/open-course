@@ -5,7 +5,7 @@ from functools import partial
 import argparse
 ROOT=Path(__file__).resolve().parent
 class Handler(SimpleHTTPRequestHandler):
-    extensions_map={**SimpleHTTPRequestHandler.extensions_map,'.mjs':'text/javascript','.ogg':'audio/ogg','.svg':'image/svg+xml'}
+    extensions_map={**SimpleHTTPRequestHandler.extensions_map,'.mjs':'text/javascript','.ogg':'audio/ogg','.svg':'image/svg+xml','.md':'text/plain; charset=utf-8','.txt':'text/plain; charset=utf-8'}
     def list_directory(self,path):self.send_error(404);return None
     def end_headers(self):self.send_header('Cache-Control','no-cache');super().end_headers()
 if __name__=='__main__':
