@@ -1,0 +1,45 @@
+{
+  "id": "game-making",
+  "version": "0.1.0",
+  "primary_topic": "ai-and-computing",
+  "topics": [
+    "ai-and-computing",
+    "design-and-making",
+    "people-and-community"
+  ],
+  "connection_axes": [
+    "people",
+    "world"
+  ],
+  "title": {
+    "zh-CN": "画迷宫，养小动物",
+    "en": "Draw a maze, care for animals"
+  },
+  "summary": {
+    "zh-CN": "用可编辑浏览器游戏表达想法、测试规则和修改作品。",
+    "en": "Express ideas, test rules and revise two editable browser games."
+  },
+  "content_languages": [
+    "zh-CN"
+  ],
+  "audience": "learners-and-educators",
+  "prerequisites": [
+    "由教师协助启动本地网页"
+  ],
+  "format": "paired-workshop",
+  "planned_duration_minutes": 60,
+  "content_license": "CC-BY-4.0",
+  "available_sessions": [
+    {
+      "id": "01-make-and-play",
+      "title": "我来设计，请你试玩",
+      "planned_minutes": 60,
+      "entry": "syllabus.md",
+      "delivery": "repository"
+    }
+  ],
+  "code_entries": [
+    "code/paper-maze/README.md",
+    "code/animal-garden/README.md"
+  ]
+}

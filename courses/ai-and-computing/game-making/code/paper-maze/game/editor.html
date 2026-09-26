@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>画我的迷宫 · 纸上秘境</title><link rel="stylesheet" href="../site.css"><link rel="stylesheet" href="editor.css"></head><body>
+<header><a class="brand" href="../index.html">AHALAB / 迷宫工作台</a><nav><a href="index.html">示例游戏</a><a href="../worksheet.html">我的任务卡</a></nav></header>
+<main><span class="eyebrow">迷宫涂鸦</span><h1 class="workspace-title">我来设计这一关</h1><p>先选画布大小和迷宫配色，再点格子画墙与道路。起点与光晶放在路上，梯子放在靠墙的道路格，出口门放在墙格上。</p>
+<div class="editor-layout"><section class="drawing-area">
+  <div class="size-panel">
+    <label class="field">画布尺寸（宽 × 高）<select id="size-preset"></select></label>
+    <div class="dimension-inputs"><label class="field">宽 · 列数<input id="map-width" type="number" min="5" max="43" step="1" value="11" inputmode="numeric"></label><span>×</span><label class="field">高 · 行数<input id="map-height" type="number" min="5" max="43" step="1" value="11" inputmode="numeric"></label></div>
+    <div class="actions"><button id="apply-size" class="primary">应用尺寸</button><button id="blank">新建空白地图</button><button id="undo-size" disabled>撤销尺寸 / 新建</button></div>
+    <p id="size-feedback" class="small" role="status" aria-live="polite"></p>
+    <p class="small">宽、高各支持 5–43 格，包含外围墙。调整时保留左上方内容；缩小后超出边界的目标会重新安放，梯子靠墙、门在墙顶。扩大的区域可继续画路。</p>
+  </div>
+  <div class="tools" id="tools" role="group" aria-label="选择画笔"></div>
+  <div class="board-viewport" tabindex="0" role="region" aria-label="迷宫画布，大地图可在这里上下左右滚动"><div id="board" class="editor-board" role="group" aria-label="可编辑的迷宫格子"></div></div>
+  <p class="small">大地图可以在画布内左右、上下滚动，每格保持正方形。<br>S 起点 / L 梯子 / D 墙顶出口门 / ◆ 光晶 · 外圈保留围墙 · 最多 16 颗光晶</p>
+</section><aside class="paper">
+  <h2>画好后检查一下</h2><p class="small">找出口的方法：在迷宫里找到 L 梯子 → 按 E 爬上墙顶 → 看见 D 出口门 → 沿墙顶走过去。请把门放在与梯子上方连通的墙格上。</p><label class="field">给关卡起个名字<input id="name" maxlength="24" value="我的秘密花园"></label>
+  <label class="field">选迷宫的颜色<select id="theme"></select></label>
+  <div id="theme-preview" class="theme-preview" aria-label="迷宫配色预览"></div><p class="small">墙面、地面、天空一起换色。画布即时预览，点“试玩我的迷宫”，看看画好的样子。</p>
+  <p id="stats"></p><button class="primary" id="play">试玩我的迷宫 →</button><p id="validation" role="status" aria-live="polite"></p>
+  <div class="actions"><button id="save">导出作品</button><button id="load">导入作品</button><button id="reset">回到起始模板</button></div><input id="file" type="file" accept="application/json,.json" hidden>
+  <p class="small">导出的 JSON 会保留地图尺寸、配色、梯子与门的位置，下次导入即可继续。试玩与返回时自动保留本标签页草稿。修改前先导出一份，留下你的第一版。</p><div class="note">请朋友试玩时，先不告诉他路线。看看他在哪一格停下来。</div>
+</aside></div></main><script type="module" src="editor.mjs"></script></body></html>

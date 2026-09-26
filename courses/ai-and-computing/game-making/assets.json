@@ -1,0 +1,14 @@
+[
+  {
+    "path": "code/paper-maze/assets/level-one.svg",
+    "creator": "AHALab",
+    "rights": "MIT",
+    "source": "Generated from the included level grid; private drawing photograph excluded."
+  },
+  {
+    "path": "code/paper-maze/assets/music",
+    "creator": "AHALab",
+    "rights": "CC-BY-4.0 for music and score; MIT for synthesis code",
+    "source": "Original mathematical synthesis"
+  }
+]

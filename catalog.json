@@ -59,6 +59,10 @@
     {
       "id": "spatial-workflows",
       "path": "courses/spatial-world/spatial-workflows"
+    },
+    {
+      "id": "game-making",
+      "path": "courses/ai-and-computing/game-making"
     }
   ],
   "tools": [

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>纸上秘境 · 第一人称迷宫</title><link rel="stylesheet" href="game.css"></head>
+<body>
+<div id="world" aria-label="第一人称三维迷宫"></div>
+<div class="vignette"></div>
+<header id="brand"><a href="../index.html">AHALAB <span>迷宫小游戏</span></a><nav><a href="editor.html">画我的迷宫 ↗</a><a href="../README.md">给小老师的教案</a></nav></header>
+<main id="menu" class="overlay">
+  <section class="intro"><div class="eyebrow">手绘迷宫 · 10关小游戏</div><h1>纸上<span>秘境</span><i>收集光晶，爬梯子，找出口。</i></h1><p class="lead">第一关是照着小朋友的手绘图做的。<br>先收集光晶，再找梯子爬上墙，最后走到出口门。</p>
+  <div class="section-label">01 / 选一位探险伙伴 <span>外观不同，能力一样</span></div>
+  <div id="characters" class="characters" role="group" aria-label="选择角色"></div>
+  <div class="section-label">02 / 今天探索哪一关 <label><input id="practice" type="checkbox">课堂自由选关</label></div>
+  <div id="levels" class="levels"></div>
+  <div id="level-description" class="level-description"></div>
+<details class="sound-settings"><summary>♫ 音乐与音效</summary><div class="sound-grid">
+<label><input type="checkbox" data-audio="music" checked> 背景音乐</label><input type="range" min="0" max="100" value="25" data-audio="musicVolume" aria-label="背景音乐音量">
+<label><input type="checkbox" data-audio="effects" checked> 游戏音效</label><input type="range" min="0" max="100" value="60" data-audio="effectsVolume" aria-label="游戏音效音量">
+</div><p>《转个弯，发现惊喜》 · 蹦蹦跳跳版 · 132 BPM<br>挥空、击中、积木散落，都有不同的声音。</p><p data-audio-status role="status"></p></details>
+  <button id="start" class="primary">开始玩 <span>→</span></button>
+  <p class="small">WASD 移动 · 鼠标看向四周 · E 取火 / 点火 / 上下梯子 · 方向键也可以玩<br>没有全局地图。走到哪里，才认识哪里。</p>
+  </section><div id="companion" aria-label="所选角色的三维外观预览"></div><aside class="world-note"><span class="square-dot"></span> 路线参考 · 第一关<br><small>这是第一关的路线参考图。</small></aside>
+</main>
+<section id="hud" hidden aria-label="游戏状态"><div class="hud-top"><div class="hud-level"><small id="chapter"></small><strong id="level-title"></strong></div><div id="objectives" class="objectives"></div><button id="pause" class="glass">Ⅱ 暂停</button></div><div id="hearts" class="hearts"></div><div class="crosshair">+</div><div id="toast" role="status" aria-live="polite"></div><div class="hud-bottom"><div id="mission" class="mission"></div><div class="actions"><button id="ignite" class="glass" hidden>E · 取火种</button><button id="ladder" class="glass" hidden>E · 爬上梯子</button><button id="mark" class="glass">F · 放路标</button><button id="hint" class="glass">H · 萤火提示</button><button id="attack" class="glass">空格 · 光杖</button></div></div><div id="touch-controls"><div class="dpad"><button data-key="ArrowUp" aria-label="向前">▲</button><button data-key="ArrowLeft" aria-label="向左转">↶</button><button data-key="ArrowDown" aria-label="向后">▼</button><button data-key="ArrowRight" aria-label="向右转">↷</button></div><span>拖动画面，看看四周</span></div></section>
+<div id="dialog" class="dialog" hidden><section><span id="dialog-kicker" class="eyebrow"></span><h2 id="dialog-title"></h2><p id="dialog-copy"></p><details class="sound-settings"><summary>♫ 音乐与音效</summary><div class="sound-grid">
+<label><input type="checkbox" data-audio="music" checked> 背景音乐</label><input type="range" min="0" max="100" value="25" data-audio="musicVolume" aria-label="背景音乐音量">
+<label><input type="checkbox" data-audio="effects" checked> 游戏音效</label><input type="range" min="0" max="100" value="60" data-audio="effectsVolume" aria-label="游戏音效音量">
+</div><p>《转个弯，发现惊喜》 · 原创木琴小曲<br>挥空、击中、击退，都有不同的声音。</p><p data-audio-status role="status"></p></details><div id="dialog-actions"></div></section></div>
+<div id="error" class="dialog" hidden><section><h2>游戏没有打开</h2><p id="error-text"></p><a href="../index.html">回到课程首页</a></section></div>
+<script src="bootstrap.js"></script>
+<link rel="stylesheet" href="companion.css"><script type="module" src="game.mjs"></script></body></html>

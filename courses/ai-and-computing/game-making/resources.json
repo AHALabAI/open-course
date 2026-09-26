@@ -1,0 +1,20 @@
+[
+  {
+    "id": "maze",
+    "distribution": "included",
+    "path": "code/paper-maze/README.md",
+    "rights": "MIT code; CC-BY-4.0 documentation; Three.js MIT retained"
+  },
+  {
+    "id": "pets",
+    "distribution": "included",
+    "path": "code/animal-garden/README.md",
+    "rights": "MIT code; CC-BY-4.0 documentation"
+  },
+  {
+    "id": "teaching-notes",
+    "distribution": "included",
+    "path": "teaching-notes.md",
+    "rights": "CC-BY-4.0 original teaching commentary; references linked, not redistributed"
+  }
+]

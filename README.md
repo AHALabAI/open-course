@@ -81,3 +81,7 @@ AHALab 原创课程内容与说明采用 **CC BY 4.0**；软件代码采用 **MI
 如果这些材料对你有帮助，可以 [Star](https://github.com/AHALabAI/open-course/stargazers) 关注更新。无需 Star 或 Fork 也能按许可证使用材料。
 
 相关工具：[ZimaBlueAI / skills](https://github.com/ZimaBlueAI/skills)。
+
+## 画迷宫，养小动物
+
+[两款可编辑游戏与60分钟活动](courses/ai-and-computing/game-making/README.md)：第一人称3D迷宫、长方形地图编辑器，以及12只动物的养成游戏。可独立本地运行。

@@ -37,3 +37,7 @@ Original course content uses CC BY 4.0; software and code use MIT. Preserve appl
 ## Fork and contribute
 
 [Fork this repository](https://github.com/AHALabAI/open-course/fork) to adapt a course or a tool. Retain the applicable notices and describe your changes. Submit corrections through a Pull Request or [Issue](https://github.com/AHALabAI/open-course/issues). A Star or Fork is optional and never a condition of the license.
+
+## Editable classroom games
+
+[Draw a maze, care for animals](courses/ai-and-computing/game-making/README.en.md): a first-person 3D maze with a rectangular map editor, and a 2D animal-care game. Both run locally. English setup instructions and an activity plan are included; the game interfaces and detailed teaching notes are in Simplified Chinese.
