@@ -1,0 +1,584 @@
+{
+  "version": 1,
+  "plays": [
+    {
+      "id": "moon-gift",
+      "title": "月下送灯",
+      "age": "7-9",
+      "preset": "dramaMoon",
+      "characters": [
+        "mulan",
+        "yutu"
+      ],
+      "summary": "说一句英语，怎样让观众看懂你在送灯？",
+      "words": [
+        [
+          "lantern",
+          "花灯",
+          "举起花灯给同伴看。"
+        ],
+        [
+          "wave",
+          "挥手",
+          "抬起手臂，做告别的动作。"
+        ]
+      ],
+      "lines": [
+        [
+          "旁白",
+          "Look at the moon.",
+          "看月亮。",
+          "指向背景中的月亮。"
+        ],
+        [
+          "送灯人",
+          "Hello, Rabbit!",
+          "你好，兔子！",
+          "走近同伴，抬起手臂。"
+        ],
+        [
+          "兔子",
+          "Hello!",
+          "你好！",
+          "点头回应。"
+        ],
+        [
+          "送灯人",
+          "This lantern is for you.",
+          "这盏灯送给你。",
+          "举灯；先放下，再由另一角色拿起。"
+        ],
+        [
+          "兔子",
+          "Thank you!",
+          "谢谢你！",
+          "点头。"
+        ],
+        [
+          "旁白",
+          "They wave goodbye.",
+          "他们挥手告别。",
+          "两位角色挥手，慢慢退场。"
+        ]
+      ],
+      "roles": [
+        "旁白",
+        "送灯人",
+        "兔子"
+      ],
+      "challenge": "我说了____，影人做了____。观众看懂了____。"
+    },
+    {
+      "id": "lost-lantern",
+      "title": "桥边寻灯",
+      "age": "10-12",
+      "preset": "dramaBridge",
+      "characters": [
+        "mulan",
+        "erlang"
+      ],
+      "summary": "台词、走位和道具，怎样一起讲清寻找花灯的故事？",
+      "words": [
+        [
+          "lantern",
+          "花灯",
+          "本剧要找的东西。"
+        ],
+        [
+          "bridge",
+          "桥",
+          "花灯放在桥旁。"
+        ],
+        [
+          "beside",
+          "在……旁边",
+          "把灯和桥的位置摆给同伴看。"
+        ],
+        [
+          "carefully",
+          "小心地",
+          "说这句时，角色慢慢移动。"
+        ]
+      ],
+      "lines": [
+        [
+          "旁白",
+          "It is getting dark.",
+          "天渐渐黑了。",
+          "两位角色入场。"
+        ],
+        [
+          "找灯人",
+          "Where is my lantern?",
+          "我的花灯去哪儿了？",
+          "先向左看，再向右看。"
+        ],
+        [
+          "同伴",
+          "Let us look for it.",
+          "我们找一找吧。",
+          "走到同伴身边。"
+        ],
+        [
+          "找灯人",
+          "Is it on the table?",
+          "它在桌上吗？",
+          "指向桌子。"
+        ],
+        [
+          "同伴",
+          "No. Look beside the bridge!",
+          "不在。看看桥旁边！",
+          "转向石桥。"
+        ],
+        [
+          "旁白",
+          "They walk carefully.",
+          "他们小心地走着。",
+          "放慢移动。"
+        ],
+        [
+          "找灯人",
+          "There it is!",
+          "它在那儿！",
+          "靠近花灯。"
+        ],
+        [
+          "同伴",
+          "Can you pick it up?",
+          "你能把它拿起来吗？",
+          "留出拿灯的时间。"
+        ],
+        [
+          "找灯人",
+          "Yes. Thank you for helping me.",
+          "能。谢谢你帮我。",
+          "拿起灯，再点头。"
+        ],
+        [
+          "旁白",
+          "They go home together.",
+          "他们一起回家。",
+          "举灯告别，退场。"
+        ]
+      ],
+      "roles": [
+        "旁白",
+        "找灯人",
+        "同伴"
+      ],
+      "challenge": "观众没听清或没看懂____。我们把____改成____，再演时____。"
+    },
+    {
+      "id": "shared-peach",
+      "title": "森林分桃",
+      "age": "13-15",
+      "preset": "dramaPeach",
+      "characters": [
+        "wukong",
+        "bajie"
+      ],
+      "summary": "同样一句话，停顿和动作变了，观众的理解会变吗？",
+      "words": [
+        [
+          "share",
+          "分享",
+          "角色要决定怎样分桃子。"
+        ],
+        [
+          "hungry",
+          "饿的",
+          "说明人物为什么想要桃子。"
+        ],
+        [
+          "promise",
+          "答应；承诺",
+          "提醒同伴先前说过的话。"
+        ],
+        [
+          "instead",
+          "改为；转而",
+          "提出另一种做法。"
+        ]
+      ],
+      "lines": [
+        [
+          "旁白",
+          "Two friends find a peach on the table.",
+          "两个朋友在桌上发现一颗桃子。",
+          "两位角色靠近桌子。"
+        ],
+        [
+          "甲",
+          "I found it first.",
+          "是我先发现的。",
+          "指向桃子。"
+        ],
+        [
+          "乙",
+          "But I am hungry too.",
+          "可是我也饿了。",
+          "面对甲，停一下。"
+        ],
+        [
+          "甲",
+          "Then what should we do?",
+          "那我们该怎么办？",
+          "放低手臂。"
+        ],
+        [
+          "乙",
+          "We could share it.",
+          "我们可以一起分享。",
+          "向甲伸手。"
+        ],
+        [
+          "甲",
+          "I promised to take it home.",
+          "我答应过把它带回家。",
+          "把桃子放回桌上。"
+        ],
+        [
+          "乙",
+          "Who is waiting for you?",
+          "谁在等你？",
+          "转向甲。"
+        ],
+        [
+          "甲",
+          "My little sister.",
+          "我的妹妹。",
+          "点头。"
+        ],
+        [
+          "旁白",
+          "They stop and think.",
+          "他们停下来想了想。",
+          "两位角色停住两拍。"
+        ],
+        [
+          "乙",
+          "Let us visit her instead.",
+          "那我们去看她吧。",
+          "举起花灯。"
+        ],
+        [
+          "甲",
+          "We can share the peach together.",
+          "我们可以一起分享这颗桃子。",
+          "拿起桃子。"
+        ],
+        [
+          "乙",
+          "That sounds fair.",
+          "这样听起来很公平。",
+          "点头。"
+        ],
+        [
+          "甲",
+          "Come with me.",
+          "跟我来。",
+          "转身带路。"
+        ],
+        [
+          "旁白",
+          "The two friends leave with the lantern.",
+          "两个朋友提着花灯离开了。",
+          "一起退场。"
+        ]
+      ],
+      "roles": [
+        "旁白",
+        "甲",
+        "乙"
+      ],
+      "challenge": "这次修改改善了____，证据是____。仅凭转写文本，还不能判断____。"
+    },
+    {
+      "id": "rainy-day",
+      "title": "雨天借伞",
+      "age": "7-9",
+      "preset": "dramaRain",
+      "characters": [
+        "mulan",
+        "yutu"
+      ],
+      "summary": "下雨了，只有一把伞。怎样邀请同伴一起走？",
+      "words": [
+        [
+          "rain",
+          "雨",
+          "说 rain 时指向雨点。"
+        ],
+        [
+          "umbrella",
+          "雨伞",
+          "先听完整单词，再连在句子里读。"
+        ],
+        [
+          "together",
+          "一起",
+          "两个人靠近，再一起向前走。"
+        ]
+      ],
+      "roles": [
+        "旁白",
+        "花木兰",
+        "兔子"
+      ],
+      "lines": [
+        [
+          "旁白",
+          "Here comes the rain.",
+          "下雨了。",
+          "两位角色停下，抬头看。"
+        ],
+        [
+          "花木兰",
+          "I have an umbrella.",
+          "我有一把伞。",
+          "走近雨伞，握手拿起来。"
+        ],
+        [
+          "兔子",
+          "May I join you?",
+          "我能和你一起吗？",
+          "靠近同伴，伸出一只手。"
+        ],
+        [
+          "花木兰",
+          "Yes. Come here!",
+          "可以。来这边！",
+          "把伞移向两人中间。"
+        ],
+        [
+          "兔子",
+          "Thank you!",
+          "谢谢你！",
+          "点头，两人靠近。"
+        ],
+        [
+          "旁白",
+          "They walk home together.",
+          "他们一起走回家。",
+          "把步子放慢，一起离场。"
+        ]
+      ],
+      "challenge": "不看中文，你能邀请同伴一起走吗？"
+    },
+    {
+      "id": "sea-rescue",
+      "title": "海边救援",
+      "age": "10-12",
+      "preset": "dramaSea",
+      "characters": [
+        "nezha",
+        "mulan"
+      ],
+      "summary": "海边传来求助声。先问清楚，再把救生圈送过去。",
+      "words": [
+        [
+          "help",
+          "帮助；求助",
+          "让同伴听出你在求助。"
+        ],
+        [
+          "ring",
+          "圈；这里指救生圈",
+          "注意词尾，别另外加一个“个”的音。"
+        ],
+        [
+          "slowly",
+          "慢慢地",
+          "说这个词时把动作放慢。"
+        ],
+        [
+          "safe",
+          "安全的",
+          "靠岸后再说，语气放松。"
+        ]
+      ],
+      "roles": [
+        "旁白",
+        "哪吒",
+        "花木兰"
+      ],
+      "lines": [
+        [
+          "旁白",
+          "There is a voice by the sea.",
+          "海边传来一个声音。",
+          "花木兰停在浪花旁。"
+        ],
+        [
+          "花木兰",
+          "Help! I cannot reach the shore.",
+          "救命！我到不了岸边。",
+          "挥动一只手求助。"
+        ],
+        [
+          "哪吒",
+          "I am here. Can you see me?",
+          "我在这里。你能看见我吗？",
+          "走近岸边，伸出手。"
+        ],
+        [
+          "花木兰",
+          "Yes. Please help me.",
+          "能。请帮帮我。",
+          "转向哪吒。"
+        ],
+        [
+          "哪吒",
+          "Hold on to this ring.",
+          "抓紧这个救生圈。",
+          "拿起救生圈，移近同伴后放下。"
+        ],
+        [
+          "花木兰",
+          "I have it!",
+          "我抓住了！",
+          "接过救生圈，握住不放。"
+        ],
+        [
+          "哪吒",
+          "Move slowly. I will help you.",
+          "慢慢移动。我来帮你。",
+          "两人缓缓靠岸。"
+        ],
+        [
+          "旁白",
+          "They reach the shore.",
+          "他们到了岸边。",
+          "把救生圈放到桌上。"
+        ],
+        [
+          "花木兰",
+          "I am safe now. Thank you!",
+          "现在安全了。谢谢你！",
+          "点头，向观众挥手。"
+        ],
+        [
+          "哪吒",
+          "Let us go home.",
+          "我们回家吧。",
+          "一起离场。"
+        ]
+      ],
+      "challenge": "求助、回应、到达岸边，这三段的语气有什么不同？"
+    },
+    {
+      "id": "borrow-fan",
+      "title": "花果山借扇",
+      "age": "13-15",
+      "preset": "dramaFan",
+      "characters": [
+        "wukong",
+        "mulan"
+      ],
+      "summary": "悟空想借扇子。对方有些担心，他要怎样说明用途、作出约定？",
+      "words": [
+        [
+          "borrow",
+          "借用",
+          "borrow 后面接想借的东西。"
+        ],
+        [
+          "promise",
+          "承诺",
+          "让同伴听清你答应了什么。"
+        ],
+        [
+          "carefully",
+          "小心地",
+          "扇子交接时配上轻缓的动作。"
+        ],
+        [
+          "return",
+          "归还",
+          "拿起来是 borrow，送回来是 return。"
+        ]
+      ],
+      "roles": [
+        "旁白",
+        "悟空",
+        "守扇人"
+      ],
+      "lines": [
+        [
+          "旁白",
+          "It is a hot day on the mountain.",
+          "山里这天很热。",
+          "悟空走上场，用手扇风。"
+        ],
+        [
+          "悟空",
+          "May I borrow your fan?",
+          "我能借用你的扇子吗？",
+          "走到桌前，指向扇子。"
+        ],
+        [
+          "守扇人",
+          "What do you need it for?",
+          "你要用它做什么？",
+          "抬手询问，先不拿扇子。"
+        ],
+        [
+          "悟空",
+          "My friends are waiting in the heat.",
+          "朋友们还在热天里等着。",
+          "转身指向山路。"
+        ],
+        [
+          "守扇人",
+          "This fan is very old.",
+          "这把扇子已经很老了。",
+          "拿起扇子，动作放轻。"
+        ],
+        [
+          "悟空",
+          "I will carry it carefully.",
+          "我会小心拿着。",
+          "伸手接，先等待对方放下。"
+        ],
+        [
+          "守扇人",
+          "When will you return it?",
+          "你什么时候归还？",
+          "指向桌面，约定归还的位置。"
+        ],
+        [
+          "悟空",
+          "Before sunset. I promise.",
+          "日落之前。我保证。",
+          "点头，接过扇子。"
+        ],
+        [
+          "旁白",
+          "Later, he comes back with the fan.",
+          "过了一会儿，他带着扇子回来了。",
+          "悟空离场，再从另一边入场。"
+        ],
+        [
+          "悟空",
+          "Here is your fan. Thank you.",
+          "扇子还给你。谢谢。",
+          "把扇子放到桌上。"
+        ],
+        [
+          "守扇人",
+          "You kept your promise.",
+          "你遵守了约定。",
+          "点头，拿起扇子。"
+        ],
+        [
+          "旁白",
+          "A small promise makes a good friend.",
+          "一次守约，让他们成了好朋友。",
+          "两人向观众致意。"
+        ]
+      ],
+      "challenge": "如果需要晚一点归还，悟空该怎样重新商量？请改写中间两句。"
+    }
+  ]
+}

@@ -19,3 +19,5 @@
 许可不表示 AHALab 为采用者的课程、产品或商业行为背书，也不授予官方合作、认证或商标使用资格。软件按原许可证不提供担保；科学示例的适用范围以课程说明为准。
 
 This is a mixed-license repository. AHALab-authored course content and documentation use CC BY 4.0; identified software uses the accompanying MIT license. Third-party and personal rights retain their own terms. Reuse does not imply affiliation, certification or endorsement.
+
+手指皮影戏 courses/design-and-making/finger-shadow/code/ 的原创软件 MIT；原创教学文案、所持插画与原创编曲权利 CC BY 4.0，品牌与独立第三方权利依课程声明。

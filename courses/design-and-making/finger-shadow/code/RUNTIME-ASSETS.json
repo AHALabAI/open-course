@@ -1,0 +1,548 @@
+[
+  {
+    "path": "vendor/ocsort/trackers/ocsort_tracker/ocsort.py",
+    "url": "https://raw.githubusercontent.com/noahcao/OC_SORT/8462e7e729a93ccd3bd995c0a79a890336cb3a0b/trackers/ocsort_tracker/ocsort.py",
+    "bytes": 18251,
+    "sha256": "62f69b0f765b6445602f1151c19763b0ffc0b8c74eee2aed404a16e4b25e6fe1",
+    "rights": "OC-SORT authors; MIT"
+  },
+  {
+    "path": "vendor/ocsort/trackers/ocsort_tracker/kalmanfilter.py",
+    "url": "https://raw.githubusercontent.com/noahcao/OC_SORT/8462e7e729a93ccd3bd995c0a79a890336cb3a0b/trackers/ocsort_tracker/kalmanfilter.py",
+    "bytes": 61686,
+    "sha256": "25282991539e3818737b41223eb27b24c33c4aa0dfcc47ba4892af451934fa1f",
+    "rights": "OC-SORT authors; MIT"
+  },
+  {
+    "path": "vendor/ocsort/trackers/ocsort_tracker/association.py",
+    "url": "https://raw.githubusercontent.com/noahcao/OC_SORT/8462e7e729a93ccd3bd995c0a79a890336cb3a0b/trackers/ocsort_tracker/association.py",
+    "bytes": 13717,
+    "sha256": "cd837b1eb64022afc1ef519baaa3f21bd953b745c83e511614994a652aa4cf00",
+    "rights": "OC-SORT authors; MIT"
+  },
+  {
+    "path": "vendor/vision_bundle.mjs",
+    "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.32/vision_bundle.mjs",
+    "bytes": 137160,
+    "sha256": "de83c48ff329717a27aeb528d5ef5f47f077c628a5302dc483aca5b513e7464b",
+    "rights": "Upstream MediaPipe terms; Apache-2.0 framework notice included"
+  },
+  {
+    "path": "vendor/wasm/vision_wasm_internal.js",
+    "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.32/wasm/vision_wasm_internal.js",
+    "bytes": 204816,
+    "sha256": "6f6b86509cf9e163ea1cfec7edc8cf53732699c04781e4c21c557c1ba402310e",
+    "rights": "Upstream MediaPipe terms; Apache-2.0 framework notice included"
+  },
+  {
+    "path": "vendor/wasm/vision_wasm_internal.wasm",
+    "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.32/wasm/vision_wasm_internal.wasm",
+    "bytes": 11453626,
+    "sha256": "cb3ec20026a9aecc2a81a93c25630ceb5389297ddb7a5f0bd61dd09cde606b9b",
+    "rights": "Upstream MediaPipe terms; Apache-2.0 framework notice included"
+  },
+  {
+    "path": "vendor/wasm/vision_wasm_nosimd_internal.js",
+    "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.32/wasm/vision_wasm_nosimd_internal.js",
+    "bytes": 204669,
+    "sha256": "9f8fc960e363f0fb2f42f7937b97ae9cf9a5630490f71031fa90caa9bb121938",
+    "rights": "Upstream MediaPipe terms; Apache-2.0 framework notice included"
+  },
+  {
+    "path": "vendor/wasm/vision_wasm_nosimd_internal.wasm",
+    "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.32/wasm/vision_wasm_nosimd_internal.wasm",
+    "bytes": 10647962,
+    "sha256": "924274fcd5ac8985f6570a8573e7971b7bd2d580ba1b8f3beb0ba8f95db6347c",
+    "rights": "Upstream MediaPipe terms; Apache-2.0 framework notice included"
+  },
+  {
+    "path": "vendor/hand_landmarker.task",
+    "url": "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task",
+    "bytes": 7819105,
+    "sha256": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1",
+    "rights": "Upstream MediaPipe terms; Apache-2.0 framework notice included"
+  },
+  {
+    "path": "vendor/MEDIAPIPE-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/google-ai-edge/mediapipe/master/LICENSE",
+    "bytes": 12331,
+    "sha256": "8707eef0533987efc5b155d64761eeb6e20793f50b9bd1a68dad1cf4719d0ed8",
+    "rights": "Upstream MediaPipe terms; Apache-2.0 framework notice included"
+  },
+  {
+    "path": "assets/english/moon-gift.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/moon-gift.wav",
+    "bytes": 546370,
+    "sha256": "49681fc023df4fcc46fd2c2b9fd0909038a8309f7118792a46639b95d09c60e8",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/moon-gift/01.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/moon-gift/01.wav",
+    "bytes": 88214,
+    "sha256": "fd82ce1b7cb1d22bd8832e726f5bddb2e4bff78128530870f76d5f03eced2940",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/moon-gift/02.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/moon-gift/02.wav",
+    "bytes": 112246,
+    "sha256": "cfa9b6d05a705f911eae4ceb90bd33e06426fd4166fb7e8e12c30bc22a156bed",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/moon-gift/03.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/moon-gift/03.wav",
+    "bytes": 67712,
+    "sha256": "227f7aa476ee779587e6c260b2a1ae2430d3eed1742b4fdebf066d0a7f8bd058",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/moon-gift/04.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/moon-gift/04.wav",
+    "bytes": 111800,
+    "sha256": "9bd5ed7c445bd69934b3139e05c66c4db378b99c9c7f708b037bf2921e7fc8d5",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/moon-gift/05.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/moon-gift/05.wav",
+    "bytes": 76972,
+    "sha256": "2ab6dd85575d057301be6c04a028cc3df5108dda43f722637adf9f48c08a6566",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/moon-gift/06.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/moon-gift/06.wav",
+    "bytes": 89536,
+    "sha256": "5aeb9e1827ef21b03fa3c2cc1cb6497a8d2a1039833a55dc561f3216a47e5302",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lost-lantern.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lost-lantern.wav",
+    "bytes": 1044858,
+    "sha256": "30760dfa6085cb8f2edddffe97efcf57cb5de24c34956b633c7e21a457ae7d6b",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/lost-lantern/01.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/lost-lantern/01.wav",
+    "bytes": 90860,
+    "sha256": "8bb43f71c7f17c51dfef565dc0b4b7c4f893ec89d78b4fba2298f045e0bc1235",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/lost-lantern/02.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/lost-lantern/02.wav",
+    "bytes": 96372,
+    "sha256": "8ee40cbea52c74b383e0f13de0a85747919247966fcdbcc63e2ae5ff4b74ffb3",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/lost-lantern/03.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/lost-lantern/03.wav",
+    "bytes": 88214,
+    "sha256": "649952309122f1d0d04dc08577b6df89be99b1805af9b704aab8a1930cf03e46",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/lost-lantern/04.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/lost-lantern/04.wav",
+    "bytes": 87110,
+    "sha256": "8fa76d3c500a7a4b77bdbbe9b4cc64b1bc7c98f001771841e6df237084efc58e",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/lost-lantern/05.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/lost-lantern/05.wav",
+    "bytes": 157668,
+    "sha256": "5b71418ad811eb36656dacf4d84e79519afa027a68d7a9234af89e7a89ca7feb",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/lost-lantern/06.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/lost-lantern/06.wav",
+    "bytes": 91960,
+    "sha256": "b89b662e2d4096f8ead754b0d7f7e95b9bcbed0da225cb09214611e263f6bf0e",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/lost-lantern/07.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/lost-lantern/07.wav",
+    "bytes": 75206,
+    "sha256": "8b3bce3ad4d1d7d13f2bebb5d63478d76d7dbd06b8260fe5f97ec3c825aff267",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/lost-lantern/08.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/lost-lantern/08.wav",
+    "bytes": 87992,
+    "sha256": "8a4cf29e5dc40582e50ac82bc37f3192a914d6161cd6fbb419f40e5529c3d965",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/lost-lantern/09.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/lost-lantern/09.wav",
+    "bytes": 174202,
+    "sha256": "aa1e1f87632d0a3f71f70c640c9d48c7bbf64b9999806f49f89d8a6627b47ab3",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/lost-lantern/10.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/lost-lantern/10.wav",
+    "bytes": 95490,
+    "sha256": "c9cef4a242c21796eca7a5662d390d1e5a000aea6e73be14a30d0161974a8dc2",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/shared-peach.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/shared-peach.wav",
+    "bytes": 1404648,
+    "sha256": "a62ae15bc956b38c2394326ed0a67bed5c214c1b45f5bf86d7600b208ecaf562",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/01.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/01.wav",
+    "bytes": 137588,
+    "sha256": "b007eeb45901681fb90e6d4bf6d34ff8c888aa6a1da19954084dcbede6ced885",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/02.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/02.wav",
+    "bytes": 97252,
+    "sha256": "cdb508088c23bc3e54090b59d5f554a9d438de5b1f5c6fe87bc01782c2f7b202",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/03.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/03.wav",
+    "bytes": 94830,
+    "sha256": "d294a89adfbc5b03871c1adca615695c0c86a66be6f6e8e6cf3069cc504ebeea",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/04.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/04.wav",
+    "bytes": 91522,
+    "sha256": "bc9eeb60cd3a3480bdbd9400e455fdd5d8fe94286570e2fe5d40263cb4dc5864",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/05.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/05.wav",
+    "bytes": 83584,
+    "sha256": "fa58f31d07b746d97443d42c1d1f089ce08acbe759bf1ab38fe28ad9e0f0e39b",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/06.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/06.wav",
+    "bytes": 112466,
+    "sha256": "75c0d3b7c36a9c69dfb28a1964c49f446819849a37fc53ad04566d00db2e112f",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/07.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/07.wav",
+    "bytes": 95050,
+    "sha256": "705e630d2b9c425c93b384d5a9ecc97039aafe1718de6fad93e1b95dcb50264f",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/08.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/08.wav",
+    "bytes": 88656,
+    "sha256": "49d0235a97103a3c4a633658451fd0d3361489ab5b3983af768bf08f3941f7f8",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/09.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/09.wav",
+    "bytes": 92182,
+    "sha256": "f2a599fb0461d1a6b548da88f9cf85767595d98e73d63cec95caa2e28a47a6c5",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/10.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/10.wav",
+    "bytes": 104304,
+    "sha256": "2c3186db1e94ad1351a8a46397f89f9246f221fe2a02f836261b407ace92bbf9",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/11.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/11.wav",
+    "bytes": 114666,
+    "sha256": "a4d5698326e91a138de3ec675fef84c27c61ad55eb3f3242a808e41553aba096",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/12.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/12.wav",
+    "bytes": 89536,
+    "sha256": "38b7b14db32dc58f9f6d849d26e9eff93fb54ae669f8b7dc041e9d5b32959249",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/13.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/13.wav",
+    "bytes": 73002,
+    "sha256": "bf6bfe42729c13ec59d285e86ca080da3c26e581b9e17b39445591dcd826c2e7",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/shared-peach/14.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/shared-peach/14.wav",
+    "bytes": 130322,
+    "sha256": "7ae273d23e72cac21cbd1277b36ef10bee5ac784091e5e63f6d253c81dda5e90",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/rainy-day.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/rainy-day.wav",
+    "bytes": 642500,
+    "sha256": "5b863739a87edf2abf7cdbdf2c0d53343f55dec2c40118f75d714c6f8a5b4089",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/rainy-day/01.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/rainy-day/01.wav",
+    "bytes": 105850,
+    "sha256": "e5924c437ccd1e467e125e7052706458c6d17b08308732e0f96a096e9b33ac34",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/rainy-day/02.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/rainy-day/02.wav",
+    "bytes": 101440,
+    "sha256": "635863618c6fdd90b4d1e645e8e82ad2fabbafa585553a7ff5d18c511d6b15f6",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/rainy-day/03.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/rainy-day/03.wav",
+    "bytes": 98578,
+    "sha256": "7cd387214ba23a2eac8d4698c14eef464805901fe89afa3e87025731297aaec5",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/rainy-day/04.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/rainy-day/04.wav",
+    "bytes": 149070,
+    "sha256": "106c492f8b4f7fe1ceaac8abdb20e2ab8bcd8430d79735bc37e37ab5e6000ff1",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/rainy-day/05.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/rainy-day/05.wav",
+    "bytes": 76972,
+    "sha256": "2ab6dd85575d057301be6c04a028cc3df5108dda43f722637adf9f48c08a6566",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/rainy-day/06.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/rainy-day/06.wav",
+    "bytes": 110700,
+    "sha256": "ab4bce0c09ce5f15fcb20071709a64e17a9d14b2da13b10933c4e4529d3827b1",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/sea-rescue.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/sea-rescue.wav",
+    "bytes": 1228304,
+    "sha256": "1de66193d7e866ed95721be0d8365f78b7ed0b1a652b3ff83582cbe07c10871d",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/sea-rescue/01.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/sea-rescue/01.wav",
+    "bytes": 104750,
+    "sha256": "9afa34b23e436c66e57b0008f0a4ad532545b9f5c33e5059b1350d30d85cf4b6",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/sea-rescue/02.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/sea-rescue/02.wav",
+    "bytes": 165378,
+    "sha256": "cd178a5692b8383cc987e4c431a044b3f00b8a4422abc28b57625525a1b2d4da",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/sea-rescue/03.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/sea-rescue/03.wav",
+    "bytes": 154358,
+    "sha256": "40f55f3c41e02185e2819d60af58301ffb946a80b077a60b676fb668bdd9dc62",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/sea-rescue/04.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/sea-rescue/04.wav",
+    "bytes": 147528,
+    "sha256": "bd05dcbaafa92f6113decf4568cb0ffdaedcc1066c34a5b9cde91d4853ddb08e",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/sea-rescue/05.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/sea-rescue/05.wav",
+    "bytes": 96590,
+    "sha256": "0996dac8fa5bb44dfdf7ac335eb9d0de3cb7cf4eadc95ee899fa6bba02b21cf0",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/sea-rescue/06.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/sea-rescue/06.wav",
+    "bytes": 67490,
+    "sha256": "18d230ae11cb80f9238dc3a052bad970ca2de4d5b105b5bd18aa3687af8506a2",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/sea-rescue/07.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/sea-rescue/07.wav",
+    "bytes": 160532,
+    "sha256": "0125e05d63ada4f87df1897d285135e03b55c54633b98f71ff6593aceda26cf9",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/sea-rescue/08.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/sea-rescue/08.wav",
+    "bytes": 89980,
+    "sha256": "0caa52c90bc25efe3418fb35f5b840c30e598de9bd58b4d6ebd5feca9c4773d9",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/sea-rescue/09.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/sea-rescue/09.wav",
+    "bytes": 153918,
+    "sha256": "0f4cd65c492731d51e84f97d9fbf104c22e5b1ee1b603f1c416ddb8cbb2c9775",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/sea-rescue/10.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/sea-rescue/10.wav",
+    "bytes": 87996,
+    "sha256": "3860ea54b1edda6bba1178da1043fb61ec165bdc5d65b5cf522fec8ae2d5cdad",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/borrow-fan.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/borrow-fan.wav",
+    "bytes": 1461106,
+    "sha256": "cc415f81d65be0bfc93b6c217c6bf2c95a0c386068a6e3014083c6d83f78bbf8",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/borrow-fan/01.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/borrow-fan/01.wav",
+    "bytes": 116432,
+    "sha256": "0842a0990f2f2819c0209a7e99acab3afef2e6bb797733047537df42c3287dd4",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/borrow-fan/02.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/borrow-fan/02.wav",
+    "bytes": 108504,
+    "sha256": "ec1c3665cea14af1bba6df8865d6d1c432863bb1f9c70cae62455bd8cae416b3",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/borrow-fan/03.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/borrow-fan/03.wav",
+    "bytes": 101880,
+    "sha256": "69d08ecb085426901a7f788aea880ce8e125681d2edb0359ac75e7f09857f511",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/borrow-fan/04.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/borrow-fan/04.wav",
+    "bytes": 119736,
+    "sha256": "6e87b195804e1dee3a5a8dfbaafa9ca947e767ee9092adb6b9429a584e1b7d2c",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/borrow-fan/05.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/borrow-fan/05.wav",
+    "bytes": 104530,
+    "sha256": "3685dfbae3f58693e941a2627131f331d7eb2b21556b8ae760319fec8acede4b",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/borrow-fan/06.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/borrow-fan/06.wav",
+    "bytes": 104310,
+    "sha256": "5c5211123d74f2eae536f3dfef1d6626132ac1c9e3386ce285e2bfddd0bde95f",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/borrow-fan/07.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/borrow-fan/07.wav",
+    "bytes": 93504,
+    "sha256": "84494599f7cde8593b71e100c3af4c701317abba91f72e1cc57267131a386987",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/borrow-fan/08.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/borrow-fan/08.wav",
+    "bytes": 166042,
+    "sha256": "596b5a81bc82ed67b5342f4ba9fcf371ed7e90930f268e094523b9982e6b9735",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/borrow-fan/09.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/borrow-fan/09.wav",
+    "bytes": 151932,
+    "sha256": "f5f93fc22401e875c72c800d112ea26c2f20ed19c81c1d331be228d02569dab3",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/borrow-fan/10.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/borrow-fan/10.wav",
+    "bytes": 159206,
+    "sha256": "2d138b8cc3166886b77203b0e3b2d9c1e10a947829aa400090553e701e59f8a5",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/borrow-fan/11.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/borrow-fan/11.wav",
+    "bytes": 101002,
+    "sha256": "7d8dd4a6ff804bd35b6063b401a8db4f3386270d024a1b47971a34ce968447fe",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/english/lines/borrow-fan/12.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/english/lines/borrow-fan/12.wav",
+    "bytes": 134292,
+    "sha256": "b0354b9ddb9673c769f24634d32774fe8d0a09515f635043b6ae7171c9cb7ceb",
+    "rights": "Original classroom script with attributed Microsoft Zira synthetic reference voice"
+  },
+  {
+    "path": "assets/music/hero-shadow-r3.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/music/hero-shadow-r3.wav",
+    "bytes": 11669420,
+    "sha256": "8adbb135b54b52e5c4156f745b3d2864c96dbe4ecc070460c09706ed4de2e139",
+    "rights": "CC-BY-4.0 for original arrangement and held audio rights; no model weights"
+  },
+  {
+    "path": "assets/music/play-chinese-r2.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/music/play-chinese-r2.wav",
+    "bytes": 10736300,
+    "sha256": "44aea06d95f4f41a61c1e351af9c28d204f15e73dd1bf9561b59694af31fd790",
+    "rights": "CC-BY-4.0 for original arrangement and held audio rights; no model weights"
+  },
+  {
+    "path": "assets/music/moon-shadow-r5.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/music/moon-shadow-r5.wav",
+    "bytes": 15378860,
+    "sha256": "bf538acb41e04cd7b5e42449659c1bca58d4d6878c54433073a0b4bf6ded9dfc",
+    "rights": "CC-BY-4.0 for original arrangement and held audio rights; no model weights"
+  },
+  {
+    "path": "assets/music/festival-shadow-r3.wav",
+    "url": "https://aha-lab.ai/course/finger-shadow/experience/assets/music/festival-shadow-r3.wav",
+    "bytes": 10690220,
+    "sha256": "1d9a894b2403155160b0b27dfdbb3ba7f70240c49092124e9a873000708e933e",
+    "rights": "CC-BY-4.0 for original arrangement and held audio rights; no model weights"
+  }
+]

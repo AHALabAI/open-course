@@ -1,0 +1,46 @@
+[
+  {
+    "id": "hero",
+    "name": "小将出场",
+    "file": "assets/music/hero-shadow-r3.wav",
+    "source": "YuE2-3B / YuE2-Vae",
+    "yue2Generated": true,
+    "duration": 40.51866666666667,
+    "sampleRate": 48000,
+    "channels": 2,
+    "sha256": "8adbb135b54b52e5c4156f745b3d2864c96dbe4ecc070460c09706ed4de2e139"
+  },
+  {
+    "id": "play",
+    "name": "灯下游戏",
+    "file": "assets/music/play-chinese-r2.wav",
+    "source": "YuE2-3B / YuE2-Vae",
+    "yue2Generated": true,
+    "duration": 37.278666666666666,
+    "sampleRate": 48000,
+    "channels": 2,
+    "sha256": "44aea06d95f4f41a61c1e351af9c28d204f15e73dd1bf9561b59694af31fd790"
+  },
+  {
+    "id": "moon",
+    "name": "月下散步",
+    "file": "assets/music/moon-shadow-r5.wav",
+    "source": "YuE2-3B / YuE2-Vae",
+    "yue2Generated": true,
+    "duration": 53.398666666666664,
+    "sampleRate": 48000,
+    "channels": 2,
+    "sha256": "bf538acb41e04cd7b5e42449659c1bca58d4d6878c54433073a0b4bf6ded9dfc"
+  },
+  {
+    "id": "festival",
+    "name": "灯会碰面",
+    "file": "assets/music/festival-shadow-r3.wav",
+    "source": "YuE2-3B / YuE2-Vae",
+    "yue2Generated": true,
+    "duration": 37.11866666666667,
+    "sampleRate": 48000,
+    "channels": 2,
+    "sha256": "1d9a894b2403155160b0b27dfdbb3ba7f70240c49092124e9a873000708e933e"
+  }
+]

@@ -1,0 +1,14 @@
+.venv*/
+.models-speech/
+node_modules/
+__pycache__/
+*.pyc
+.env
+*.log
+vendor/*.task
+vendor/*.mjs
+vendor/wasm/
+assets/english/**/*.wav
+assets/english/*.wav
+assets/music/*.wav
+vendor/ocsort/**/*.py

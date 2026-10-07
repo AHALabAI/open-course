@@ -1,0 +1,25 @@
+import {StageScene,SETS,BACKGROUNDS,PROP_TYPES,SCENE_KEY} from './scene-state.mjs';
+import {drawProp,sceneArtReady} from './scene-view.mjs';
+export class SceneControls{
+ constructor({actors,selected,canvas}){let saved=null;try{saved=JSON.parse(localStorage.getItem(SCENE_KEY));this.board=new StageScene(saved);}catch{this.board=new StageScene();}this.actors=actors;this.selectedActor=selected;this.canvas=canvas;this.arranging=false;this.drag=null;this.lastRevision=-1;this.$=id=>document.getElementById(id);
+  const $=this.$;for(const [id,name] of Object.entries(BACKGROUNDS))$('scene-background').add(new Option(name,id));$('scene-background').value=this.board.background;
+  for(const [id,s] of Object.entries(SETS))$('scene-preset').add(new Option(s.name,id));$('scene-preset').value=this.board.preset;
+  $('scene-background').onchange=()=>{this.board.background=$('scene-background').value;this.board.changed('背景已换，道具位置保留。');this.save();this.refresh();};
+  $('scene-auto').checked=this.board.auto;$('scene-auto').onchange=()=>{this.board.auto=$('scene-auto').checked;this.board.changed(this.board.auto?'将按稳定入场的人物组合布景。':'保留现在的布景。');this.save();this.refresh();};
+  $('scene-apply').onclick=()=>{this.board.manual();this.board.apply($('scene-preset').value,performance.now());this.save();this.refresh();};
+  $('scene-arrange').onclick=()=>{this.arranging=!this.arranging;this.drag=null;$('scene-arrange').setAttribute('aria-pressed',String(this.arranging));$('scene-arrange').textContent=this.arranging?'完成摆放':'摆道具';canvas.classList.toggle('arranging',this.arranging);this.board.changed(this.arranging?'点击舞台道具后拖动；方向键微调。人物暂不跟随鼠标。':'可以操偶了。靠近小物件，收拢手指拿起；张手放下。');this.refresh();};
+  $('scene-item').onchange=()=>{this.board.selected=Number($('scene-item').value)||null;this.board.changed();this.refresh();};
+  $('scene-remove').onclick=()=>{this.board.remove(this.board.selected);this.save();this.refresh();};$('scene-clear').onclick=()=>{this.board.clear();this.save();this.refresh();};
+  $('scene-reset').onclick=()=>{this.board.manual();this.board.apply(this.board.preset,performance.now());this.save();this.refresh();};
+  $('scene-use').onclick=()=>{const p=this.actors().find(p=>p.slot===this.selectedActor());this.board.interact(p,performance.now(),true);this.refresh();};
+  $('scene-drop').onclick=()=>{const p=this.actors().find(p=>p.slot===this.selectedActor());if(p)this.board.drop(this.board.held(p),performance.now());this.refresh();};
+  for(const [type,d] of Object.entries(PROP_TYPES)){const b=document.createElement('button'),c=document.createElement('canvas'),label=document.createElement('span');b.type='button';b.dataset.stageProp=type;b.title=d.hint;b.setAttribute('aria-label','添加'+d.name);c.width=100;c.height=88;label.textContent=d.name;b.append(c,label);$('scene-props').append(b);const paint=()=>{const g=c.getContext('2d');g.clearRect(0,0,100,88);const k=Math.min(88/d.w,78/d.h);g.save();g.translate(50,44);g.scale(k,k);drawProp(g,{type,x:0,y:0});g.restore();};sceneArtReady.then(paint);b.onclick=()=>{this.board.add(type);this.save();this.refresh();};}
+  window.addEventListener('beforeunload',()=>this.save());this.refresh();
+ }
+ save(){try{localStorage.setItem(SCENE_KEY,JSON.stringify(this.board.serialize()));}catch{this.board.changed('布景未能保存；本次仍可继续摆放。');}}
+ pointerDown(point,event){if(!this.arranging)return false;const i=this.board.hit(point.x,point.y);this.board.selected=i?.id||null;this.drag=i?{id:i.id,x:point.x-i.x,y:point.y-i.y}:null;if(i){this.canvas.setPointerCapture(event.pointerId);this.board.manual();}this.board.changed();this.refresh();return true;}
+ pointerMove(point){if(!this.arranging)return false;if(this.drag)this.board.move(this.drag.id,point.x-this.drag.x,point.y-this.drag.y);return true;}
+ pointerUp(){if(!this.arranging)return false;this.drag=null;this.save();this.refresh();return true;}
+ key(event){if(!this.arranging)return false;const delta={ArrowLeft:[-5,0],ArrowRight:[5,0],ArrowUp:[0,-5],ArrowDown:[0,5]}[event.key],i=this.board.items.find(i=>i.id===this.board.selected);if(delta&&i){event.preventDefault();this.board.move(i.id,i.x+delta[0],i.y+delta[1]);this.save();}if(event.key==='Delete'&&i){event.preventDefault();this.board.remove(i.id);this.save();}this.refresh();return true;}
+ refresh(){const b=this.board,$=this.$;if(this.lastRevision===b.revision&&this.lastRecommendation===b.recommendation)return;this.lastRevision=b.revision;this.lastRecommendation=b.recommendation;if(this.lastPreset!==b.preset){this.lastPreset=b.preset;$('scene-preset').value=b.preset;}$('scene-auto').checked=b.auto;$('scene-background').value=b.background;$('scene-status').textContent=b.message;$('scene-summary').textContent=BACKGROUNDS[b.backgroundId]+' · '+b.items.length+' 件道具';$('scene-recommendation').textContent=b.recommendation?'当前人物推荐：'+SETS[b.recommendation].name:'等角色上场，再推荐布景。';$('scene-item').replaceChildren(new Option('选择舞台上的道具',''),...b.items.map(i=>new Option(PROP_TYPES[i.type].name+' #'+i.id,String(i.id))));$('scene-item').value=String(b.selected||'');$('scene-remove').disabled=!b.selected;$('scene-apply').disabled=false;}
+}

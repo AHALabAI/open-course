@@ -1,0 +1,16 @@
+.shadow-language{display:flex;align-items:center;gap:.5rem;font:13px/1.4 system-ui,sans-serif;letter-spacing:0;max-width:100%;flex-wrap:wrap;padding:.4rem .6rem;position:relative;z-index:5}
+.shadow-language select{font:inherit;color:inherit;background:#fffdf5;border:1px solid #998875;border-radius:4px;padding:.35rem .6rem;width:auto;max-width:180px;min-width:0}
+select{min-width:0;max-width:100%;box-sizing:border-box}
+.chooser label,.setup label{min-width:0;max-width:100%}
+.chooser select,.setup select{width:100%;min-width:0}
+.chooser .task-select{min-width:0;max-width:100%}
+html:not([lang=zh-CN]) h1,html:not([lang=zh-CN]) h2,html:not([lang=zh-CN]) .eyebrow{letter-spacing:normal;overflow-wrap:anywhere}
+html:not([lang=zh-CN]) h1 span{white-space:normal;overflow-wrap:anywhere}
+html[dir=rtl] .top,html[dir=rtl] nav,html[dir=rtl] .buttons{direction:rtl}
+html[dir=rtl] th,html[dir=rtl] td{text-align:right}
+html[dir=rtl] .example{border-left:0;border-right:3px solid #a9573d}
+html[dir=rtl] input,html[dir=rtl] textarea{text-align:start}
+html[dir=rtl] #stage,html[dir=rtl] canvas,html[dir=rtl] video,html[dir=rtl] .finger-grid,html[dir=rtl] .finger-controls,html[dir=rtl] [lang=en],html[dir=rtl] #drama-line,html[dir=rtl] .drama-neighbor,html[dir=rtl] code,html[dir=rtl] pre{direction:ltr}
+[lang=en]{unicode-bidi:isolate}
+@media(max-width:780px){.top{flex-wrap:wrap}.shadow-language{flex:1 1 100%;justify-content:flex-end}.top nav{max-width:100%}.hero h1{font-size:clamp(32px,8vw,46px)}.card h3{overflow-wrap:anywhere}}
+@media print{.shadow-language{display:none}}

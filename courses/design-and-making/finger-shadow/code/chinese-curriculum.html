@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>教师备课 · 手指皮影戏 · 语文｜AHALab X ZimaBlueAI</title><link href="assets/brand/AHALab-logo.png" rel="icon"/><link href="app/course-watermark.css" rel="stylesheet"/>
+<style>
+:root{color-scheme:light;--ink:#282820;--muted:#6a6a5e;--paper:#fffef9;--line:#dfdfd2;--accent:#305e50;--soft:#eef3ed}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:#f4f2e9;color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;font-size:17px;line-height:1.85}a{color:var(--accent);text-underline-offset:4px}a:hover{color:#173f32}a:focus-visible,button:focus-visible,.table-wrap:focus-visible{outline:3px solid #a75f28;outline-offset:4px}header{max-width:1240px;margin:auto;padding:22px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-weight:600}.brand img{object-fit:contain}.header-actions{display:flex;gap:20px;align-items:center;flex-wrap:wrap;font-size:15px}button{font:inherit;color:var(--accent);background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:6px 14px;cursor:pointer}.layout{max-width:1240px;margin:0 auto;padding:10px 32px 48px;display:grid;grid-template-columns:238px minmax(0,1fr);gap:32px}aside{align-self:start;position:sticky;top:24px;max-height:calc(100vh - 48px);overflow:auto;padding:16px 0}aside h2{font-size:15px;margin:0 0 12px;padding:0 12px;color:var(--muted)}.toc a{display:block;padding:7px 12px;font-size:14px;line-height:1.5;text-decoration:none;border-left:2px solid transparent}.toc a:hover,.toc a[aria-current="location"]{background:var(--soft);border-color:var(--accent)}.toc small{display:block;font-size:12px;color:var(--muted);margin-top:3px}main{min-width:0}.guide-section{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:30px 36px;margin-bottom:24px;scroll-margin-top:24px}.intro{border-top:4px solid var(--accent)}.kicker{font-size:14px;color:var(--accent);margin:0 0 8px}h1{font-size:34px;line-height:1.45;margin:0 0 20px;font-weight:650;letter-spacing:-.5px}h1 span{white-space:nowrap}h2{font-size:23px;line-height:1.55;margin:0 0 20px;font-weight:650}h3{font-size:18px;margin:28px 0 12px;padding:8px 12px;background:var(--soft);border-radius:4px;font-weight:600}p{margin:12px 0}ol,ul{padding-left:1.5em;margin:12px 0}li{padding-left:4px;margin:7px 0}.table-wrap{overflow-x:auto;margin:18px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65;text-align:left}th,td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--soft);font-weight:600}td:first-child{white-space:nowrap}footer{max-width:1240px;margin:auto;padding:0 32px 32px;font-size:14px;color:var(--muted);text-align:center}.print-note{display:none}
+@media(max-width:900px){.layout{grid-template-columns:190px minmax(0,1fr);gap:20px;padding-inline:20px}.guide-section{padding:24px}header{padding-inline:20px}}
+@media(max-width:680px){body{font-size:16px}.layout{display:block;padding:0 14px 24px}header{padding:16px 14px;gap:12px}.header-actions{gap:14px;font-size:14px}aside{position:static;max-height:none;padding:8px 0 20px}.toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}.toc a{padding:8px;font-size:13px}aside h2{padding-left:8px}.guide-section{padding:22px 18px;margin-bottom:16px}h1{font-size:28px}h2{font-size:21px}th,td{padding:8px}table{font-size:14px}footer{padding-inline:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body{background:white;color:black;font-size:11pt;line-height:1.7}header,aside,.header-actions{display:none}.layout{display:block;padding:0;max-width:none}.guide-section{border:0;border-radius:0;padding:0;margin:0 0 20px}.lesson{break-before:page}.intro{border:0}h1{font-size:22pt}h2{font-size:17pt}h3{font-size:12pt;background:transparent;padding:0;break-after:avoid}h2,h3{break-after:avoid}li,tr{break-inside:avoid}.table-wrap{overflow:visible}table{font-size:10pt}thead{display:table-header-group}a{color:black;text-decoration:none}footer{padding:12px 0;font-size:10pt}.print-note{display:block;color:#444;font-size:10pt}@page{size:A4;margin:18mm}}
+</style><script data-shadow-i18n="" src="i18n/ui.mjs" type="module"></script><link data-shadow-i18n="" href="i18n/style.css" rel="stylesheet"/></head><body><header><a class="brand" href="index.html"><img alt="AHALab 标志" height="44" src="assets/brand/AHALab-logo.png" width="44"/><span>手指皮影戏 · 语文</span></a><div class="header-actions"><a href="chinese-drama.html">进入习作课堂 ↗</a><a href="https://mp.weixin.qq.com/s/sBJoPbetgkh9iIuMOeFJxA?scene=1&amp;click_id=559339951" rel="noopener noreferrer" target="_blank">了解“手指皮影戏”课程 ↗</a><button id="print-guide" type="button">打印备课</button></div><label class="shadow-language">Language <select aria-label="Language" data-shadow-language=""><option selected="" value="zh-CN">简体中文</option><option value="en">English</option><option value="ru">Русский</option><option value="fr">Français</option><option value="es">Español</option><option value="ar">العربية</option><option value="ja">日本語</option><option value="de">Deutsch</option><option value="ko">한국어</option><option value="hi">हिन्दी</option><option value="bn">বাংলা</option><option value="pt">Português</option><option value="ur">اردو</option><option value="fi">Suomi</option><option value="da">Dansk</option><option value="nl">Nederlands</option></select></label></header><div class="layout"><aside aria-label="备课目录"><h2>备课目录</h2><nav class="toc"><a href="#overview">课程说明</a>
+<a href="#schedule">每个任务的两课安排</a>
+<a href="#units">单元与任务</a>
+<a href="#transformation">《变形记》<small>六上第一单元</small></a>
+<a href="#retelling">《故事新编》<small>四下第八单元</small></a>
+<a href="#fairytale">《我来编童话》<small>三上第四单元</small></a>
+<a href="#festival">《中华传统节日》<small>三下第三单元</small></a>
+<a href="#one-day">《我和____过一天》<small>四上第四单元</small></a>
+<a href="#learning">《我学会了____》<small>四下第六单元</small></a>
+<a href="#teacher">《“漫画”老师》<small>五上第二单元</small></a>
+<a href="#person">《把一个人的特点写具体》<small>五下第五单元</small></a>
+<a href="#activity">《多彩的活动》<small>六上第二单元</small></a>
+<a href="#customs">《家乡的风俗》<small>六下第一单元</small></a>
+<a href="#equipment">设备与课堂准备</a>
+<a href="#feedback">作品怎么读</a></nav></aside><main><section aria-labelledby="overview-title" class="guide-section intro" id="overview"><p class="kicker">教师备课 · 三至六年级</p><h1 id="overview-title">手指皮影戏 <span>· 语文</span></h1><p>三至六年级习作课堂，十个任务。每个任务建议两课，每课 40 分钟；也可按班级进度分开安排。</p>
+<p>这些任务对应三至六年级的习作单元，使用时请以本班教材为准。以下为备课设计，尚未试教。</p>
+<p>先让学生选一件事、分三格排戏，操偶者与观察者轮换。记录由学生自己写，系统不代写真实经历，也不自动给作文评分。英语戏剧与操偶课程继续保留。</p>
+<p>打开 <a href="chinese-drama.html">语文习作工具</a>。每个任务都可以选角、换布景、写台词、排演、记细节、写作与修改。本课记录支持打印和文字导出，全部习作可备份后在另一台设备恢复。</p></section>
+<section aria-labelledby="schedule-title" class="guide-section" id="schedule"><h2 id="schedule-title">每个任务的两课安排</h2><div aria-label="可左右滚动的表格" class="table-wrap" tabindex="0"><table><thead><tr><th scope="col">课次</th><th scope="col">时间</th><th scope="col">课堂活动</th><th scope="col">留下什么</th></tr></thead><tbody>
+<tr><td>第一课</td><td>5 分钟</td><td>读题，选择要讲的一件事</td><td>故事想法</td></tr>
+<tr><td>第一课</td><td>8 分钟</td><td>写三格故事，商量分工</td><td>三格记录</td></tr>
+<tr><td>第一课</td><td>7 分钟</td><td>试动作和道具，调整一次</td><td>调整记录</td></tr>
+<tr><td>第一课</td><td>15 分钟</td><td>轮换排演，观察者记录动作和语言</td><td>观察记录</td></tr>
+<tr><td>第一课</td><td>5 分钟</td><td>每人讲最想写的一幕</td><td>写作重点</td></tr>
+<tr><td>第二课</td><td>5 分钟</td><td>回看记录，决定详略</td><td>写作安排</td></tr>
+<tr><td>第二课</td><td>22 分钟</td><td>独立写作，需要时先口述或画图</td><td>初稿</td></tr>
+<tr><td>第二课</td><td>8 分钟</td><td>同伴读文，指出清楚处与疑问</td><td>同伴反馈</td></tr>
+<tr><td>第二课</td><td>5 分钟</td><td>修改一处，说清理由</td><td>修改记录</td></tr>
+</tbody></table></div>
+<p>三年级多用口述、图画和短提示，先帮助孩子把一件事讲完整。四年级逐步写清经过和一次变化。五年级围绕人物特点选典型事例，避免只列评价词。六年级关注视角、详略和资料来处。支持程度还要看学生已有经验。</p></section>
+<section aria-labelledby="units-title" class="guide-section" id="units"><h2 id="units-title">单元与任务</h2><div aria-label="可左右滚动的表格" class="table-wrap" tabindex="0"><table><thead><tr><th scope="col">单元</th><th scope="col">习作</th><th scope="col">本次重点</th></tr></thead><tbody>
+<tr><td>六上第一单元</td><td><a href="#transformation">《变形记》</a></td><td>用变化后的身体看世界</td></tr>
+<tr><td>四下第八单元</td><td><a href="#retelling">《故事新编》</a></td><td>让新结局有来由</td></tr>
+<tr><td>三上第四单元</td><td><a href="#fairytale">《我来编童话》</a></td><td>把一件事讲完整</td></tr>
+<tr><td>三下第三单元</td><td><a href="#festival">《中华传统节日》</a></td><td>写自己过节时做过的事</td></tr>
+<tr><td>四上第四单元</td><td><a href="#one-day">《我和____过一天》</a></td><td>让人物特点参与故事</td></tr>
+<tr><td>四下第六单元</td><td><a href="#learning">《我学会了____》</a></td><td>写清尝试与调整</td></tr>
+<tr><td>五上第二单元</td><td><a href="#teacher">《“漫画”老师》</a></td><td>抓住特点，善意夸张</td></tr>
+<tr><td>五下第五单元</td><td><a href="#person">《把一个人的特点写具体》</a></td><td>让动作和事例说明特点</td></tr>
+<tr><td>六上第二单元</td><td><a href="#activity">《多彩的活动》</a></td><td>写全场，也写一个人</td></tr>
+<tr><td>六下第一单元</td><td><a href="#customs">《家乡的风俗》</a></td><td>亲历与资料各有来处</td></tr>
+</tbody></table></div></section>
+<section aria-labelledby="transformation-title" class="guide-section lesson" id="transformation"><h2 id="transformation-title">六上第一单元 · 《变形记》</h2><p>如果你变成幕布上的一只影人，伸手、走路和看东西会有什么不同？先演一次，再用“我”讲这一天。</p>
+<p>让读者看出变身前后的差别，并写清一次意外怎样发生。</p>
+<p><a href="chinese-drama.html?unit=transformation">打开本课工具</a></p>
+<h3>排戏前的三个问题</h3>
+<ol>
+<li>我变成了什么，身体哪一处最不一样？</li>
+<li>一件原本容易的事，变身后遇到了什么麻烦？</li>
+<li>我用了什么办法，事情后来怎样？</li>
+</ol>
+<h3>排演与观察</h3>
+<ol>
+<li>影人醒来，发现头和四肢被五根线牵着。</li>
+<li>影人走到长桌旁，试着拿起一件比自己想象中大的东西。</li>
+<li>同伴赶来帮忙。演出一种只有变身后才能想到的办法。</li>
+</ol>
+<p>演完就记，记录可以写关键词。</p>
+<ul>
+<li>从影人的高度看，道具像什么？</li>
+<li>演出一个动作受限的瞬间，记下身体怎样动。</li>
+<li>我心里想的，与观众看到的有什么差别？</li>
+</ul>
+<h3>教师备课</h3>
+<p>请学生先说清变成什么，再追问身体带来的限制。允许夸张，帮助学生检查自己的设定。不要替全班规定同一种结局。</p>
+<p>学生卡住时可以这样帮助。</p>
+<p>请他只演拿东西这一小段，边演边说“我伸出手……”。把口述记成几句，再补前后发生的事。</p>
+<p>写得较熟练的学生可以继续尝试。</p>
+<p>换到同伴的视角重看这一幕，比较两种叙述，再决定正文保留哪一种。</p>
+<h3>同伴读文与修改</h3>
+<ul>
+<li>全文有没有保持变化后的“我”的视角？</li>
+<li>哪处细节与这个身体有关，换成人就不会这样？</li>
+<li>办法有没有回应前面的麻烦？</li>
+</ul></section>
+<section aria-labelledby="retelling-title" class="guide-section lesson" id="retelling"><h2 id="retelling-title">四下第八单元 · 《故事新编》</h2><p>孙悟空和猪八戒来到花果山，桌上只剩一个仙桃。故事可以从这里变一变，也可以选你熟悉的另一段。</p>
+<p>保留人物容易认出的特点，写清改动怎样带来新结局。</p>
+<p><a href="chinese-drama.html?unit=retelling">打开本课工具</a></p>
+<h3>排戏前的三个问题</h3>
+<ol>
+<li>原故事中，我最想改哪一件事？</li>
+<li>这个人物会怎样说、怎样做？</li>
+<li>新发生的事，会把结局带到哪里？</li>
+</ol>
+<h3>排演与观察</h3>
+<ol>
+<li>两位角色同时发现桌上的仙桃。</li>
+<li>演出一次分歧，台词让观众听懂各自的想法。</li>
+<li>让一件道具或一个决定改变结果。</li>
+</ol>
+<p>演完就记，记录可以写关键词。</p>
+<ul>
+<li>角色争着做了什么？记一个具体动作。</li>
+<li>哪句台词让人认出他的性格？</li>
+<li>结局转变前，哪件事起了作用？</li>
+</ul>
+<h3>教师备课</h3>
+<p>先请学生用自己的话讲原故事，再圈出要改的那一处。排戏时只演改动之后的片段。讨论结局为什么会变，避免只换名字和道具。</p>
+<p>学生卡住时可以这样帮助。</p>
+<p>保留原来的人物与地点，只改一次选择。让同伴接着说“这样一来，接下来就……”。</p>
+<p>写得较熟练的学生可以继续尝试。</p>
+<p>同一开头排两个结局，请观众指出各自需要补出的铺垫。</p>
+<h3>同伴读文与修改</h3>
+<ul>
+<li>读者能认出这是哪个故事里的谁吗？</li>
+<li>改动的地方有没有写清原因？</li>
+<li>新结局与前面发生的事接得上吗？</li>
+</ul></section>
+<section aria-labelledby="fairytale-title" class="guide-section lesson" id="fairytale"><h2 id="fairytale-title">三上第四单元 · 《我来编童话》</h2><p>下雨了，小兔和小狗站在桥的两边，只有一把伞。它们想做什么？你来决定。</p>
+<p>说清谁在什么地方遇到一件事，再写出事情的经过和结果。</p>
+<p><a href="chinese-drama.html?unit=fairytale">打开本课工具</a></p>
+<h3>排戏前的三个问题</h3>
+<ol>
+<li>谁来了？它想做什么？</li>
+<li>出了什么小麻烦？</li>
+<li>它怎样试，最后怎样了？</li>
+</ol>
+<h3>排演与观察</h3>
+<ol>
+<li>一个角色先出场，告诉观众它要去哪里。</li>
+<li>让另一个角色带来一个小麻烦，也可以带来帮助。</li>
+<li>把最后的结果演给同伴看。</li>
+</ol>
+<p>演完就记，记录可以写关键词。</p>
+<ul>
+<li>它先做了什么？</li>
+<li>遇到麻烦时，说了哪句话？</li>
+<li>最后哪一个动作让你知道事情结束了？</li>
+</ul>
+<h3>教师备课</h3>
+<p>一次只问一个问题。先让孩子完整讲一遍，再写。允许画三幅图、请同伴代记关键词；不要求照抄老师给的开头。</p>
+<p>学生卡住时可以这样帮助。</p>
+<p>边演边说三句，先说谁来了，再讲麻烦，最后讲结果。把自己的三句扩写成小故事。</p>
+<p>写得较熟练的学生可以继续尝试。</p>
+<p>加一句对话，让观众猜到角色心里在想什么。</p>
+<h3>同伴读文与修改</h3>
+<ul>
+<li>谁在做事，写清了吗？</li>
+<li>读着读着，有没有突然跳过一件重要的事？</li>
+<li>结尾能看出事情的结果吗？</li>
+</ul></section>
+<section aria-labelledby="festival-title" class="guide-section lesson" id="festival"><h2 id="festival-title">三下第三单元 · 《中华传统节日》</h2><p>选一个你过过的传统节日。可以先用嫦娥和玉兔排一段中秋小戏，再讲你家那天怎样过。</p>
+<p>把一次真实的过节经历写清楚，分清亲历与查来的故事。</p>
+<p><a href="chinese-drama.html?unit=festival">打开本课工具</a></p>
+<h3>排戏前的三个问题</h3>
+<ol>
+<li>选哪个节日？我家那天做什么？</li>
+<li>哪一件事是我亲手参加的？</li>
+<li>皮影小戏要介绍哪一个节日故事？</li>
+</ol>
+<h3>排演与观察</h3>
+<ol>
+<li>角色提灯出场，介绍今天排的是哪个节日。</li>
+<li>演一段你想分享的节日故事。</li>
+<li>停下皮影，说说你家过节时真正发生的一件事。</li>
+</ol>
+<p>演完就记，记录可以写关键词。</p>
+<ul>
+<li>我参与了什么，先做什么、后做什么？</li>
+<li>当时看到、听到或闻到了什么？</li>
+<li>神话来自哪里？哪一部分是我编来排戏的？</li>
+</ul>
+<h3>教师备课</h3>
+<p>可以换成班级正在学习的节日。中秋只是已有角色的演示。先听学生讲家庭习惯，再补资料；不把同一种过法当作所有家庭的过法。</p>
+<p>学生卡住时可以这样帮助。</p>
+<p>带一张照片或画一件节日物品，用它讲一件自己参加过的事。</p>
+<p>写得较熟练的学生可以继续尝试。</p>
+<p>问问家人同一个节日还有怎样的过法，把听来的内容注明是谁说的。</p>
+<h3>同伴读文与修改</h3>
+<ul>
+<li>文章写的是我选定的那个节日吗？</li>
+<li>我亲手做的事有没有写具体？</li>
+<li>有没有把神话故事写成自己亲历的事实？</li>
+</ul></section>
+<section aria-labelledby="one-day-title" class="guide-section lesson" id="one-day"><h2 id="one-day-title">四上第四单元 · 《我和____过一天》</h2><p>如果嫦娥或孙悟空来做你的同伴，你们这一天想去哪儿？安排一件需要两个人一起做的事。</p>
+<p>写出一天里最值得讲的一件事，让读者从行动中认出这个人物。</p>
+<p><a href="chinese-drama.html?unit=one-day">打开本课工具</a></p>
+<h3>排戏前的三个问题</h3>
+<ol>
+<li>我和谁过一天？他有什么本领或特点？</li>
+<li>我们想去哪里，做什么？</li>
+<li>出了什么意外？我们怎样合作？</li>
+</ol>
+<h3>排演与观察</h3>
+<ol>
+<li>我与神话人物见面，约定今天要做的事。</li>
+<li>在路上遇到一个小意外，演出他会怎样处理。</li>
+<li>演出分别前的一刻，说明这一天发生了什么变化。</li>
+</ol>
+<p>演完就记，记录可以写关键词。</p>
+<ul>
+<li>他的本领在哪个动作里派上用场？</li>
+<li>我做了什么，不能全由他解决。</li>
+<li>哪一刻最想留下？记下对话或动作。</li>
+</ul>
+<h3>教师备课</h3>
+<p>不要求从早到晚逐时记录。让学生选择最值得讲的一幕。追问“假如换一个人物，这件事还会这样吗”，帮助他把人物特点写进经过。</p>
+<p>学生卡住时可以这样帮助。</p>
+<p>先演一个意外，把“我”和同伴各做的一个动作记下来，再讲完整经过。</p>
+<p>写得较熟练的学生可以继续尝试。</p>
+<p>给人物安排一次本领也解决不了的困难，写出两人怎样商量。</p>
+<h3>同伴读文与修改</h3>
+<ul>
+<li>人物的本领和脾气与我知道的故事相合吗？</li>
+<li>一天里有没有一件事写得比其他事更详细？</li>
+<li>“我”有没有参与解决问题？</li>
+</ul></section>
+<section aria-labelledby="learning-title" class="guide-section lesson" id="learning"><h2 id="learning-title">四下第六单元 · 《我学会了____》</h2><p>试着用影人的手把花灯放到桌上。第一次成功了吗？再试时改了哪里？你的尝试就是今天的写作材料。</p>
+<p>写清学会一件事的过程，重点写遇到的困难和具体办法。</p>
+<p><a href="chinese-drama.html?unit=learning">打开本课工具</a></p>
+<h3>排戏前的三个问题</h3>
+<ol>
+<li>我要学会哪一个动作？</li>
+<li>第一次我准备怎样做？</li>
+<li>请谁观察？我们怎样判断真的做到了？</li>
+</ol>
+<h3>排演与观察</h3>
+<ol>
+<li>把角色的手移近花灯，收拢手指试着拿起。</li>
+<li>张手放下，看看花灯落在了哪里；让同伴说出看到的情况。</li>
+<li>只改一处再试，记录动作或设置有什么不同。</li>
+</ol>
+<p>演完就记，记录可以写关键词。</p>
+<ul>
+<li>第一次哪里没成功？记实际发生的事。</li>
+<li>同伴怎样提醒，我后来改了什么？</li>
+<li>哪次做到了？当时我怎么想？</li>
+</ul>
+<h3>教师备课</h3>
+<p>先做再写，保留失败记录。不要预设人人最终成功，也不要只让学生写坚持的道理。设备识别问题与自己的动作困难可以分别描述。</p>
+<p>学生卡住时可以这样帮助。</p>
+<p>把两次尝试画在纸上，各写一个动作和一个结果，再口述中间改了什么。</p>
+<p>写得较熟练的学生可以继续尝试。</p>
+<p>选择一次真正改变结果的调整详写，其余尝试略写。</p>
+<h3>同伴读文与修改</h3>
+<ul>
+<li>有没有写清最难的那一步？</li>
+<li>读者能照着文字知道我怎样调整吗？</li>
+<li>有没有用真实的经过说明结果？还没学会也可以如实写。</li>
+</ul></section>
+<section aria-labelledby="teacher-title" class="guide-section lesson" id="teacher"><h2 id="teacher-title">五上第二单元 · 《“漫画”老师》</h2><p>想一位你熟悉的老师。用一个动作和一件小道具演他，请同伴说出猜测的依据。也可以到画板上做自己的老师影人。</p>
+<p>用熟悉的典型事情表现老师的特点，夸张要有观察依据。</p>
+<p><a href="chinese-drama.html?unit=teacher">打开本课工具</a></p>
+<h3>排戏前的三个问题</h3>
+<ol>
+<li>他最容易让人认出的一个特点是什么？</li>
+<li>哪件真实的小事能让人看见这个特点？</li>
+<li>怎样用动作、道具或一句常说的话演出来？</li>
+</ol>
+<h3>排演与观察</h3>
+<ol>
+<li>角色拿着能表现特点的道具出场，暂时不说名字。</li>
+<li>演出一件你观察过的小事，注意习惯动作。</li>
+<li>请同伴讲猜测的依据，自己记下最准确的一处。</li>
+</ol>
+<p>演完就记，记录可以写关键词。</p>
+<ul>
+<li>记下一个真实的习惯动作。</li>
+<li>哪件事情能表现他的性格？</li>
+<li>夸张哪一处会有趣又友善？</li>
+</ul>
+<h3>教师备课</h3>
+<p>内置角色只供练习动作，不当作老师的真实形象。鼓励学生自制影人。先谈观察与善意，避免拿身体差异或隐私逗笑。</p>
+<p>学生卡住时可以这样帮助。</p>
+<p>从老师常用的一件物品入手，讲一次他使用它的事情，暂时不用概括性格。</p>
+<p>写得较熟练的学生可以继续尝试。</p>
+<p>同样的特点选两件事，比较哪件更典型，再决定详略。</p>
+<h3>同伴读文与修改</h3>
+<ul>
+<li>抓住的特点是否在具体事例里看得见？</li>
+<li>事情是我观察过的，还是凭空给老师编的？</li>
+<li>请被描写的人读，会感到被尊重吗？</li>
+</ul></section>
+<section aria-labelledby="person-title" class="guide-section lesson" id="person"><h2 id="person-title">五下第五单元 · 《把一个人的特点写具体》</h2><p>选一个熟悉的人，用影人演一件最能说明他特点的事。观众从哪个动作看出来？把那个动作留下。</p>
+<p>选典型事例，把人物的动作、语言和表现写具体。</p>
+<p><a href="chinese-drama.html?unit=person">打开本课工具</a></p>
+<h3>排戏前的三个问题</h3>
+<ol>
+<li>我要写谁，最想让读者认识他哪一个特点？</li>
+<li>哪一件我知道的事最能说明这个特点？</li>
+<li>哪一个动作值得放慢演给大家看？</li>
+</ol>
+<h3>排演与观察</h3>
+<ol>
+<li>人物出场，演他在事情开始时怎样做。</li>
+<li>慢一点演最能表现特点的动作，让观察者记下先后顺序。</li>
+<li>演事情的结果，请同伴说出哪些表现支持他的判断。</li>
+</ol>
+<p>演完就记，记录可以写关键词。</p>
+<ul>
+<li>把一个大动作拆成两三个小动作。</li>
+<li>记下一句确实说过的话，记不清就转述。</li>
+<li>他在这个情境里的表现，怎样说明所选特点？</li>
+</ul>
+<h3>教师备课</h3>
+<p>影人用于重演观察过的事情。真实人物的经历不由系统代编。反馈时请同伴先指出文中依据，再谈他读到的特点。</p>
+<p>学生卡住时可以这样帮助。</p>
+<p>删掉暂时用不上的评价词，只讲那个人在一件事里先做什么、接着怎样。</p>
+<p>写得较熟练的学生可以继续尝试。</p>
+<p>用同一件事里的语言、动作互相补充，避免每一句都再解释人物特点。</p>
+<h3>同伴读文与修改</h3>
+<ul>
+<li>所选事例与人物特点有关吗？</li>
+<li>有没有只说“他很……”，却没写怎么做？</li>
+<li>动作、语言有没有帮助读者认识这个人？</li>
+</ul></section>
+<section aria-labelledby="activity-title" class="guide-section lesson" id="activity"><h2 id="activity-title">六上第二单元 · 《多彩的活动》</h2><p>给同学演一场两分钟的皮影戏。观察者先看全场，再盯住一位同学的一段表现，演完交换记录。</p>
+<p>交代活动经过，把印象深的场面写具体，兼顾全场与个人表现。</p>
+<p><a href="chinese-drama.html?unit=activity">打开本课工具</a></p>
+<h3>排戏前的三个问题</h3>
+<ol>
+<li>这场活动在哪里，谁参加，怎样分工？</li>
+<li>开场、主要表演和结束怎样安排？</li>
+<li>请谁记全场，谁观察一个人？</li>
+</ol>
+<h3>排演与观察</h3>
+<ol>
+<li>开场报幕，介绍这场戏与分工。</li>
+<li>两位角色合作搬道具，制造一段值得全场关注的场面。</li>
+<li>谢幕后交换观察记录，只写实际发生的反应。</li>
+</ol>
+<p>演完就记，记录可以写关键词。</p>
+<ul>
+<li>场上和观众席当时分别怎样？</li>
+<li>选一个人，记他在关键时刻的动作或语言。</li>
+<li>哪一幕最深刻？原因是什么？</li>
+</ul>
+<h3>教师备课</h3>
+<p>操偶者和观察者轮换。不要预填掌声、笑声或紧张等反应。允许观察者记录安静、失误和等待，帮助学生选真实且有特点的场面。</p>
+<p>学生卡住时可以这样帮助。</p>
+<p>先口述最清楚的一幕，用“当时大家……，其中……”找到全场和个人两种观察。</p>
+<p>写得较熟练的学生可以继续尝试。</p>
+<p>比较两位观察者的记录，决定正文的重点场面与叙述顺序。</p>
+<h3>同伴读文与修改</h3>
+<ul>
+<li>活动的时间、地点与经过交代清楚了吗？</li>
+<li>重点场面里有没有全场情况，也有个人的具体表现？</li>
+<li>我当时的感受有没有与现场细节连在一起？</li>
+</ul></section>
+<section aria-labelledby="customs-title" class="guide-section lesson" id="customs"><h2 id="customs-title">六下第一单元 · 《家乡的风俗》</h2><p>问问家人，家乡有哪些你感兴趣的风俗。选一种，用皮影演出一个步骤；再把亲历、采访和查到的资料分别记下来。</p>
+<p>介绍一种家乡风俗，写清有特点的活动与自己的经历，并保留资料来处。</p>
+<p><a href="chinese-drama.html?unit=customs">打开本课工具</a></p>
+<h3>排戏前的三个问题</h3>
+<ol>
+<li>我选哪一种家乡风俗？为什么想了解它？</li>
+<li>我亲历过什么，还需要问谁或查什么？</li>
+<li>皮影能演哪一个步骤，哪些部分要靠口述补充？</li>
+</ol>
+<h3>排演与观察</h3>
+<ol>
+<li>报出风俗的名字和地方，用自己的话介绍。</li>
+<li>演一个有特点的步骤，说明它来自亲历、采访还是资料。</li>
+<li>讲自己最想深入了解的一处，记录演戏与真实风俗的差别。</li>
+</ol>
+<p>演完就记，记录可以写关键词。</p>
+<ul>
+<li>最有特点的步骤是什么，谁怎样做？</li>
+<li>我亲身参加过哪一段？记一个真切感受。</li>
+<li>访问了谁，何时访问，查了哪份资料？</li>
+</ul>
+<h3>教师备课</h3>
+<p>皮影戏本身可以成为非遗调查对象，但不要推定每位学生家乡都有皮影习俗。允许选择任何确有资料的风俗，尊重同一地方不同家庭的做法。</p>
+<p>学生卡住时可以这样帮助。</p>
+<p>带着“什么时候、谁来做、怎样做”三个问题问一位家人，先写自己最清楚的一步。</p>
+<p>写得较熟练的学生可以继续尝试。</p>
+<p>对比亲历与另一份资料的异同，标明地域或家庭差别，不急着归为统一规则。</p>
+<h3>同伴读文与修改</h3>
+<ul>
+<li>读者能认识这个地方的这一种风俗吗？</li>
+<li>重点步骤写具体了吗，其他部分是否可以略写？</li>
+<li>亲历、采访与资料有没有分清，是否夸大成人人都这样？</li>
+</ul></section>
+<section aria-labelledby="equipment-title" class="guide-section" id="equipment"><h2 id="equipment-title">设备与课堂准备</h2><p>每组可用一台电脑和摄像头，两至四人轮换。先用鼠标练习，能完成角色与道具动作后再开启摄像头。设备数量不足时，可轮流排演，其他组先用实体纸偶与三格纸排故事。</p>
+<p>五指默认对应左腿、左臂、头、右臂、右腿。中指控制头，左右两边手指对称控制四肢。影人的手移近可搬动的小道具后握住，张手放下。可换角色、背景，调整布景，显示提偶线。</p>
+<p>语文排演采用手动换句的三行提词器。当前句黑色，前后句灰色；不把英语发音分用于语文习作。中文朗读识别与评价可在后续阶段另行设计。</p>
+<p>学生的台词、观察和习作只保存在当前浏览器。换设备或清理缓存前，请使用“备份全部习作”。导出的记录由学生与老师决定如何分享。</p></section>
+<section aria-labelledby="feedback-title" class="guide-section" id="feedback"><h2 id="feedback-title">作品怎么读</h2><p>先看学生是否完成了这次习作的要求，再找一处具体细节。请同伴指出哪里读得清楚、哪里还想问。修改记录要说清补了什么、删了什么或改变了哪个顺序，不以字数与统一范文衡量所有孩子。</p></section></main></div><footer>研发：AHALab X ZimaBlueAI · 教师备课<p class="print-note">课次与进度可按班级安排调整。</p></footer><script>
+document.getElementById('print-guide').addEventListener('click',()=>window.print());
+const links=[...document.querySelectorAll('.toc a')],targets=links.map(a=>document.querySelector(a.getAttribute('href')));
+function markActive(){let active=targets[0];for(const target of targets){if(target.getBoundingClientRect().top<=140)active=target;}for(const link of links){if(link.hash==='#'+active.id)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');}}
+let pending=false;window.addEventListener('scroll',()=>{if(!pending){pending=true;requestAnimationFrame(()=>{markActive();pending=false;});}},{passive:true});markActive();
+</script></body></html>

@@ -1,0 +1,16 @@
+{
+  "name": "ahalab-finger-shadow",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "desktop.cjs",
+  "scripts": {
+    "start": "node serve.cjs",
+    "test": "node --test tests/*.test.mjs",
+    "assets": "python scripts/fetch-assets.py",
+    "desktop": "electron ."
+  },
+  "devDependencies": {
+    "electron": "31.7.7"
+  }
+}

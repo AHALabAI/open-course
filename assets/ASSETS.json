@@ -118,5 +118,131 @@
     "rights": "MIT — see the project LICENSE",
     "sha256": "e84b0571bacab72d80b2f7b9c54f0234202fa766d92e6410ef1acb64d55cbc37",
     "bytes": 52816
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/brand/AHALab-logo-print.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab brand asset",
+    "rights": "Brand identification only",
+    "sha256": "26947785192ced7fbc884bcb9c6899c983da96cdbb2f807104cc7827a6236611"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/brand/AHALab-logo.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab brand asset",
+    "rights": "Brand identification only",
+    "sha256": "a6e43dab60891b01490f609aa77029b55ea2dc6eefc41363a115538cbe45468f"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/course-poster.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab course promotional illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "9bacd17db84794d564efc875bc4ef505c249fe43e6148eddbf41fca6e49fb35a"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/generated/bajie-atlas-v3.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab original digital illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "bdbd8e964cde2c9b326de7ea5fbb8c884d19478ddf054752de81b8da37b35e7d"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/generated/change-atlas-v1.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab original digital illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "d2c5377caccdafce830c7bc978788200fb584313b14ce2b81b7f9bc25aa8bfe0"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/generated/erlang-atlas-v3.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab original digital illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "0dea2144858ee48d923b90d0748d0ee65d2e5013feafc06ba93e8a9992933ad2"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/generated/mulan-atlas-v3.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab original digital illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "8e410f46ae07cfd6601095d0d55dd0a7890a682f817b42e107f3edb89b62886d"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/generated/nezha-atlas-v2.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab original digital illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "06c76ac524a9fca24cf8079a4444d5bc4c38d8a56d8a2795658946373fcf0dad"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/generated/scene-forest-v5.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab original digital illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "49cba18c17aa044780229b3f7817ec3218666a45829bf7c7831fdabf410d5e57"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/generated/scene-lantern-v5.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab original digital illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "dd1ee45288c5c79418a572ea5acabde8e7b442a18136aa77152f5539f436a9c8"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/generated/scene-lotus-v5.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab original digital illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "dddbe706ee34b4138917841828f5245d9fa36b54763a0edcd3401323da4c87ec"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/generated/scene-pinwheel-v5.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab original digital illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "6fd940458dcab4ee11b260788b75de60d465280beb887515e276655c74de9d33"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/generated/scene-props-v5.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab original digital illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "e10064ada1a93efbb370a357f14125f61d40fb465c2b5f60fb4a59cc46f32479"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/generated/theater-v3.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab original digital illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "bc8b4b0be2045ca9fd0b65a4bdfe6944768799b476c410b24b6d989271bb0df8"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/generated/wukong-atlas-v2.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab original digital illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "a251d0acbd0f76197c834f5aab9c976833633b97087a644fcfa6385c7c4cb2b3"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/code/assets/generated/yutu-atlas-v3.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab original digital illustration",
+    "rights": "CC-BY-4.0 for rights held by AHALab; independent likeness rights excluded",
+    "sha256": "33a6c07d623765dc7b15af6b3f6ff978bff2e20b94ae0b0912466f2859bb13a2"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/poster/hand-shadow-course-qr-poster-final.png",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab course promotional illustration with exact course and article QR codes",
+    "rights": "CC-BY-4.0 for rights held by AHALab; brand identification and independent likeness rights excluded",
+    "sha256": "aa66da0d22c11ccccedddf32ee7d6a210758a484c7c2d6f343934119bcd28db1"
+  },
+  {
+    "path": "courses/design-and-making/finger-shadow/poster/hand-shadow-course-qr-poster-print.pdf",
+    "creator": "AHALab X ZimaBlueAI",
+    "source": "AHALab course promotional illustration with exact course and article QR codes",
+    "rights": "CC-BY-4.0 for rights held by AHALab; brand identification and independent likeness rights excluded",
+    "sha256": "1eb727969757c8c0869f0245353478eec5b5f87c8056d3cd0fc8bb163ab6d6d3"
   }
 ]

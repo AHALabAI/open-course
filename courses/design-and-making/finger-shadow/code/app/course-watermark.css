@@ -1,0 +1,2 @@
+body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;background-image:url('../assets/brand/AHALab-watermark.svg');background-repeat:repeat;background-size:320px 240px;opacity:.045}
+@media print{body::after{opacity:.055;print-color-adjust:exact;-webkit-print-color-adjust:exact}}

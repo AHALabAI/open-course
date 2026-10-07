@@ -19,6 +19,7 @@ AHALab explores AI and project-based learning through collaboration, care for ot
 | [Cool Island](courses/climate-and-ecology/cool-island/README.md) | Six planned 120-minute sessions and a locally runnable browser activity. Weather examples are illustrative, not live forecasts. |
 | [HTML presentation player](tools/html-ppt-player/README.md) | Three-slide example, speaker window, notes, timers and motion controls. |
 | [From spaces to games](courses/spatial-world/spatial-workflows/README.md) | Three learning modules with editable source: an interactive room, a four-storey workshop and public-data reconstruction. |
+| Design and making | [Finger Shadow Theatre](courses/design-and-making/finger-shadow/README.md) | Puppetry, six English plays and ten Chinese writing activities; full teaching materials in Chinese |
 
 Teaching materials are currently in Simplified Chinese. English summaries do not imply a full English translation. Use catalog.json for language availability and stable course paths.
 

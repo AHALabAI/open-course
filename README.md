@@ -22,6 +22,7 @@
 | 与世界相连 | [MMCOOL：我们生活在同一个世界](courses/world-and-society/mmcool-worldview/README.md) | 两天各约 120 分钟；已整理第一天的官网课件、讲稿和活动入口 |
 | 气候与生态 | [城市凉岛](courses/climate-and-ecology/cool-island/README.md) | 六节各约 120 分钟；教案和浏览器互动代码可在本机运行 |
 | 空间世界 | [从空间到游戏](courses/spatial-world/spatial-workflows/README.md) | 三个学习模块；交互房间、四层工坊与公开空间重建的完整源码 |
+| 设计与制造 | [手指皮影戏](courses/design-and-making/finger-shadow/README.md) | 操偶、6出英语短剧与10项语文习作；分龄教案和浏览器代码 |
 
 每门课含对象与时长、课程说明、课次、活动、资料出处、配套代码及来源声明。跨主题课程只保存一份，用 [catalog.json](catalog.json) 与 course.json 中的多个主题标签检索。
 

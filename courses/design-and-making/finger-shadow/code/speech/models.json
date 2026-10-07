@@ -1,0 +1,77 @@
+{
+  "senseVoice": {
+    "files": [
+      {
+        "file": "model.onnx",
+        "bytes": 937615562,
+        "sha256": "e6cae166cba6ce6c4b7556706829e653e77a80ac33956f9bf7953f28daa52c01"
+      },
+      {
+        "file": "tokens.json",
+        "bytes": 352064,
+        "sha256": "a2594fc1474e78973149cba8cd1f603ebed8c39c7decb470631f66e70ce58e97"
+      },
+      {
+        "file": "config.yaml",
+        "bytes": 1855,
+        "sha256": "f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19"
+      }
+    ],
+    "source": "https://github.com/QwenAudio/SenseVoice",
+    "local_directory": ".models-speech/sensevoice-small",
+    "rights": "Model weights retain the upstream model licence; course code does not relicense them. Check the selected model revision and model card.",
+    "model_card": "https://huggingface.co/FunAudioLLM/SenseVoiceSmall",
+    "model_license": "https://github.com/modelscope/FunASR/blob/main/MODEL_LICENSE",
+    "export_guide": "https://github.com/QwenAudio/SenseVoice/blob/main/export.py",
+    "hash_note": "Hashes identify the locally verified export. Independent exports may differ and require interface checks and a recorded file manifest."
+  },
+  "phonemeModel": {
+    "repo": "vitouphy/wav2vec2-xls-r-300m-timit-phoneme",
+    "revision": "efb7ae9b88f13db0d42eac8cedbba19739e2a278",
+    "files": [
+      {
+        "file": "config.json",
+        "bytes": 2068,
+        "sha256": "17158b6f99c0bef454c7313b021240c7133a4039f229c28d4495ecd207f9f007"
+      },
+      {
+        "file": "preprocessor_config.json",
+        "bytes": 214,
+        "sha256": "60ca5a31e13f69ee2fbf147504c8676db5f6398fd7a6b12294341dff838edfcf"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 287,
+        "sha256": "3dd1990023adb889ac3029349f80262802c923fe06beb1807118cb1d5e5f8b02"
+      },
+      {
+        "file": "special_tokens_map.json",
+        "bytes": 309,
+        "sha256": "fe9499f3f127cf340419ded12d4175b3a28a58c99c949bf3f8343a6f6b9fa872"
+      },
+      {
+        "file": "vocab.json",
+        "bytes": 486,
+        "sha256": "12b7de6be6a1bd3132ffdef8d8fe191c8e98f2d70639666e35d9cf6c9d2af77a"
+      },
+      {
+        "file": "added_tokens.json",
+        "bytes": 23,
+        "sha256": "ec58d12af09ef36b4f44ba496b5f3b6cb650b70994ebff692a160f77d2d28c51"
+      },
+      {
+        "file": "model.safetensors",
+        "bytes": 1261987832,
+        "sha256": "0e3bde20ed7b252a48e69eddf7bd6d7eadc7dbacb06924148514e500ebad4b35"
+      }
+    ]
+  },
+  "runtime": {
+    "numpy": "2.4.4",
+    "torch": "2.6.0+cu124",
+    "torchaudio": "2.6.0+cu124",
+    "transformers": "4.57.3",
+    "onnxruntime": "1.27.0",
+    "cmudict": "1.1.3"
+  }
+}

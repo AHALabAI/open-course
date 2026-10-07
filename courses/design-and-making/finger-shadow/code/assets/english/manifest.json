@@ -1,0 +1,660 @@
+{
+  "version": 2,
+  "createdAt": "2026-09-29T09:30:26.414Z",
+  "engine": "Windows System.Speech / installed local English voices",
+  "note": "Original scripts; synthetic reference reading, not a student recording.",
+  "plays": [
+    {
+      "id": "moon-gift",
+      "title": "月下送灯",
+      "file": "moon-gift.wav",
+      "voice": "Microsoft Zira Desktop",
+      "rate": -2,
+      "text": "Look at the moon. Hello, Rabbit! Hello! This lantern is for you. Thank you! They wave goodbye.",
+      "bytes": 546370,
+      "sha256": "49681fc023df4fcc46fd2c2b9fd0909038a8309f7118792a46639b95d09c60e8",
+      "lines": [
+        {
+          "index": 0,
+          "role": "旁白",
+          "file": "lines/moon-gift/01.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -2,
+          "text": "Look at the moon.",
+          "bytes": 88214,
+          "sha256": "fd82ce1b7cb1d22bd8832e726f5bddb2e4bff78128530870f76d5f03eced2940"
+        },
+        {
+          "index": 1,
+          "role": "送灯人",
+          "file": "lines/moon-gift/02.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -2,
+          "text": "Hello, Rabbit!",
+          "bytes": 112246,
+          "sha256": "cfa9b6d05a705f911eae4ceb90bd33e06426fd4166fb7e8e12c30bc22a156bed"
+        },
+        {
+          "index": 2,
+          "role": "兔子",
+          "file": "lines/moon-gift/03.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -2,
+          "text": "Hello!",
+          "bytes": 67712,
+          "sha256": "227f7aa476ee779587e6c260b2a1ae2430d3eed1742b4fdebf066d0a7f8bd058"
+        },
+        {
+          "index": 3,
+          "role": "送灯人",
+          "file": "lines/moon-gift/04.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -2,
+          "text": "This lantern is for you.",
+          "bytes": 111800,
+          "sha256": "9bd5ed7c445bd69934b3139e05c66c4db378b99c9c7f708b037bf2921e7fc8d5"
+        },
+        {
+          "index": 4,
+          "role": "兔子",
+          "file": "lines/moon-gift/05.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -2,
+          "text": "Thank you!",
+          "bytes": 76972,
+          "sha256": "2ab6dd85575d057301be6c04a028cc3df5108dda43f722637adf9f48c08a6566"
+        },
+        {
+          "index": 5,
+          "role": "旁白",
+          "file": "lines/moon-gift/06.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -2,
+          "text": "They wave goodbye.",
+          "bytes": 89536,
+          "sha256": "5aeb9e1827ef21b03fa3c2cc1cb6497a8d2a1039833a55dc561f3216a47e5302"
+        }
+      ]
+    },
+    {
+      "id": "lost-lantern",
+      "title": "桥边寻灯",
+      "file": "lost-lantern.wav",
+      "voice": "Microsoft Zira Desktop",
+      "rate": -1,
+      "text": "It is getting dark. Where is my lantern? Let us look for it. Is it on the table? No. Look beside the bridge! They walk carefully. There it is! Can you pick it up? Yes. Thank you for helping me. They go home together.",
+      "bytes": 1044858,
+      "sha256": "30760dfa6085cb8f2edddffe97efcf57cb5de24c34956b633c7e21a457ae7d6b",
+      "lines": [
+        {
+          "index": 0,
+          "role": "旁白",
+          "file": "lines/lost-lantern/01.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "It is getting dark.",
+          "bytes": 90860,
+          "sha256": "8bb43f71c7f17c51dfef565dc0b4b7c4f893ec89d78b4fba2298f045e0bc1235"
+        },
+        {
+          "index": 1,
+          "role": "找灯人",
+          "file": "lines/lost-lantern/02.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Where is my lantern?",
+          "bytes": 96372,
+          "sha256": "8ee40cbea52c74b383e0f13de0a85747919247966fcdbcc63e2ae5ff4b74ffb3"
+        },
+        {
+          "index": 2,
+          "role": "同伴",
+          "file": "lines/lost-lantern/03.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Let us look for it.",
+          "bytes": 88214,
+          "sha256": "649952309122f1d0d04dc08577b6df89be99b1805af9b704aab8a1930cf03e46"
+        },
+        {
+          "index": 3,
+          "role": "找灯人",
+          "file": "lines/lost-lantern/04.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Is it on the table?",
+          "bytes": 87110,
+          "sha256": "8fa76d3c500a7a4b77bdbbe9b4cc64b1bc7c98f001771841e6df237084efc58e"
+        },
+        {
+          "index": 4,
+          "role": "同伴",
+          "file": "lines/lost-lantern/05.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "No. Look beside the bridge!",
+          "bytes": 157668,
+          "sha256": "5b71418ad811eb36656dacf4d84e79519afa027a68d7a9234af89e7a89ca7feb"
+        },
+        {
+          "index": 5,
+          "role": "旁白",
+          "file": "lines/lost-lantern/06.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "They walk carefully.",
+          "bytes": 91960,
+          "sha256": "b89b662e2d4096f8ead754b0d7f7e95b9bcbed0da225cb09214611e263f6bf0e"
+        },
+        {
+          "index": 6,
+          "role": "找灯人",
+          "file": "lines/lost-lantern/07.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "There it is!",
+          "bytes": 75206,
+          "sha256": "8b3bce3ad4d1d7d13f2bebb5d63478d76d7dbd06b8260fe5f97ec3c825aff267"
+        },
+        {
+          "index": 7,
+          "role": "同伴",
+          "file": "lines/lost-lantern/08.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Can you pick it up?",
+          "bytes": 87992,
+          "sha256": "8a4cf29e5dc40582e50ac82bc37f3192a914d6161cd6fbb419f40e5529c3d965"
+        },
+        {
+          "index": 8,
+          "role": "找灯人",
+          "file": "lines/lost-lantern/09.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Yes. Thank you for helping me.",
+          "bytes": 174202,
+          "sha256": "aa1e1f87632d0a3f71f70c640c9d48c7bbf64b9999806f49f89d8a6627b47ab3"
+        },
+        {
+          "index": 9,
+          "role": "旁白",
+          "file": "lines/lost-lantern/10.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "They go home together.",
+          "bytes": 95490,
+          "sha256": "c9cef4a242c21796eca7a5662d390d1e5a000aea6e73be14a30d0161974a8dc2"
+        }
+      ]
+    },
+    {
+      "id": "shared-peach",
+      "title": "森林分桃",
+      "file": "shared-peach.wav",
+      "voice": "Microsoft Zira Desktop",
+      "rate": -1,
+      "text": "Two friends find a peach on the table. I found it first. But I am hungry too. Then what should we do? We could share it. I promised to take it home. Who is waiting for you? My little sister. They stop and think. Let us visit her instead. We can share the peach together. That sounds fair. Come with me. The two friends leave with the lantern.",
+      "bytes": 1404648,
+      "sha256": "a62ae15bc956b38c2394326ed0a67bed5c214c1b45f5bf86d7600b208ecaf562",
+      "lines": [
+        {
+          "index": 0,
+          "role": "旁白",
+          "file": "lines/shared-peach/01.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Two friends find a peach on the table.",
+          "bytes": 137588,
+          "sha256": "b007eeb45901681fb90e6d4bf6d34ff8c888aa6a1da19954084dcbede6ced885"
+        },
+        {
+          "index": 1,
+          "role": "甲",
+          "file": "lines/shared-peach/02.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "I found it first.",
+          "bytes": 97252,
+          "sha256": "cdb508088c23bc3e54090b59d5f554a9d438de5b1f5c6fe87bc01782c2f7b202"
+        },
+        {
+          "index": 2,
+          "role": "乙",
+          "file": "lines/shared-peach/03.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "But I am hungry too.",
+          "bytes": 94830,
+          "sha256": "d294a89adfbc5b03871c1adca615695c0c86a66be6f6e8e6cf3069cc504ebeea"
+        },
+        {
+          "index": 3,
+          "role": "甲",
+          "file": "lines/shared-peach/04.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Then what should we do?",
+          "bytes": 91522,
+          "sha256": "bc9eeb60cd3a3480bdbd9400e455fdd5d8fe94286570e2fe5d40263cb4dc5864"
+        },
+        {
+          "index": 4,
+          "role": "乙",
+          "file": "lines/shared-peach/05.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "We could share it.",
+          "bytes": 83584,
+          "sha256": "fa58f31d07b746d97443d42c1d1f089ce08acbe759bf1ab38fe28ad9e0f0e39b"
+        },
+        {
+          "index": 5,
+          "role": "甲",
+          "file": "lines/shared-peach/06.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "I promised to take it home.",
+          "bytes": 112466,
+          "sha256": "75c0d3b7c36a9c69dfb28a1964c49f446819849a37fc53ad04566d00db2e112f"
+        },
+        {
+          "index": 6,
+          "role": "乙",
+          "file": "lines/shared-peach/07.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Who is waiting for you?",
+          "bytes": 95050,
+          "sha256": "705e630d2b9c425c93b384d5a9ecc97039aafe1718de6fad93e1b95dcb50264f"
+        },
+        {
+          "index": 7,
+          "role": "甲",
+          "file": "lines/shared-peach/08.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "My little sister.",
+          "bytes": 88656,
+          "sha256": "49d0235a97103a3c4a633658451fd0d3361489ab5b3983af768bf08f3941f7f8"
+        },
+        {
+          "index": 8,
+          "role": "旁白",
+          "file": "lines/shared-peach/09.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "They stop and think.",
+          "bytes": 92182,
+          "sha256": "f2a599fb0461d1a6b548da88f9cf85767595d98e73d63cec95caa2e28a47a6c5"
+        },
+        {
+          "index": 9,
+          "role": "乙",
+          "file": "lines/shared-peach/10.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Let us visit her instead.",
+          "bytes": 104304,
+          "sha256": "2c3186db1e94ad1351a8a46397f89f9246f221fe2a02f836261b407ace92bbf9"
+        },
+        {
+          "index": 10,
+          "role": "甲",
+          "file": "lines/shared-peach/11.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "We can share the peach together.",
+          "bytes": 114666,
+          "sha256": "a4d5698326e91a138de3ec675fef84c27c61ad55eb3f3242a808e41553aba096"
+        },
+        {
+          "index": 11,
+          "role": "乙",
+          "file": "lines/shared-peach/12.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "That sounds fair.",
+          "bytes": 89536,
+          "sha256": "38b7b14db32dc58f9f6d849d26e9eff93fb54ae669f8b7dc041e9d5b32959249"
+        },
+        {
+          "index": 12,
+          "role": "甲",
+          "file": "lines/shared-peach/13.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Come with me.",
+          "bytes": 73002,
+          "sha256": "bf6bfe42729c13ec59d285e86ca080da3c26e581b9e17b39445591dcd826c2e7"
+        },
+        {
+          "index": 13,
+          "role": "旁白",
+          "file": "lines/shared-peach/14.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "The two friends leave with the lantern.",
+          "bytes": 130322,
+          "sha256": "7ae273d23e72cac21cbd1277b36ef10bee5ac784091e5e63f6d253c81dda5e90"
+        }
+      ]
+    },
+    {
+      "id": "rainy-day",
+      "title": "雨天借伞",
+      "file": "rainy-day.wav",
+      "voice": "Microsoft Zira Desktop",
+      "rate": -2,
+      "text": "Here comes the rain. I have an umbrella. May I join you? Yes. Come here! Thank you! They walk home together.",
+      "bytes": 642500,
+      "sha256": "5b863739a87edf2abf7cdbdf2c0d53343f55dec2c40118f75d714c6f8a5b4089",
+      "lines": [
+        {
+          "index": 0,
+          "role": "旁白",
+          "file": "lines/rainy-day/01.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -2,
+          "text": "Here comes the rain.",
+          "bytes": 105850,
+          "sha256": "e5924c437ccd1e467e125e7052706458c6d17b08308732e0f96a096e9b33ac34"
+        },
+        {
+          "index": 1,
+          "role": "布鲁依",
+          "file": "lines/rainy-day/02.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -2,
+          "text": "I have an umbrella.",
+          "bytes": 101440,
+          "sha256": "635863618c6fdd90b4d1e645e8e82ad2fabbafa585553a7ff5d18c511d6b15f6"
+        },
+        {
+          "index": 2,
+          "role": "兔子",
+          "file": "lines/rainy-day/03.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -2,
+          "text": "May I join you?",
+          "bytes": 98578,
+          "sha256": "7cd387214ba23a2eac8d4698c14eef464805901fe89afa3e87025731297aaec5"
+        },
+        {
+          "index": 3,
+          "role": "布鲁依",
+          "file": "lines/rainy-day/04.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -2,
+          "text": "Yes. Come here!",
+          "bytes": 149070,
+          "sha256": "106c492f8b4f7fe1ceaac8abdb20e2ab8bcd8430d79735bc37e37ab5e6000ff1"
+        },
+        {
+          "index": 4,
+          "role": "兔子",
+          "file": "lines/rainy-day/05.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -2,
+          "text": "Thank you!",
+          "bytes": 76972,
+          "sha256": "2ab6dd85575d057301be6c04a028cc3df5108dda43f722637adf9f48c08a6566"
+        },
+        {
+          "index": 5,
+          "role": "旁白",
+          "file": "lines/rainy-day/06.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -2,
+          "text": "They walk home together.",
+          "bytes": 110700,
+          "sha256": "ab4bce0c09ce5f15fcb20071709a64e17a9d14b2da13b10933c4e4529d3827b1"
+        }
+      ]
+    },
+    {
+      "id": "sea-rescue",
+      "title": "海边救援",
+      "file": "sea-rescue.wav",
+      "voice": "Microsoft Zira Desktop",
+      "rate": -1,
+      "text": "There is a voice by the sea. Help! I cannot reach the shore. I am here. Can you see me? Yes. Please help me. Hold on to this ring. I have it! Move slowly. I will help you. They reach the shore. I am safe now. Thank you! Let us go home.",
+      "bytes": 1228304,
+      "sha256": "1de66193d7e866ed95721be0d8365f78b7ed0b1a652b3ff83582cbe07c10871d",
+      "lines": [
+        {
+          "index": 0,
+          "role": "旁白",
+          "file": "lines/sea-rescue/01.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "There is a voice by the sea.",
+          "bytes": 104750,
+          "sha256": "9afa34b23e436c66e57b0008f0a4ad532545b9f5c33e5059b1350d30d85cf4b6"
+        },
+        {
+          "index": 1,
+          "role": "布鲁依",
+          "file": "lines/sea-rescue/02.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Help! I cannot reach the shore.",
+          "bytes": 165378,
+          "sha256": "cd178a5692b8383cc987e4c431a044b3f00b8a4422abc28b57625525a1b2d4da"
+        },
+        {
+          "index": 2,
+          "role": "哪吒",
+          "file": "lines/sea-rescue/03.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "I am here. Can you see me?",
+          "bytes": 154358,
+          "sha256": "40f55f3c41e02185e2819d60af58301ffb946a80b077a60b676fb668bdd9dc62"
+        },
+        {
+          "index": 3,
+          "role": "布鲁依",
+          "file": "lines/sea-rescue/04.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Yes. Please help me.",
+          "bytes": 147528,
+          "sha256": "bd05dcbaafa92f6113decf4568cb0ffdaedcc1066c34a5b9cde91d4853ddb08e"
+        },
+        {
+          "index": 4,
+          "role": "哪吒",
+          "file": "lines/sea-rescue/05.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Hold on to this ring.",
+          "bytes": 96590,
+          "sha256": "0996dac8fa5bb44dfdf7ac335eb9d0de3cb7cf4eadc95ee899fa6bba02b21cf0"
+        },
+        {
+          "index": 5,
+          "role": "布鲁依",
+          "file": "lines/sea-rescue/06.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "I have it!",
+          "bytes": 67490,
+          "sha256": "18d230ae11cb80f9238dc3a052bad970ca2de4d5b105b5bd18aa3687af8506a2"
+        },
+        {
+          "index": 6,
+          "role": "哪吒",
+          "file": "lines/sea-rescue/07.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Move slowly. I will help you.",
+          "bytes": 160532,
+          "sha256": "0125e05d63ada4f87df1897d285135e03b55c54633b98f71ff6593aceda26cf9"
+        },
+        {
+          "index": 7,
+          "role": "旁白",
+          "file": "lines/sea-rescue/08.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "They reach the shore.",
+          "bytes": 89980,
+          "sha256": "0caa52c90bc25efe3418fb35f5b840c30e598de9bd58b4d6ebd5feca9c4773d9"
+        },
+        {
+          "index": 8,
+          "role": "布鲁依",
+          "file": "lines/sea-rescue/09.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "I am safe now. Thank you!",
+          "bytes": 153918,
+          "sha256": "0f4cd65c492731d51e84f97d9fbf104c22e5b1ee1b603f1c416ddb8cbb2c9775"
+        },
+        {
+          "index": 9,
+          "role": "哪吒",
+          "file": "lines/sea-rescue/10.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Let us go home.",
+          "bytes": 87996,
+          "sha256": "3860ea54b1edda6bba1178da1043fb61ec165bdc5d65b5cf522fec8ae2d5cdad"
+        }
+      ]
+    },
+    {
+      "id": "borrow-fan",
+      "title": "花果山借扇",
+      "file": "borrow-fan.wav",
+      "voice": "Microsoft Zira Desktop",
+      "rate": -1,
+      "text": "It is a hot day on the mountain. May I borrow your fan? What do you need it for? My friends are waiting in the heat. This fan is very old. I will carry it carefully. When will you return it? Before sunset. I promise. Later, he comes back with the fan. Here is your fan. Thank you. You kept your promise. A small promise makes a good friend.",
+      "bytes": 1461106,
+      "sha256": "cc415f81d65be0bfc93b6c217c6bf2c95a0c386068a6e3014083c6d83f78bbf8",
+      "lines": [
+        {
+          "index": 0,
+          "role": "旁白",
+          "file": "lines/borrow-fan/01.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "It is a hot day on the mountain.",
+          "bytes": 116432,
+          "sha256": "0842a0990f2f2819c0209a7e99acab3afef2e6bb797733047537df42c3287dd4"
+        },
+        {
+          "index": 1,
+          "role": "悟空",
+          "file": "lines/borrow-fan/02.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "May I borrow your fan?",
+          "bytes": 108504,
+          "sha256": "ec1c3665cea14af1bba6df8865d6d1c432863bb1f9c70cae62455bd8cae416b3"
+        },
+        {
+          "index": 2,
+          "role": "守扇人",
+          "file": "lines/borrow-fan/03.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "What do you need it for?",
+          "bytes": 101880,
+          "sha256": "69d08ecb085426901a7f788aea880ce8e125681d2edb0359ac75e7f09857f511"
+        },
+        {
+          "index": 3,
+          "role": "悟空",
+          "file": "lines/borrow-fan/04.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "My friends are waiting in the heat.",
+          "bytes": 119736,
+          "sha256": "6e87b195804e1dee3a5a8dfbaafa9ca947e767ee9092adb6b9429a584e1b7d2c"
+        },
+        {
+          "index": 4,
+          "role": "守扇人",
+          "file": "lines/borrow-fan/05.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "This fan is very old.",
+          "bytes": 104530,
+          "sha256": "3685dfbae3f58693e941a2627131f331d7eb2b21556b8ae760319fec8acede4b"
+        },
+        {
+          "index": 5,
+          "role": "悟空",
+          "file": "lines/borrow-fan/06.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "I will carry it carefully.",
+          "bytes": 104310,
+          "sha256": "5c5211123d74f2eae536f3dfef1d6626132ac1c9e3386ce285e2bfddd0bde95f"
+        },
+        {
+          "index": 6,
+          "role": "守扇人",
+          "file": "lines/borrow-fan/07.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "When will you return it?",
+          "bytes": 93504,
+          "sha256": "84494599f7cde8593b71e100c3af4c701317abba91f72e1cc57267131a386987"
+        },
+        {
+          "index": 7,
+          "role": "悟空",
+          "file": "lines/borrow-fan/08.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Before sunset. I promise.",
+          "bytes": 166042,
+          "sha256": "596b5a81bc82ed67b5342f4ba9fcf371ed7e90930f268e094523b9982e6b9735"
+        },
+        {
+          "index": 8,
+          "role": "旁白",
+          "file": "lines/borrow-fan/09.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Later, he comes back with the fan.",
+          "bytes": 151932,
+          "sha256": "f5f93fc22401e875c72c800d112ea26c2f20ed19c81c1d331be228d02569dab3"
+        },
+        {
+          "index": 9,
+          "role": "悟空",
+          "file": "lines/borrow-fan/10.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "Here is your fan. Thank you.",
+          "bytes": 159206,
+          "sha256": "2d138b8cc3166886b77203b0e3b2d9c1e10a947829aa400090553e701e59f8a5"
+        },
+        {
+          "index": 10,
+          "role": "守扇人",
+          "file": "lines/borrow-fan/11.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "You kept your promise.",
+          "bytes": 101002,
+          "sha256": "7d8dd4a6ff804bd35b6063b401a8db4f3386270d024a1b47971a34ce968447fe"
+        },
+        {
+          "index": 11,
+          "role": "旁白",
+          "file": "lines/borrow-fan/12.wav",
+          "voice": "Microsoft Zira Desktop",
+          "rate": -1,
+          "text": "A small promise makes a good friend.",
+          "bytes": 134292,
+          "sha256": "b0354b9ddb9673c769f24634d32774fe8d0a09515f635043b6ae7171c9cb7ceb"
+        }
+      ]
+    }
+  ]
+}

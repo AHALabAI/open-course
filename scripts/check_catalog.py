@@ -11,6 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 WEB_ROOTS=[ROOT/'courses/spatial-world/spatial-workflows/code/aha-world/public',ROOT/'courses/spatial-world/spatial-workflows/code/world-starter/public',ROOT/'tools/aha-world/public',ROOT/'tools/world-starter/public',ROOT/'tools/warmup-ai-or-human']
 SLUG=re.compile(r'^[a-z0-9]+(?:-[a-z0-9]+)*$')
 errors=[]
+DEFERRED_FILES=set()
 def require(ok,message):
     if not ok:errors.append(message)
 def read(p):
@@ -19,12 +20,22 @@ def read(p):
 def local(base,relative):
     target=(base/unquote(urlsplit(relative).path)).resolve()
     if not target.is_relative_to(ROOT):errors.append('Path leaves repository: '+relative);return None
-    require(target.exists(),'Missing local path: '+str(target.relative_to(ROOT)))
+    require(target.exists() or target in DEFERRED_FILES,'Missing local path: '+str(target.relative_to(ROOT)))
     return target
 
 def main():
     catalog=read(ROOT/'catalog.json')
     if not isinstance(catalog,dict):return 1
+    for manifest in ROOT.glob('courses/*/*/code/RUNTIME-ASSETS.json'):
+        rows=read(manifest)
+        if not isinstance(rows,list):continue
+        for row in rows:
+            target=(manifest.parent/row.get('path','')).resolve()
+            valid=(target.is_relative_to(manifest.parent.resolve()) and row.get('path','').startswith(('assets/','vendor/')) and target.suffix in {'.wav','.wasm','.task','.js','.mjs','.txt','.py'} and urlsplit(row.get('url','')).scheme=='https' and bool(re.fullmatch('[0-9a-f]{64}',row.get('sha256',''))) and isinstance(row.get('bytes'),int) and row['bytes']>0 and bool(row.get('rights')))
+            require(valid,'Invalid runtime attachment: '+str(manifest.relative_to(ROOT)))
+            if valid:
+                DEFERRED_FILES.add(target)
+                if target.is_file():require(hashlib.sha256(target.read_bytes()).hexdigest()==row['sha256'],'Runtime asset hash mismatch: '+row['path'])
     topics={x['id'] for x in catalog['topics']};ids=set();session_count=0
     for row in catalog['courses']:
         ident=row['id'];require(bool(SLUG.fullmatch(ident)),'Invalid course ID: '+ident)
@@ -123,6 +134,6 @@ def main():
     for f in ROOT.rglob('*'):
         if f.is_file() and not {'.git','node_modules','__pycache__'}.intersection(f.parts) and f.suffix.lower() in {'.png','.jpg','.jpeg','.webp','.gif','.glb','.blend','.pdf'}:
             require(f.relative_to(ROOT).as_posix() in listed,'Missing asset attribution: '+f.relative_to(ROOT).as_posix())
-    print(json.dumps({'courses':len(catalog['courses']),'sessions':session_count,'tools':len(catalog.get('tools',[])),'files_checked':count,'errors':errors,'passed':not errors},ensure_ascii=False,indent=2))
+    print(json.dumps({'courses':len(catalog['courses']),'sessions':session_count,'tools':len(catalog.get('tools',[])),'files_checked':count,'declared_runtime_assets':len(DEFERRED_FILES),'errors':errors,'passed':not errors},ensure_ascii=False,indent=2))
     return int(bool(errors))
 if __name__=='__main__':sys.exit(main())

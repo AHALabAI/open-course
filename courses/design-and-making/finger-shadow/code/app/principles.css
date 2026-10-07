@@ -1,0 +1,7 @@
+.principle-note{margin:12px 0;padding:10px 13px;background:#f3eddf;border:1px solid #d2c4a9;border-radius:3px;color:#4c4437;font-size:12px;line-height:1.75;text-align:left}
+.principle-note summary{cursor:pointer;font-weight:600;color:#785038;font-size:12px;line-height:1.6}
+.principle-note p{font-size:12px;line-height:1.75;margin:10px 0 0;max-width:82ch}
+.principle-note a{color:#765132;text-underline-offset:3px}
+.principle-note summary:focus-visible{outline:2px solid #8b563a;outline-offset:4px}
+.theater>.principle-note{margin:0;border-radius:0;padding:9px 18px}
+@media(max-width:600px){.principle-note{font-size:13px}.principle-note p,.principle-note summary{font-size:13px}}

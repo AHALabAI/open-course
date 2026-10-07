@@ -1,0 +1,23 @@
+[
+  {
+    "path": "vendor/ocsort/trackers/ocsort_tracker/ocsort.py",
+    "url": "https://raw.githubusercontent.com/noahcao/OC_SORT/8462e7e729a93ccd3bd995c0a79a890336cb3a0b/trackers/ocsort_tracker/ocsort.py",
+    "bytes": 18251,
+    "sha256": "62f69b0f765b6445602f1151c19763b0ffc0b8c74eee2aed404a16e4b25e6fe1",
+    "rights": "OC-SORT authors; MIT"
+  },
+  {
+    "path": "vendor/ocsort/trackers/ocsort_tracker/kalmanfilter.py",
+    "url": "https://raw.githubusercontent.com/noahcao/OC_SORT/8462e7e729a93ccd3bd995c0a79a890336cb3a0b/trackers/ocsort_tracker/kalmanfilter.py",
+    "bytes": 61686,
+    "sha256": "25282991539e3818737b41223eb27b24c33c4aa0dfcc47ba4892af451934fa1f",
+    "rights": "OC-SORT authors; MIT"
+  },
+  {
+    "path": "vendor/ocsort/trackers/ocsort_tracker/association.py",
+    "url": "https://raw.githubusercontent.com/noahcao/OC_SORT/8462e7e729a93ccd3bd995c0a79a890336cb3a0b/trackers/ocsort_tracker/association.py",
+    "bytes": 13717,
+    "sha256": "cd837b1eb64022afc1ef519baaa3f21bd953b745c83e511614994a652aa4cf00",
+    "rights": "OC-SORT authors; MIT"
+  }
+]

@@ -1,0 +1,6 @@
+numpy==2.4.4
+torch==2.6.0
+torchaudio==2.6.0
+transformers==4.57.3
+onnxruntime==1.27.0
+cmudict==1.1.3

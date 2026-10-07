@@ -1,0 +1,89 @@
+{
+  "id": "finger-shadow",
+  "version": "1.0.0",
+  "primary_topic": "design-and-making",
+  "topics": [
+    "design-and-making",
+    "ai-and-computing",
+    "people-and-community"
+  ],
+  "connection_axes": [
+    "people",
+    "world"
+  ],
+  "title": {
+    "zh-CN": "手指皮影戏",
+    "en": "Finger Shadow Theatre",
+    "ru": "Театр теней на кончиках пальцев",
+    "fr": "Théâtre d’ombres au bout des doigts",
+    "es": "Teatro de sombras con los dedos",
+    "ar": "مسرح خيال الظل بأصابعك",
+    "ja": "指で動かす影絵劇",
+    "de": "Schattentheater mit den Fingern",
+    "ko": "손가락으로 움직이는 그림자극",
+    "hi": "उँगलियों से चलने वाला छाया कठपुतली नाटक",
+    "bn": "আঙুলে চালানো ছায়া পুতুলনাট্য",
+    "pt": "Teatro de sombras com os dedos",
+    "ur": "انگلیوں سے چلنے والا سایہ پتلی کا تھیٹر",
+    "fi": "Sormilla ohjattava varjoteatteri",
+    "da": "Skyggeteater med fingrene",
+    "nl": "Schaduwtheater met je vingers"
+  },
+  "summary": {
+    "zh-CN": "做影人、试操偶，用英语排演，把观察到的动作和故事写下来。",
+    "en": "Make puppets, perform short English plays and turn observed actions into Chinese writing."
+  },
+  "content_languages": [
+    "zh-CN",
+    "en",
+    "ru",
+    "fr",
+    "es",
+    "ar",
+    "ja",
+    "de",
+    "ko",
+    "hi",
+    "bn",
+    "pt",
+    "ur",
+    "fi",
+    "da",
+    "nl"
+  ],
+  "audience": "learners-and-educators",
+  "prerequisites": [
+    "由教师协助启动网页与设备",
+    "语言任务按本班阅读经验选择"
+  ],
+  "format": "paired-workshop",
+  "planned_duration_minutes": 880,
+  "duration_note": "一条8课操偶路线加各一项英语与语文活动；其余剧目与习作为可选任务",
+  "content_license": "CC-BY-4.0",
+  "available_sessions": [
+    {
+      "id": "puppet",
+      "title": "做影人与视觉操偶",
+      "planned_minutes": 720,
+      "entry": "code/classroom.html",
+      "delivery": "repository"
+    },
+    {
+      "id": "english",
+      "title": "英语小剧场",
+      "planned_minutes": 80,
+      "entry": "code/english-drama.html",
+      "delivery": "repository"
+    },
+    {
+      "id": "chinese",
+      "title": "语文习作，选一项排演与修改",
+      "planned_minutes": 80,
+      "entry": "code/chinese-curriculum.html",
+      "delivery": "repository"
+    }
+  ],
+  "code_entries": [
+    "code/README.md"
+  ]
+}
