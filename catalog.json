@@ -67,6 +67,10 @@
     {
       "id": "finger-shadow",
       "path": "courses/design-and-making/finger-shadow"
+    },
+    {
+      "id": "movelab-pbl",
+      "path": "courses/ai-and-computing/movelab-pbl"
     }
   ],
   "tools": [

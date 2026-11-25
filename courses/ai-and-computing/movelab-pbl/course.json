@@ -1,0 +1,90 @@
+{
+  "id": "movelab-pbl",
+  "version": "1.0.0",
+  "primary_topic": "ai-and-computing",
+  "topics": [
+    "ai-and-computing",
+    "people-and-community"
+  ],
+  "connection_axes": [
+    "world",
+    "people"
+  ],
+  "title": {
+    "zh-CN": "捕获每一帧",
+    "en": "Capture Every Frame",
+    "ru": "Поймай каждый кадр",
+    "fr": "Capturer chaque image",
+    "es": "Captura cada fotograma",
+    "ar": "التقط كل إطار",
+    "ja": "一コマも逃さない",
+    "de": "Jedes Bild erfassen",
+    "ko": "모든 프레임을 포착하다",
+    "hi": "हर फ़्रेम को पकड़ें",
+    "bn": "প্রতিটি ফ্রেম ধরুন",
+    "pt": "Capture cada quadro",
+    "ur": "ہر فریم محفوظ کریں",
+    "fi": "Tallenna jokainen ruutu",
+    "da": "Fang hvert billede",
+    "nl": "Leg elk frame vast"
+  },
+  "summary": {
+    "zh-CN": "用一台摄像头，把运动变成可以回看的证据。",
+    "en": "Use one camera to turn movement into evidence you can review.",
+    "ru": "Одна камера превращает движение в данные, которые можно проверить.",
+    "fr": "Une seule caméra suffit pour transformer un mouvement en observations vérifiables.",
+    "es": "Usa una cámara para convertir el movimiento en evidencia que puedas revisar.",
+    "ar": "استخدم كاميرا واحدة لتحويل الحركة إلى أدلة يمكنك مراجعتها.",
+    "ja": "一台のカメラで、動きを見直せる証拠にする。",
+    "de": "Mach aus Bewegung mit einer Kamera überprüfbare Beobachtungen.",
+    "ko": "카메라 한 대로 움직임을 다시 확인할 수 있는 증거로 바꿉니다.",
+    "hi": "एक कैमरे से गतिविधि को ऐसे साक्ष्य में बदलें जिसे फिर देख सकें।",
+    "bn": "একটি ক্যামেরা দিয়ে চলাচলকে পুনরায় যাচাই করা যায় এমন প্রমাণে রূপ দিন।",
+    "pt": "Use uma câmera para transformar movimento em evidências que podem ser revistas.",
+    "ur": "ایک کیمرے سے حرکت کو قابلِ جائزہ شواہد میں بدلیں۔",
+    "fi": "Muuta liike yhdellä kameralla havainnoiksi, joita voi tarkistaa.",
+    "da": "Gør bevægelse til observationer, du kan efterprøve med ét kamera.",
+    "nl": "Maak met één camera van beweging controleerbaar bewijs."
+  },
+  "content_languages": [
+    "zh-CN"
+  ],
+  "website_languages": [
+    "zh-CN",
+    "en",
+    "ru",
+    "fr",
+    "es",
+    "ar",
+    "ja",
+    "de",
+    "ko",
+    "hi",
+    "bn",
+    "pt",
+    "ur",
+    "fi",
+    "da",
+    "nl"
+  ],
+  "audience": "learners-and-educators",
+  "format": "project-workshop",
+  "planned_duration_minutes": 90,
+  "content_license": "CC-BY-4.0",
+  "available_sessions": [
+    {
+      "id": "measurement-lab",
+      "title": "标定与运动事件复跑",
+      "planned_minutes": 90,
+      "entry": "movelab-measurement.ipynb",
+      "delivery": "repository"
+    }
+  ],
+  "code_entries": [
+    "code/measurement.rs",
+    "code/build-wasm.mjs",
+    "code/course.js",
+    "basketball-video-review.ipynb"
+  ],
+  "website": "https://aha-lab.ai/course/movelab-pbl/"
+}

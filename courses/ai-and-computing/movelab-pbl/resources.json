@@ -1,0 +1,23 @@
+[
+  {
+    "id": "notebook",
+    "title": "MoveLab 教学 Notebook",
+    "distribution": "included",
+    "path": "movelab-measurement.ipynb",
+    "rights": "AHALab 原创教学材料，CC BY 4.0；代码 MIT"
+  },
+  {
+    "id": "roboflow",
+    "title": "Roboflow Basketball AI Notebook",
+    "distribution": "external-link",
+    "url": "https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/basketball-ai-how-to-detect-track-and-identify-basketball-players.ipynb",
+    "rights": "上游链接，按原作者条款使用"
+  },
+  {
+    "id": "vision-demos",
+    "title": "vision-demos Basketball Shot Analysis",
+    "distribution": "external-link",
+    "url": "https://github.com/jeremyipark/vision-demos/tree/main/basketball",
+    "rights": "上游链接，按原作者条款使用"
+  }
+]
